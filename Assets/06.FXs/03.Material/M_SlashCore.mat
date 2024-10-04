@@ -64,7 +64,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _Add_Power: 3
-    - _Gradation_Power: 1.7
+    - _Gradation_Power: 0
     - _Intensity: 4
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -76,5 +76,5 @@ Material:
     - _Base_Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Base_Tiling: {r: 1, g: 1, b: 0, a: 0}
     - _Color: {r: 0.008021949, g: 0.017213032, b: 0.025382884, a: 0}
-    - _Final_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Final_Color: {r: 0.5, g: 0.40801886, b: 0.40801886, a: 0}
   m_BuildTextureStacks: []
