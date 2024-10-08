@@ -30,7 +30,7 @@ public class MonsterSpawner : MonoBehaviour
             MonsterController monsterController = monster.GetComponent<MonsterController>();
             if (monsterController != null)
             {
-                monsterController.player = player;
+                monsterController.player = player; // 플레이어 설정
             }
         }
     }

@@ -91,11 +91,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d40e4f2a651f8d24c878120eca6f5cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   moveSpeed: 1
   attackDistance: 5
   stopDistance: 1.5
   attackRate: 1
+  flockingRadius: 5
+  separationDistance: 4
+  player: {fileID: 0}
 --- !u!195 &3462712077748534110
 NavMeshAgent:
   m_ObjectHideFlags: 0

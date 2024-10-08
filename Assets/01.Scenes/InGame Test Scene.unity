@@ -439,13 +439,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f439913c4096fdb40b666b9c94709a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 498856737}
   animator: {fileID: 1571957879}
   mainCamera: {fileID: 900496743}
   fireballPrefab: {fileID: 2074061724701706938, guid: 17625f416e37653488d596718d7d58c2,
     type: 3}
   fireballSpawnPoint: {fileID: 851542233}
   fireballSpeed: 10
+  movementSpeed: 10
+  rotationSpeed: 10
 --- !u!1 &537746792
 GameObject:
   m_ObjectHideFlags: 0
@@ -879,6 +880,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Magician_RIO
+      objectReference: {fileID: 0}
+    - target: {fileID: 7940719953895527930, guid: 6a3c3c37133b6ae4d9590995c8166d88,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
