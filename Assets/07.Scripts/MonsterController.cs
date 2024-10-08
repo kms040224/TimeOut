@@ -15,6 +15,7 @@ public class MonsterController : MonoBehaviour
     public float separationDistance = 1.5f; // 몬스터들 간의 거리
     private NavMeshAgent agent;
     public Transform player; // 플레이어의 Transform
+    private FlockingManager flockingManager; // FlockingManager 참조
 
     void Start()
     {
@@ -23,9 +24,24 @@ public class MonsterController : MonoBehaviour
         // "Player" 태그를 가진 오브젝트 찾기
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
+        // FlockingManager 찾기
+        flockingManager = FindObjectOfType<FlockingManager>();
+        if (flockingManager != null)
+        {
+            flockingManager.RegisterMonster(this); // FlockingManager에 등록
+        }
+
         if (player == null)
         {
             Debug.LogError("Player not found in the scene. Make sure the player has the 'Player' tag.");
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (flockingManager != null)
+        {
+            flockingManager.UnregisterMonster(this); // 제거될 때 FlockingManager에서 등록 해제
         }
     }
 
@@ -67,7 +83,7 @@ public class MonsterController : MonoBehaviour
         }
     }
 
-    Vector3 FlockingBehavior()
+    public Vector3 FlockingBehavior() // 접근 제한을 public으로 변경
     {
         Vector3 separationForce = CalculateSeparation();
         Vector3 alignmentForce = CalculateAlignment();
