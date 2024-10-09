@@ -8,8 +8,6 @@ public class CharacterController : MonoBehaviour
     public Camera mainCamera;   // 메인 카메라
     public GameObject fireballPrefab;  // 발사할 파이어볼 프리팹
     public Transform fireballSpawnPoint;  // 파이어볼이 발사될 위치
-    public float fireballSpeed = 10f;    // 파이어볼 속도
-
     public float movementSpeed = 10f;    // 이동 속도
     public float rotationSpeed = 10f;    // 회전 속도
     private Vector3 destinationPoint;    // 이동할 목표 지점
@@ -107,11 +105,12 @@ public class CharacterController : MonoBehaviour
             // 파이어볼을 생성하고 발사 방향 설정
             GameObject fireball = Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
 
-            // 마우스 커서가 가리키는 방향으로 파이어볼을 날아가게 설정
-            Vector3 fireballDirection = (hit.point - fireballSpawnPoint.position).normalized;
-            fireballDirection.y = 0; // 쿼터뷰에서 Y축(높이)을 고정하여 수평으로만 이동하게 설정
-
-            fireball.GetComponent<Rigidbody>().velocity = fireballDirection * fireballSpeed;
+            // 파이어볼의 FireballController 스크립트를 가져와서 발사
+            FireballController fireballController = fireball.GetComponent<FireballController>();
+            if (fireballController != null)
+            {
+                fireballController.Launch(hit.point); // 마우스 커서 위치 전달
+            }
 
             Debug.Log("Fireball shot towards: " + hit.point);
         }

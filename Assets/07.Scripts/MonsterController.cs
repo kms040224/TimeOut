@@ -17,18 +17,17 @@ public class MonsterController : MonoBehaviour
     public Transform player; // 플레이어의 Transform
     private FlockingManager flockingManager; // FlockingManager 참조
 
+    public int health = 100; // 몬스터의 체력
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-
-        // "Player" 태그를 가진 오브젝트 찾기
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
-        // FlockingManager 찾기
         flockingManager = FindObjectOfType<FlockingManager>();
+
         if (flockingManager != null)
         {
-            flockingManager.RegisterMonster(this); // FlockingManager에 등록
+            flockingManager.RegisterMonster(this);
         }
 
         if (player == null)
@@ -41,7 +40,7 @@ public class MonsterController : MonoBehaviour
     {
         if (flockingManager != null)
         {
-            flockingManager.UnregisterMonster(this); // 제거될 때 FlockingManager에서 등록 해제
+            flockingManager.UnregisterMonster(this);
         }
     }
 
@@ -50,16 +49,12 @@ public class MonsterController : MonoBehaviour
         if (player == null)
         {
             Debug.LogError("Player reference is null! Make sure the player is set.");
-            return; // 플레이어가 없으면 업데이트 중지
+            return;
         }
 
-        // 플레이어와의 거리 계산
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-
-        // 몬스터가 플레이어에게 이동
         MoveToPlayer();
 
-        // 공격 조건 확인
         if (distanceToPlayer <= stopDistance)
         {
             Attack();
@@ -70,7 +65,6 @@ public class MonsterController : MonoBehaviour
     {
         if (agent != null && player != null)
         {
-            // 플로킹 동작 추가
             Vector3 flockingForce = FlockingBehavior();
             Vector3 targetPosition = player.position + flockingForce;
 
@@ -83,13 +77,12 @@ public class MonsterController : MonoBehaviour
         }
     }
 
-    public Vector3 FlockingBehavior() // 접근 제한을 public으로 변경
+    public Vector3 FlockingBehavior()
     {
         Vector3 separationForce = CalculateSeparation();
         Vector3 alignmentForce = CalculateAlignment();
         Vector3 cohesionForce = CalculateCohesion();
 
-        // 힘들을 더하고 반환
         return separationForce + alignmentForce + cohesionForce;
     }
 
@@ -100,14 +93,13 @@ public class MonsterController : MonoBehaviour
 
         foreach (Collider neighbor in neighbors)
         {
-            if (neighbor != this.GetComponent<Collider>()) // 자기 자신 제외
+            if (neighbor != this.GetComponent<Collider>())
             {
                 float distance = Vector3.Distance(transform.position, neighbor.transform.position);
                 if (distance < separationDistance)
                 {
-                    // 몬스터들 간의 분리 힘 계산
                     Vector3 direction = (transform.position - neighbor.transform.position).normalized;
-                    force += direction / distance; // 가까울수록 힘이 강해지도록
+                    force += direction / distance;
                 }
             }
         }
@@ -116,20 +108,18 @@ public class MonsterController : MonoBehaviour
 
     Vector3 CalculateAlignment()
     {
-        // 주변 몬스터 찾기
         Collider[] nearbyMonsters = Physics.OverlapSphere(transform.position, flockingRadius);
-
         Vector3 alignment = Vector3.zero;
         int count = 0;
 
         foreach (Collider monster in nearbyMonsters)
         {
-            if (monster.transform != transform) // 자신을 제외
+            if (monster.transform != transform)
             {
                 MonsterController otherMonster = monster.GetComponent<MonsterController>();
-                if (otherMonster != null) // null 체크
+                if (otherMonster != null)
                 {
-                    alignment += otherMonster.agent.velocity; // 다른 몬스터의 속도 추가
+                    alignment += otherMonster.agent.velocity;
                     count++;
                 }
             }
@@ -137,9 +127,9 @@ public class MonsterController : MonoBehaviour
 
         if (count > 0)
         {
-            alignment /= count; // 평균 속도 계산
-            alignment = alignment.normalized * moveSpeed; // 속도를 설정
-            alignment -= agent.velocity; // 현재 속도와의 차이
+            alignment /= count;
+            alignment = alignment.normalized * moveSpeed;
+            alignment -= agent.velocity;
         }
 
         return alignment;
@@ -155,7 +145,7 @@ public class MonsterController : MonoBehaviour
         {
             if (neighbor != this.GetComponent<Collider>())
             {
-                centerOfMass += neighbor.transform.position; // 주변 몬스터의 중심 계산
+                centerOfMass += neighbor.transform.position;
                 count++;
             }
         }
@@ -163,7 +153,7 @@ public class MonsterController : MonoBehaviour
         if (count > 0)
         {
             centerOfMass /= count;
-            return (centerOfMass - transform.position).normalized; // 응집 힘 반환
+            return (centerOfMass - transform.position).normalized;
         }
         return Vector3.zero;
     }
@@ -172,10 +162,28 @@ public class MonsterController : MonoBehaviour
     {
         if (Time.time >= nextAttackTime)
         {
-            // 공격 로직 구현 (애니메이션, 데미지 처리 등)
             Debug.Log("Attack the player!");
-
             nextAttackTime = Time.time + attackRate;
         }
+    }
+
+    // 몬스터가 피해를 입는 메서드
+    public void TakeDamage(int damage)
+    {
+        health -= damage; // 체력 감소
+        Debug.Log("Monster took damage! Current health: " + health);
+
+        // 체력이 0 이하가 되면 몬스터 사망 처리
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
+    // 몬스터 사망 처리 메서드
+    private void Die()
+    {
+        Debug.Log("Monster died!");
+        Destroy(gameObject); // 몬스터 오브젝트 삭제
     }
 }
