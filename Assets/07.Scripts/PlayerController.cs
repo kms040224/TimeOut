@@ -67,7 +67,7 @@ public class CharacterController : MonoBehaviour
         }
 
         // Q 키를 눌렀을 때 파이어볼 발사 및 캐릭터 회전
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             AimAtCursorInstantly(); // 마우스 커서 방향으로 즉시 캐릭터 회전
             ShootFireball(); // 파이어볼 발사
