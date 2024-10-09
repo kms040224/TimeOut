@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f;    // 회전 속도
     public float flamethrowerDuration = 1.5f; // 화염방사기 지속 시간
     public float flamethrowerCooldown = 12f; // 화염방사기 쿨타임
-    public int health = 100;
     public Slider healthSlider;
 
     private Vector3 destinationPoint;    // 이동할 목표 지점
@@ -32,16 +31,40 @@ public class PlayerController : MonoBehaviour
 
         if (mainCamera == null)
             mainCamera = Camera.main;
+
         if (GameOverPanel != null)
             GameOverPanel.SetActive(false);
-        UpdateHealthBar();
+
+        // PlayerHealthManager의 인스턴스가 null인지 체크
+        if (PlayerHealthManager.Instance != null)
+        {
+            UpdateHealthBar(); // 체력 바 업데이트
+        }
+        else
+        {
+            Debug.LogError("PlayerHealthManager 인스턴스가 null입니다. PlayerHealthManager가 씬에 추가되어 있는지 확인하세요.");
+        }
+
+        // healthSlider가 null인지 체크
+        if (healthSlider == null)
+        {
+            Debug.LogError("Health Slider가 할당되지 않았습니다.");
+        }
     }
 
     void Update()
     {
-        if (health <= 0)
+        // PlayerHealthManager 인스턴스 확인
+        if (PlayerHealthManager.Instance != null)
         {
-            return;
+            UpdateHealthBar(); // 체력 바 업데이트
+        }
+
+        // 체력이 0 이하이면 더 이상 업데이트하지 않음
+        if (PlayerHealthManager.Instance.health <= 0)
+        {
+            Die();
+            return; // 죽으면 업데이트 종료
         }
 
         // 쿨타임이 끝났고 화염방사기를 사용 중이 아닐 때 Q 키 감지
@@ -107,8 +130,20 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // 마우스 커서 방향으로 캐릭터 회전
-    void AimAtCursor()
+    private void UpdateHealthBar()
+    {
+        // healthSlider가 null이 아닌 경우에만 업데이트
+        if (healthSlider != null)
+        {
+            healthSlider.value = (float)PlayerHealthManager.Instance.CurrentHealth / PlayerHealthManager.Instance.maxHealth; // 슬라이더 값 업데이트
+        }
+        else
+        {
+            Debug.LogError("Health Slider가 null입니다.");
+        }
+    }
+
+    private void AimAtCursor()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -182,20 +217,10 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        health -= damage; // 체력 감소
-        health = Mathf.Clamp(health, 0, 100); // 체력 제한 (최대 100으로 설정)
-        UpdateHealthBar();
+        PlayerHealthManager.Instance.TakeDamage(damage);
+        UpdateHealthBar(); // 체력 바 업데이트
+    }
 
-        // 체력이 0 이하가 되면 플레이어 사망 처리
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-    private void UpdateHealthBar()
-    {
-        healthSlider.value = (float)health / 100; // 슬라이더 값 업데이트
-    }
     private void Die()
     {
         Debug.Log("Player died!");

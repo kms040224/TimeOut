@@ -649,7 +649,6 @@ MonoBehaviour:
   rotationSpeed: 5
   flamethrowerDuration: 1.5
   flamethrowerCooldown: 12
-  health: 100
   healthSlider: {fileID: 1253290009}
 --- !u!1 &537746792
 GameObject:
@@ -1483,7 +1482,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: b009f759712da314cb3d2bd3393a0061, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
