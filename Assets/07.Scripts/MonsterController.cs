@@ -16,6 +16,7 @@ public class MonsterController : MonoBehaviour
     private NavMeshAgent agent;
     public Transform player; // 플레이어의 Transform
     private FlockingManager flockingManager; // FlockingManager 참조
+    private PlayerController playerController;
 
     public int health = 100; // 몬스터의 체력
 
@@ -34,6 +35,7 @@ public class MonsterController : MonoBehaviour
         {
             Debug.LogError("Player not found in the scene. Make sure the player has the 'Player' tag.");
         }
+        playerController = player.GetComponent<PlayerController>();
     }
 
     void OnDestroy()
@@ -164,6 +166,10 @@ public class MonsterController : MonoBehaviour
         {
             Debug.Log("Attack the player!");
             nextAttackTime = Time.time + attackRate;
+            if (playerController != null)
+            {
+                playerController.TakeDamage(10); // 플레이어에게 10의 데미지를 입힘
+            }
         }
     }
 

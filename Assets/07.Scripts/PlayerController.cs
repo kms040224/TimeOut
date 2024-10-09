@@ -8,17 +8,20 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;   // 메인 카메라
     public GameObject fireballPrefab;  // 발사할 파이어볼 프리팹
     public GameObject flamethrowerPrefab; // 사용할 화염방사기 프리팹
+    public GameObject GameOverPanel;
     public Transform fireballSpawnPoint;  // 파이어볼이 발사될 위치
     public Transform flamethrowerSpawnPoint; // 화염방사기 발사 위치
     public float movementSpeed = 10f;    // 이동 속도
     public float rotationSpeed = 10f;    // 회전 속도
     public float flamethrowerDuration = 1.5f; // 화염방사기 지속 시간
     public float flamethrowerCooldown = 12f; // 화염방사기 쿨타임
+    public int health = 100;
 
     private Vector3 destinationPoint;    // 이동할 목표 지점
     private bool shouldMove = false;     // 이동 중 여부
     private bool isUsingFlamethrower = false; // 화염방사기 사용 중 여부
     private float flamethrowerCooldownTimer = 0f; // 화염방사기 쿨타임 타이머
+
 
     void Start()
     {
@@ -27,10 +30,17 @@ public class PlayerController : MonoBehaviour
 
         if (mainCamera == null)
             mainCamera = Camera.main;
+        if (GameOverPanel != null)
+            GameOverPanel.SetActive(false);
     }
 
     void Update()
     {
+        if (health <= 0)
+        {
+            return;
+        }
+
         // 쿨타임이 끝났고 화염방사기를 사용 중이 아닐 때 Q 키 감지
         if (Input.GetKeyDown(KeyCode.Q) && !isUsingFlamethrower && flamethrowerCooldownTimer <= 0)
         {
@@ -165,6 +175,25 @@ public class PlayerController : MonoBehaviour
             }
 
             Debug.Log("Fireball shot towards: " + hit.point);
+        }
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage; // 체력 감소
+        Debug.Log("Player took damage! Current health: " + health);
+
+        // 체력이 0 이하가 되면 플레이어 사망 처리
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+    private void Die()
+    {
+        Debug.Log("Player died!");
+        if (GameOverPanel != null)
+        {
+            GameOverPanel.SetActive(true);
         }
     }
 }
