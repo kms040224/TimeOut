@@ -441,7 +441,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -504,9 +504,14 @@ MonoBehaviour:
   mainCamera: {fileID: 900496743}
   fireballPrefab: {fileID: 2074061724701706938, guid: 17625f416e37653488d596718d7d58c2,
     type: 3}
+  flamethrowerPrefab: {fileID: 5277023610010231033, guid: a2817ff0850e3d348a5521c42fb8bd99,
+    type: 3}
   fireballSpawnPoint: {fileID: 851542233}
+  flamethrowerSpawnPoint: {fileID: 851542233}
   movementSpeed: 5
   rotationSpeed: 5
+  flamethrowerDuration: 1.5
+  flamethrowerCooldown: 12
 --- !u!1 &537746792
 GameObject:
   m_ObjectHideFlags: 0
