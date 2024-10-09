@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public float flamethrowerDuration = 1.5f; // 화염방사기 지속 시간
     public float flamethrowerCooldown = 12f; // 화염방사기 쿨타임
     public int health = 100;
+    public Slider healthSlider;
 
     private Vector3 destinationPoint;    // 이동할 목표 지점
     private bool shouldMove = false;     // 이동 중 여부
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour
             mainCamera = Camera.main;
         if (GameOverPanel != null)
             GameOverPanel.SetActive(false);
+        UpdateHealthBar();
     }
 
     void Update()
@@ -180,13 +183,18 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage; // 체력 감소
-        Debug.Log("Player took damage! Current health: " + health);
+        health = Mathf.Clamp(health, 0, 100); // 체력 제한 (최대 100으로 설정)
+        UpdateHealthBar();
 
         // 체력이 0 이하가 되면 플레이어 사망 처리
         if (health <= 0)
         {
             Die();
         }
+    }
+    private void UpdateHealthBar()
+    {
+        healthSlider.value = (float)health / 100; // 슬라이더 값 업데이트
     }
     private void Die()
     {

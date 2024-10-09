@@ -165,6 +165,7 @@ public class MonsterController : MonoBehaviour
         if (Time.time >= nextAttackTime)
         {
             Debug.Log("Attack the player!");
+            PlayerController playerController = player.GetComponent<PlayerController>();
             nextAttackTime = Time.time + attackRate;
             if (playerController != null)
             {
