@@ -5,24 +5,33 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public Animator animator;   // 캐릭터의 Animator
-    public Camera mainCamera;   // 메인 카메라
-    public GameObject fireballPrefab;  // 발사할 파이어볼 프리팹
-    public GameObject flamethrowerPrefab; // 사용할 화염방사기 프리팹
+    public Animator animator;
+    public Camera mainCamera;
+    public GameObject fireballPrefab;
+    public GameObject flamethrowerPrefab;
+    public GameObject fireOrbPrefab;  // 화염구체 프리팹 추가
+    public GameObject areaEffectPrefab; // 장판 프리팹 추가
+    public GameObject meteorPrefab;
     public GameObject GameOverPanel;
-    public Transform fireballSpawnPoint;  // 파이어볼이 발사될 위치
-    public Transform flamethrowerSpawnPoint; // 화염방사기 발사 위치
-    public float movementSpeed = 10f;    // 이동 속도
-    public float rotationSpeed = 10f;    // 회전 속도
-    public float flamethrowerDuration = 1.5f; // 화염방사기 지속 시간
-    public float flamethrowerCooldown = 12f; // 화염방사기 쿨타임
+    public Transform fireballSpawnPoint;
+    public Transform flamethrowerSpawnPoint;
+    public float movementSpeed = 10f;
+    public float rotationSpeed = 10f;
+    public float flamethrowerDuration = 1.5f;
+    public float flamethrowerCooldown = 12f;
     public Slider healthSlider;
+    public float teleportDistance = 1f; // 순간이동 거리 설정
+    public float teleportCooldown = 8.0f;
+    private float lastTeleportTime = -8.0f;
+    public float areaEffectCooldown = 10.0f; // 장판 쿨타임 설정
+    private float lastAreaEffectTime = -10.0f; // 장판 쿨타임 초기화
+    public float meteorCooldown = 40f; // 메테오 쿨타임 설정
+    private float lastMeteorTime = -40f; // 메테오 쿨타임 초기화
 
-    private Vector3 destinationPoint;    // 이동할 목표 지점
-    private bool shouldMove = false;     // 이동 중 여부
-    private bool isUsingFlamethrower = false; // 화염방사기 사용 중 여부
-    private float flamethrowerCooldownTimer = 0f; // 화염방사기 쿨타임 타이머
-
+    private Vector3 destinationPoint;
+    private bool shouldMove = false;
+    private bool isUsingFlamethrower = false;
+    private float flamethrowerCooldownTimer = 0f;
 
     void Start()
     {
@@ -35,7 +44,6 @@ public class PlayerController : MonoBehaviour
         if (GameOverPanel != null)
             GameOverPanel.SetActive(false);
 
-        // PlayerHealthManager의 인스턴스가 null인지 체크
         if (PlayerHealthManager.Instance != null)
         {
             UpdateHealthBar(); // 체력 바 업데이트
@@ -45,7 +53,6 @@ public class PlayerController : MonoBehaviour
             Debug.LogError("PlayerHealthManager 인스턴스가 null입니다. PlayerHealthManager가 씬에 추가되어 있는지 확인하세요.");
         }
 
-        // healthSlider가 null인지 체크
         if (healthSlider == null)
         {
             Debug.LogError("Health Slider가 할당되지 않았습니다.");
@@ -54,39 +61,33 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // PlayerHealthManager 인스턴스 확인
         if (PlayerHealthManager.Instance != null)
         {
-            UpdateHealthBar(); // 체력 바 업데이트
+            UpdateHealthBar();
         }
 
-        // 체력이 0 이하이면 더 이상 업데이트하지 않음
         if (PlayerHealthManager.Instance.health <= 0)
         {
             Die();
-            return; // 죽으면 업데이트 종료
+            return;
         }
 
-        // 쿨타임이 끝났고 화염방사기를 사용 중이 아닐 때 Q 키 감지
         if (Input.GetKeyDown(KeyCode.Q) && !isUsingFlamethrower && flamethrowerCooldownTimer <= 0)
         {
-            AimAtCursor(); // 마우스 커서 방향으로 즉시 캐릭터 회전
+            AimAtCursor();
             StartCoroutine(UseFlamethrower());
         }
 
-        // 쿨타임 타이머 업데이트
         if (flamethrowerCooldownTimer > 0)
         {
             flamethrowerCooldownTimer -= Time.deltaTime;
         }
 
-        // 마우스 우클릭 감지 (이동)
         if (Input.GetMouseButtonDown(1) && !isUsingFlamethrower)
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            // 땅을 클릭한 경우 캐릭터 이동
             if (Physics.Raycast(ray, out hit, 100f))
             {
                 if (hit.collider.CompareTag("Ground"))
@@ -97,45 +98,52 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        // 이동 관련 처리
         if (shouldMove && !isUsingFlamethrower)
         {
-            // 목표 지점을 향해 회전
             Quaternion targetRotation = Quaternion.LookRotation(destinationPoint - transform.position);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            // 목표 지점으로 이동
             transform.position = Vector3.MoveTowards(transform.position, destinationPoint, movementSpeed * Time.deltaTime);
 
-            // 캐릭터가 도착했을 때 이동 멈춤
             if (transform.position == destinationPoint)
             {
                 shouldMove = false;
             }
 
-            // 걷는 애니메이션 활성화
             animator.SetBool("isWalking", true);
         }
         else
         {
-            // 캐릭터가 멈췄을 때 애니메이션 중지
             animator.SetBool("isWalking", false);
         }
 
-        // A 키를 눌렀을 때 파이어볼 발사 및 캐릭터 회전
         if (Input.GetKeyDown(KeyCode.A) && !isUsingFlamethrower)
         {
-            AimAtCursor(); // 마우스 커서 방향으로 즉시 캐릭터 회전
-            ShootFireball(); // 파이어볼 발사
+            AimAtCursor();
+            ShootFireball();
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            TeleportAndSpawnFireOrbs();
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            LayDownAreaEffect();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            LaunchMeteor();
         }
     }
 
     private void UpdateHealthBar()
     {
-        // healthSlider가 null이 아닌 경우에만 업데이트
         if (healthSlider != null)
         {
-            healthSlider.value = (float)PlayerHealthManager.Instance.CurrentHealth / PlayerHealthManager.Instance.maxHealth; // 슬라이더 값 업데이트
+            healthSlider.value = (float)PlayerHealthManager.Instance.CurrentHealth / PlayerHealthManager.Instance.maxHealth;
         }
         else
         {
@@ -150,75 +158,173 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            // 마우스 클릭 지점과 캐릭터의 위치 차이로 회전 방향 설정
             Vector3 direction = (hit.point - transform.position).normalized;
-            direction.y = 0;  // Y축 회전 제거
+            direction.y = 0;
 
-            // 회전할 방향을 LookRotation으로 설정
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            // 캐릭터의 회전을 즉시 적용
             transform.rotation = lookRotation;
         }
     }
 
-    // 화염방사기 사용 코루틴
     private IEnumerator UseFlamethrower()
     {
         isUsingFlamethrower = true;
 
-        // 화염방사기 애니메이션 시작
         animator.SetBool("isUsingFlamethrower", true);
 
-        // 마우스 커서 방향으로 화염방사기 발사
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
-            // 화염방사기 프리팹을 생성하여 발사
             GameObject flamethrower = Instantiate(flamethrowerPrefab, flamethrowerSpawnPoint.position, Quaternion.identity);
-            flamethrower.transform.LookAt(hit.point); // 화염방사기를 마우스 커서 방향으로 회전
+            flamethrower.transform.LookAt(hit.point);
 
-            // 화염방사기 사용 시간 대기
             yield return new WaitForSeconds(flamethrowerDuration);
         }
 
-        // 화염방사기 애니메이션 종료
         animator.SetBool("isUsingFlamethrower", false);
-
-        // 쿨타임 설정
         flamethrowerCooldownTimer = flamethrowerCooldown;
-
-        // 화염방사기 사용 종료
         isUsingFlamethrower = false;
     }
 
-    // 파이어볼 발사
     void ShootFireball()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
-        // 마우스 커서가 닿은 지점을 계산
         if (Physics.Raycast(ray, out hit))
         {
-            // 파이어볼을 생성하고 발사 방향 설정
             GameObject fireball = Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
-
-            // 파이어볼의 FireballController 스크립트를 가져와서 발사
             FireballController fireballController = fireball.GetComponent<FireballController>();
+
             if (fireballController != null)
             {
-                fireballController.Launch(hit.point); // 마우스 커서 위치 전달
+                fireballController.Launch(hit.point);
             }
 
             Debug.Log("Fireball shot towards: " + hit.point);
         }
     }
+
+    // 마우스 방향으로 캐릭터를 1만큼 순간이동하고 화염구체를 생성하는 메서드
+    void TeleportAndSpawnFireOrbs()
+    {
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastTeleportTime < teleportCooldown)
+        {
+            Debug.Log("스킬이 아직 쿨타임 중입니다.");
+            return;
+        }
+
+        // 순간이동할 수 있는 경우, 현재 시간을 기록
+        lastTeleportTime = Time.time;
+
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Vector3 teleportDirection = (hit.point - transform.position).normalized;
+            teleportDirection.y = 0;
+            transform.position += teleportDirection * teleportDistance;
+
+            // 캐릭터 주위에 두 개의 화염구체 생성
+            SpawnFireOrbs();
+        }
+    }
+
+    // 화염구체를 생성하고 가장 가까운 몬스터를 향해 날아가게 하는 메서드
+    void SpawnFireOrbs()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            GameObject fireOrb = Instantiate(fireOrbPrefab, transform.position + (Vector3.right * (i == 0 ? 1 : -1)), Quaternion.identity);
+            FireOrbController fireOrbController = fireOrb.GetComponent<FireOrbController>();
+
+            if (fireOrbController != null)
+            {
+                GameObject nearestMonster = FindNearestMonster();
+                if (nearestMonster != null)
+                {
+                    fireOrbController.SetTarget(nearestMonster.transform);
+                }
+            }
+        }
+    }
+
+    // 가장 가까운 몬스터를 찾는 메서드
+    GameObject FindNearestMonster()
+    {
+        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
+        GameObject nearestMonster = null;
+        float minDistance = Mathf.Infinity;
+
+        foreach (GameObject monster in monsters)
+        {
+            float distance = Vector3.Distance(transform.position, monster.transform.position);
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestMonster = monster;
+            }
+        }
+
+        return nearestMonster;
+    }
+
+    // 장판을 깔고 쿨타임을 관리하는 메서드
+    void LayDownAreaEffect()
+    {
+        if (Time.time - lastAreaEffectTime < areaEffectCooldown)
+        {
+            Debug.Log("장판 쿨타임 중입니다.");
+            return;
+        }
+
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            // 장판 생성
+            Vector3 areaEffectPosition = new Vector3(hit.point.x, hit.point.y + 0.1f, hit.point.z);
+            Instantiate(areaEffectPrefab, hit.point, Quaternion.identity);
+            lastAreaEffectTime = Time.time; // 현재 시간을 기록하여 쿨타임 관리
+        }
+    }
+
+    void LaunchMeteor()
+    {
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastMeteorTime < meteorCooldown)
+        {
+            Debug.Log("메테오 쿨타임 중입니다.");
+            return;
+        }
+
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            // 메테오 생성
+            GameObject meteor = Instantiate(meteorPrefab, transform.position, Quaternion.identity);
+            MeteorController meteorController = meteor.GetComponent<MeteorController>();
+
+            if (meteorController != null)
+            {
+                meteorController.Launch(hit.point); // 메테오 발사
+            }
+
+            lastMeteorTime = Time.time; // 현재 시간을 기록하여 쿨타임 관리
+        }
+    }
+
     public void TakeDamage(int damage)
     {
         PlayerHealthManager.Instance.TakeDamage(damage);
-        UpdateHealthBar(); // 체력 바 업데이트
+        UpdateHealthBar();
     }
 
     private void Die()

@@ -580,6 +580,12 @@ MonoBehaviour:
   fireballPrefab: {fileID: 2074061724701706938, guid: 17625f416e37653488d596718d7d58c2,
     type: 3}
   flamethrowerPrefab: {fileID: 1313965333}
+  fireOrbPrefab: {fileID: 4949368458191691870, guid: 1443bc937ff99a44a91fb5b5c4d2347a,
+    type: 3}
+  areaEffectPrefab: {fileID: 8563992477214407658, guid: 9ab1863477e875f4aa10367942d3b698,
+    type: 3}
+  meteorPrefab: {fileID: 7111896838402939154, guid: 8107478d7075b7944bf072d49ffe9c16,
+    type: 3}
   GameOverPanel: {fileID: 2018132163}
   fireballSpawnPoint: {fileID: 851542233}
   flamethrowerSpawnPoint: {fileID: 851542233}
@@ -588,6 +594,10 @@ MonoBehaviour:
   flamethrowerDuration: 1.5
   flamethrowerCooldown: 12
   healthSlider: {fileID: 696685624}
+  teleportDistance: 1
+  teleportCooldown: 8
+  areaEffectCooldown: 10
+  meteorCooldown: 40
 --- !u!1 &537746792
 GameObject:
   m_ObjectHideFlags: 0
