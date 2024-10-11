@@ -575,7 +575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f439913c4096fdb40b666b9c94709a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1571957879}
+  animator: {fileID: 498856740}
   mainCamera: {fileID: 900496743}
   fireballPrefab: {fileID: 2074061724701706938, guid: 17625f416e37653488d596718d7d58c2,
     type: 3}
@@ -598,6 +598,40 @@ MonoBehaviour:
   teleportCooldown: 8
   areaEffectCooldown: 10
   meteorCooldown: 40
+--- !u!114 &498856739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498856732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68d7b5124d2273246b974ce44729583e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+--- !u!95 &498856740
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498856732}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 35c44a97c30e4e946a0f4d3310613b95, type: 3}
+  m_Controller: {fileID: 9100000, guid: 9c2a25e35e471d64d8307e48180090c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &537746792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1849,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2640996444692788344, guid: 6a3c3c37133b6ae4d9590995c8166d88, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5251107426523682287, guid: 6a3c3c37133b6ae4d9590995c8166d88,
@@ -1839,13 +1874,15 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 498856738}
+    - targetCorrespondingSourceObject: {fileID: 7940719953895527930, guid: 6a3c3c37133b6ae4d9590995c8166d88,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 498856739}
+    - targetCorrespondingSourceObject: {fileID: 7940719953895527930, guid: 6a3c3c37133b6ae4d9590995c8166d88,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 498856740}
   m_SourcePrefab: {fileID: 100100000, guid: 6a3c3c37133b6ae4d9590995c8166d88, type: 3}
---- !u!95 &1571957879 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2640996444692788344, guid: 6a3c3c37133b6ae4d9590995c8166d88,
-    type: 3}
-  m_PrefabInstance: {fileID: 1544643603}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904432557
 GameObject:
   m_ObjectHideFlags: 0
