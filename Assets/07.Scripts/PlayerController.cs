@@ -27,6 +27,10 @@ public class PlayerController : MonoBehaviour
     private float lastAreaEffectTime = -10.0f; // 장판 쿨타임 초기화
     public float meteorCooldown = 40f; // 메테오 쿨타임 설정
     private float lastMeteorTime = -40f; // 메테오 쿨타임 초기화
+    public float rollSpeed = 15f; // 굴러가는 속도
+    public float rollDistance = 3f; // 굴러가는 거리
+    public float rollCooldown = 5f; // 굴러가는 쿨타임 설정
+    private float lastRollTime = -5f; // 굴러가기 쿨타임 초기화
 
     private Vector3 destinationPoint;
     private bool shouldMove = false;
@@ -136,6 +140,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             LaunchMeteor();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            RollTowardsCursor();
         }
     }
 
@@ -318,6 +327,36 @@ public class PlayerController : MonoBehaviour
             }
 
             lastMeteorTime = Time.time; // 현재 시간을 기록하여 쿨타임 관리
+        }
+    }
+
+    void RollTowardsCursor()
+    {
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastRollTime < rollCooldown)
+        {
+            Debug.Log("구르기 스킬이 아직 쿨타임 중입니다.");
+            return;
+        }
+
+        lastRollTime = Time.time; // 마지막 구르기 시간 갱신
+
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit))
+        {
+            Vector3 rollDirection = (hit.point - transform.position).normalized;
+            rollDirection.y = 0;
+
+            // 캐릭터 굴러가는 애니메이션 트리거
+            animator.SetTrigger("Roll");
+
+            // 캐릭터 위치 이동
+            Vector3 rollTargetPosition = transform.position + rollDirection * rollDistance;
+            transform.position = Vector3.Lerp(transform.position, rollTargetPosition, rollSpeed * Time.deltaTime);
+
+            Debug.Log("캐릭터가 굴러서 이동: " + rollTargetPosition);
         }
     }
 
