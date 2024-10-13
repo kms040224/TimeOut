@@ -144,7 +144,11 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            RollTowardsCursor();
+            if (Time.time - lastRollTime >= rollCooldown) // 쿨타임 체크
+            {
+                AimAtCursor();
+                StartCoroutine(RollTowardsCursor());
+            }
         }
     }
 
@@ -330,13 +334,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void RollTowardsCursor()
+    IEnumerator RollTowardsCursor()
     {
         // 쿨타임이 지나지 않았으면 실행하지 않음
         if (Time.time - lastRollTime < rollCooldown)
         {
             Debug.Log("구르기 스킬이 아직 쿨타임 중입니다.");
-            return;
+            yield break; // Coroutine 종료
         }
 
         lastRollTime = Time.time; // 마지막 구르기 시간 갱신
@@ -352,10 +356,22 @@ public class PlayerController : MonoBehaviour
             // 캐릭터 굴러가는 애니메이션 트리거
             animator.SetTrigger("Roll");
 
-            // 캐릭터 위치 이동
-            Vector3 rollTargetPosition = transform.position + rollDirection * rollDistance;
-            transform.position = Vector3.Lerp(transform.position, rollTargetPosition, rollSpeed * Time.deltaTime);
+            Vector3 startPosition = transform.position; // 시작 위치
+            Vector3 rollTargetPosition = transform.position + rollDirection * rollDistance; // 목표 위치
+            float elapsedTime = 0f; // 경과 시간
+            float rollDuration = rollDistance / rollSpeed; // 구르기 시간
 
+            while (elapsedTime < rollDuration)
+            {
+                // 경과 시간 업데이트
+                elapsedTime += Time.deltaTime;
+                // 현재 위치를 보간하여 이동
+                transform.position = Vector3.Lerp(startPosition, rollTargetPosition, elapsedTime / rollDuration);
+                yield return null; // 다음 프레임까지 대기
+            }
+
+            // 최종 위치 설정
+            transform.position = rollTargetPosition;
             Debug.Log("캐릭터가 굴러서 이동: " + rollTargetPosition);
         }
     }
