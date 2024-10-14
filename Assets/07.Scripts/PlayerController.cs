@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public float rollDistance = 3f; // 굴러가는 거리
     public float rollCooldown = 5f; // 굴러가는 쿨타임 설정
     private float lastRollTime = -5f; // 굴러가기 쿨타임 초기화
+    public AniController aniController;
 
     private Vector3 destinationPoint;
     private bool shouldMove = false;
@@ -112,14 +113,19 @@ public class PlayerController : MonoBehaviour
             if (transform.position == destinationPoint)
             {
                 shouldMove = false;
+                animator.SetBool("isMoving", false); // 멈췄을 때 애니메이션 중지
+            }
+            else
+            {
+                animator.SetBool("isMoving", true); // 이동 중 애니메이션 재생
             }
 
-            animator.SetBool("isWalking", true);
         }
         else
         {
-            animator.SetBool("isWalking", false);
+            animator.SetBool("isMoving", false);
         }
+
 
         if (Input.GetKeyDown(KeyCode.A) && !isUsingFlamethrower)
         {

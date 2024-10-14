@@ -756,6 +756,7 @@ MonoBehaviour:
   rollSpeed: 15
   rollDistance: 3
   rollCooldown: 5
+  aniController: {fileID: 498856739}
 --- !u!114 &498856739
 MonoBehaviour:
   m_ObjectHideFlags: 0
