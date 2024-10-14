@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6840211929182813501}
   - component: {fileID: 5963566115254753139}
   - component: {fileID: 2489923775100223554}
+  - component: {fileID: -6636023636666791691}
   m_Layer: 0
   m_Name: CH01_Wall_Tile_03_01
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-6636023636666791691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4101428533546663086}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 1.7966335, z: 100}
+  m_Center: {x: -50, y: 0.89831674, z: -50}

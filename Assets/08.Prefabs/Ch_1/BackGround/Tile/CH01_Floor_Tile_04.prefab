@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3338146232366354589}
   - component: {fileID: 8724946480477969716}
   - component: {fileID: 5808380026876339690}
+  - component: {fileID: -2815968527132867412}
   m_Layer: 0
   m_Name: CH01_Floor_Tile_04
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-2815968527132867412
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3298352281340524550}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 100, y: 3.16256, z: 100}
+  m_Center: {x: -50.000008, y: 1.58128, z: -49.99997}
