@@ -84,4 +84,12 @@ public class GameManager : MonoBehaviour
             doors[currentSpawnAreaIndex].SetActive(true); // 다음 구간으로의 문 닫기
         }
     }
+    public void ToggleDoor(int index, bool isActive)
+    {
+        if (index >= 0 && index < doors.Length)
+        {
+            doors[index].SetActive(isActive);
+            Debug.Log($"구역 {index}의 문이 {(isActive ? "활성화" : "비활성화")}되었습니다.");
+        }
+    }
 }

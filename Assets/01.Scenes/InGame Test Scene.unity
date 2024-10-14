@@ -485,7 +485,7 @@ Transform:
   m_GameObject: {fileID: 291761220}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.683548, y: 6.936451, z: 1.7712822}
+  m_LocalPosition: {x: 39.683548, y: 0, z: 1.7712822}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -724,7 +724,7 @@ Transform:
   m_GameObject: {fileID: 345629377}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.563547, y: 6.936451, z: 1.7712822}
+  m_LocalPosition: {x: 28.563547, y: 5.649, z: 6.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -914,7 +914,7 @@ MonoBehaviour:
   areaEffectCooldown: 10
   meteorCooldown: 40
   rollSpeed: 15
-  rollDistance: 30
+  rollDistance: 3
   rollCooldown: 5
 --- !u!114 &498856739
 MonoBehaviour:
@@ -1876,8 +1876,8 @@ MonoBehaviour:
   rotationAngle: 45
   height: 8
   zoomSpeed: 2
-  minZoom: 1
-  maxZoom: 3
+  minZoom: 2
+  maxZoom: 10
 --- !u!1 &940722845
 GameObject:
   m_ObjectHideFlags: 0
@@ -2231,7 +2231,7 @@ Transform:
   m_GameObject: {fileID: 1058030483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.683548, y: 6.936451, z: -7.9687176}
+  m_LocalPosition: {x: 39.683548, y: 0, z: -7.9687176}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2478,7 +2478,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
