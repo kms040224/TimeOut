@@ -17,11 +17,13 @@ public class MonsterController : MonoBehaviour
     public Transform player; // 플레이어의 Transform
     private FlockingManager flockingManager; // FlockingManager 참조
     private PlayerController playerController;
+    private GameManager gameManager;
 
     public int health = 100; // 몬스터의 체력
 
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         flockingManager = FindObjectOfType<FlockingManager>();
@@ -192,5 +194,6 @@ public class MonsterController : MonoBehaviour
     {
         Debug.Log("Monster died!");
         Destroy(gameObject); // 몬스터 오브젝트 삭제
+        gameManager.OnMonsterKilled();
     }
 }

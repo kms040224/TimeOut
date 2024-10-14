@@ -5,41 +5,83 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject portalPrefab; // 포탈 프리팹
-    public Transform portalSpawnPoint; // 포탈이 생성될 위치
-    private GameObject[] monsters;
+    public GameObject[] spawnAreas; // 각 구간에 대한 몬스터 스폰 구역
+    public GameObject[] doors; // 구간을 연결하는 문들 (각 구간의 출입문)
+    public GameObject[] monsterPrefabs; // 몬스터 프리팹
+    private int currentSpawnAreaIndex = 0; // 현재 구간 인덱스
+    private int monsterCount; // 현재 구간의 몬스터 수
 
-    void Start()
+    private void Start()
     {
-        // 몬스터 태그를 가진 모든 오브젝트를 찾아 배열에 저장
-        monsters = GameObject.FindGameObjectsWithTag("Monster");
+        // 첫 구간의 문을 열고 대기 (몬스터는 플레이어가 들어올 때 스폰)
+        OpenCurrentArea();
     }
 
-    void Update()
+    // 특정 구간에 몬스터 스폰
+    private void SpawnMonstersInArea(int areaIndex)
     {
-        CheckMonsters();
-    }
-
-    // 모든 몬스터가 죽었는지 확인하는 함수
-    void CheckMonsters()
-    {
-        foreach (GameObject monster in monsters)
+        Transform spawnArea = spawnAreas[areaIndex].transform;
+        foreach (Transform spawnPoint in spawnArea)
         {
-            if (monster != null) return; // 하나라도 살아있으면 함수 종료
+            // 각 스폰 포인트에 몬스터 소환
+            int randomIndex = Random.Range(0, monsterPrefabs.Length);
+            Instantiate(monsterPrefabs[randomIndex], spawnPoint.position, Quaternion.identity);
         }
 
-        // 모든 몬스터가 죽었으면 포탈 생성
-        SpawnPortal();
+        // 스폰된 몬스터 수 계산
+        monsterCount = spawnArea.childCount;
+        Debug.Log($"구역 {areaIndex}에 {monsterCount} 마리의 몬스터가 스폰되었습니다.");
     }
 
-    // 포탈을 생성하는 함수
-    void SpawnPortal()
+    // 플레이어가 특정 구역에 들어왔을 때 호출되는 함수
+    public void OnPlayerEnterArea(int areaIndex)
     {
-        // 포탈이 이미 생성되었는지 확인
-        if (portalPrefab != null && !portalPrefab.activeSelf)
+        if (areaIndex == currentSpawnAreaIndex) // 플레이어가 현재 구역에 들어왔을 때만 스폰
         {
-            portalPrefab.SetActive(true); // 포탈 활성화
-            portalPrefab.transform.position = portalSpawnPoint.position; // 포탈 위치 설정
+            Debug.Log($"플레이어가 구역 {areaIndex}에 들어왔습니다.");
+            SpawnMonstersInArea(areaIndex);
+        }
+    }
+
+    // 몬스터가 죽을 때 호출되는 함수
+    public void OnMonsterKilled()
+    {
+        monsterCount--;
+        Debug.Log("남은 몬스터 수: " + monsterCount);
+
+        // 구역의 모든 몬스터가 죽었는지 확인
+        if (monsterCount <= 0)
+        {
+            Debug.Log("현재 구역의 모든 몬스터가 처치되었습니다.");
+            OpenNextArea();
+        }
+    }
+
+    // 현재 구간의 문을 열고 다음 구간의 문을 닫기
+    private void OpenNextArea()
+    {
+        if (currentSpawnAreaIndex < doors.Length)
+        {
+            doors[currentSpawnAreaIndex].SetActive(false); // 현재 구간의 문 열기
+        }
+
+        currentSpawnAreaIndex++;
+        if (currentSpawnAreaIndex < spawnAreas.Length)
+        {
+            OpenCurrentArea();
+        }
+        else
+        {
+            Debug.Log("모든 구간을 완료했습니다.");
+        }
+    }
+
+    // 현재 구간의 문을 닫기
+    private void OpenCurrentArea()
+    {
+        if (currentSpawnAreaIndex < doors.Length)
+        {
+            doors[currentSpawnAreaIndex].SetActive(true); // 다음 구간으로의 문 닫기
         }
     }
 }
