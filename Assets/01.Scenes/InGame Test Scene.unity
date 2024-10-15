@@ -1893,10 +1893,7 @@ MonoBehaviour:
   offset: {x: 3, y: 0, z: 3}
   smoothSpeed: 0.125
   rotationAngle: 45
-  height: 8
-  zoomSpeed: 2
-  minZoom: 2
-  maxZoom: 10
+  height: 10
 --- !u!1 &940722845
 GameObject:
   m_ObjectHideFlags: 0
