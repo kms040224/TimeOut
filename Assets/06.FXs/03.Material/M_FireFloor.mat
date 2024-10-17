@@ -69,7 +69,7 @@ Material:
     m_Floats:
     - _Circle_Rotate_01: 0.5
     - _Circle_Rotate_02: -0.3
-    - _Corona_intensity: 6
+    - _Corona_intensity: 50
     - _Intensity: 3
     - _QueueControl: 0
     - _QueueOffset: 0
