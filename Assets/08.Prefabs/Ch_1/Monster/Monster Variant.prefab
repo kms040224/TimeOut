@@ -744,6 +744,8 @@ MonoBehaviour:
   separationDistance: 4
   player: {fileID: 0}
   health: 100
+  hitParticlePrefab: {fileID: 8961421439207506276, guid: 9234708433098b347b0b7ca75ffdf5eb,
+    type: 3}
 --- !u!195 &1818437318642862296
 NavMeshAgent:
   m_ObjectHideFlags: 0
