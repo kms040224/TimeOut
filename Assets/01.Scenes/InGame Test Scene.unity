@@ -2099,12 +2099,17 @@ MonoBehaviour:
   - itemType: 0
     itemName: Small Potion
     itemImage: {fileID: 21300000, guid: 6f8c6a1b959adeb42bf8f42c22d4cf40, type: 3}
+    efts:
+    - {fileID: 11400000, guid: cf2990afdac1c5c46b0f339f9966fa73, type: 2}
   - itemType: 0
     itemName: Potion
     itemImage: {fileID: 21300000, guid: 11ff914debcea7740925ff23943318d9, type: 3}
+    efts:
+    - {fileID: 11400000, guid: f354493665df8c749ab66a7f9c0c70c9, type: 2}
   - itemType: 0
     itemName: Sword
     itemImage: {fileID: 21300000, guid: 38daf72cb2e0ac0408f28c0cd87a00cf, type: 3}
+    efts: []
   fieldItemPrefab: {fileID: 4275102446174112736, guid: 1a4be5857c47d7943b9a941582ac4b6d,
     type: 3}
   pos:

@@ -50,6 +50,12 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    public void RemoveItem(int _index)
+    {
+        items.RemoveAt(_index);
+        onChangeItem.Invoke();
+    }
+
     private void OnTriggerEnter(Collider collision)
     {
         if(collision.CompareTag("FieldItem"))
