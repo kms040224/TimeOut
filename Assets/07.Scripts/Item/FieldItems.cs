@@ -5,7 +5,8 @@ using UnityEngine;
 public class FieldItems : MonoBehaviour
 {
     public Item item;
-    public SpriteRenderer image;
+    public GameObject item3DModel;
+
     public void SetItem(Item _item)
     {
         item.itemName = _item.itemName;
@@ -13,7 +14,10 @@ public class FieldItems : MonoBehaviour
         item.itemType = _item.itemType;
         item.efts = _item.efts;
 
-        image.sprite = item.itemImage;
+        if (item3DModel != null)
+        {
+            item3DModel.SetActive(true);
+        }
     }
 
     public Item GetItem()

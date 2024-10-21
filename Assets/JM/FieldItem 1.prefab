@@ -125,3 +125,5 @@ MonoBehaviour:
     itemImage: {fileID: 21300000, guid: 38daf72cb2e0ac0408f28c0cd87a00cf, type: 3}
     efts: []
   image: {fileID: 5351817557279520917}
+  item3DModel: {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc,
+    type: 3}
