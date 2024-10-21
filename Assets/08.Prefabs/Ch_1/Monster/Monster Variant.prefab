@@ -744,8 +744,10 @@ MonoBehaviour:
   separationDistance: 4
   player: {fileID: 0}
   health: 100
-  hitParticlePrefab: {fileID: 8961421439207506276, guid: 9234708433098b347b0b7ca75ffdf5eb,
-    type: 3}
+  dropItems:
+  - {fileID: 4275102446174112736, guid: 1a4be5857c47d7943b9a941582ac4b6d, type: 3}
+  - {fileID: 4275102446174112736, guid: 6bc1ce60514f37f4b9154f41fde2e794, type: 3}
+  dropChance: 1
 --- !u!195 &1818437318642862296
 NavMeshAgent:
   m_ObjectHideFlags: 0
