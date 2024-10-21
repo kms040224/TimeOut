@@ -1728,7 +1728,7 @@ MonoBehaviour:
   mainCamera: {fileID: 900496743}
   fireballPrefab: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
     type: 3}
-  flamethrowerPrefab: {fileID: 5673125165378818512, guid: 1043a1d5444bff141a8dd940410acecc,
+  flamethrowerPrefab: {fileID: 9179484208670720367, guid: 9775b443934578d42b5f16d3aaccc831,
     type: 3}
   fireOrbPrefab: {fileID: 4949368458191691870, guid: 1443bc937ff99a44a91fb5b5c4d2347a,
     type: 3}
