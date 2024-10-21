@@ -37,6 +37,9 @@ public class PlayerController : MonoBehaviour
     private bool shouldMove = false;
     private bool isUsingFlamethrower = false;
     private float flamethrowerCooldownTimer = 0f;
+    public float healthDrainRate = 1f; // 1초에 1만큼 체력 감소
+    private float healthDrainCooldown = 1f; // 체력 감소 간격
+    private float lastHealthDrainTime = 0f; // 마지막 체력 감소 시간
 
     void Start()
     {
@@ -76,6 +79,8 @@ public class PlayerController : MonoBehaviour
             Die();
             return;
         }
+
+        DrainHealthOverTime();
 
         if (Input.GetKeyDown(KeyCode.Q) && !isUsingFlamethrower && flamethrowerCooldownTimer <= 0)
         {
@@ -155,6 +160,16 @@ public class PlayerController : MonoBehaviour
                 AimAtCursor();
                 StartCoroutine(RollTowardsCursor());
             }
+        }
+    }
+
+    void DrainHealthOverTime()
+    {
+        if (Time.time - lastHealthDrainTime >= healthDrainCooldown)
+        {
+            PlayerHealthManager.Instance.TakeDamage((int)healthDrainRate); // 체력 감소
+            lastHealthDrainTime = Time.time; // 마지막 체력 감소 시간 업데이트
+            UpdateHealthBar(); // 체력 바 업데이트
         }
     }
 
