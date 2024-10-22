@@ -205,8 +205,13 @@ public class MonsterController : MonoBehaviour
         if (dropItems.Count > 0 && Random.value <= dropChance)
         {
             int randomIndex = Random.Range(0, dropItems.Count);
-            GameObject droppedItem = Instantiate(dropItems[randomIndex], transform.position, Quaternion.identity);
-            Debug.Log("Dropped item: " + droppedItem.name);
+            Item droppedItem = ItemDatabase.instance.itemDB[randomIndex]; // 데이터베이스에서 아이템 가져오기
+
+            // 드롭된 아이템 오브젝트 생성
+            GameObject droppedItemObject = Instantiate(droppedItem.itemPrefab, transform.position, Quaternion.identity); // 아이템 프리팹 사용
+            droppedItemObject.GetComponent<FieldItems>().SetItem(droppedItem); // 드롭된 아이템 설정
+
+            Debug.Log("Dropped item: " + droppedItem.itemName);
         }
     }
 }

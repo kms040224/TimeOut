@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96f27f2d915be234c9e0d3ab5aa99196, type: 3}
-  m_Name: New Item Healing Eft
+  m_Script: {fileID: 11500000, guid: 0addda4451ddb8d408b1fcdbacd99f6a, type: 3}
+  m_Name: HealEffect
   m_EditorClassIdentifier: 
-  healingPoint: 5
+  healAmount: 10

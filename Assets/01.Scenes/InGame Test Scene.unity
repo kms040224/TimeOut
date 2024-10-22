@@ -1747,11 +1747,12 @@ MonoBehaviour:
   teleportDistance: 1
   teleportCooldown: 8
   areaEffectCooldown: 10
-  meteorCooldown: 40
+  meteorCooldown: 0
   rollSpeed: 15
   rollDistance: 3
   rollCooldown: 5
   aniController: {fileID: 498856739}
+  healthDrainRate: 1
 --- !u!114 &498856739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,26 +2100,24 @@ MonoBehaviour:
   - itemType: 0
     itemName: Small Potion
     itemImage: {fileID: 21300000, guid: 6f8c6a1b959adeb42bf8f42c22d4cf40, type: 3}
+    itemPrefab: {fileID: 1265667851118796360, guid: 444861057751a854983c8d00810da66c,
+      type: 3}
     efts:
-    - {fileID: 11400000, guid: cf2990afdac1c5c46b0f339f9966fa73, type: 2}
+    - {fileID: 11400000, guid: f9fa1d3d1f2996f48bdab1a2b4e4cf34, type: 2}
   - itemType: 0
     itemName: Potion
     itemImage: {fileID: 21300000, guid: 11ff914debcea7740925ff23943318d9, type: 3}
+    itemPrefab: {fileID: 1000013846074356, guid: 11e31a2ebb4e6e246bcf8c0ba034a031,
+      type: 3}
     efts:
-    - {fileID: 11400000, guid: f354493665df8c749ab66a7f9c0c70c9, type: 2}
+    - {fileID: 11400000, guid: 5fd8a34ca8cf69a418e2722ab70008c0, type: 2}
   - itemType: 0
-    itemName: Sword
+    itemName: Potion
     itemImage: {fileID: 21300000, guid: 38daf72cb2e0ac0408f28c0cd87a00cf, type: 3}
-    efts: []
-  fieldItemPrefab: {fileID: 4275102446174112736, guid: 1a4be5857c47d7943b9a941582ac4b6d,
-    type: 3}
-  pos:
-  - {x: 1, y: 1, z: 1}
-  - {x: 2, y: 1, z: 1}
-  - {x: 3, y: 1, z: 1}
-  - {x: 4, y: 1, z: 1}
-  - {x: 5, y: 1, z: 1}
-  - {x: 6, y: 1, z: 1}
+    itemPrefab: {fileID: 6706802796391227106, guid: bb0f891208a30fa46b2926bea9df74c8,
+      type: 3}
+    efts:
+    - {fileID: 11400000, guid: 5fd8a34ca8cf69a418e2722ab70008c0, type: 2}
 --- !u!4 &538497849
 Transform:
   m_ObjectHideFlags: 0
