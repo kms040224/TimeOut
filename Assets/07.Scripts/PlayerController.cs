@@ -40,7 +40,6 @@ public class PlayerController : MonoBehaviour
     public float healthDrainRate = 1f; // 1초에 1만큼 체력 감소
     private float healthDrainCooldown = 1f; // 체력 감소 간격
     private float lastHealthDrainTime = 0f; // 마지막 체력 감소 시간
-    private Rigidbody rigid;
 
     void Start()
     {
@@ -66,18 +65,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("Health Slider가 할당되지 않았습니다.");
         }
-        rigid = GetComponent<Rigidbody>();
-        rigid.constraints = RigidbodyConstraints.FreezeRotation;
-    }
-
-    void FreezeRotation()
-    {
-        rigid.angularVelocity = Vector3.zero;
-    }
-
-    void FixedUpdate()
-    {
-        FreezeRotation();
     }
 
     void Update()
@@ -117,29 +104,31 @@ public class PlayerController : MonoBehaviour
                 {
                     destinationPoint = new Vector3(hit.point.x, transform.position.y, hit.point.z);
                     shouldMove = true;
-
-                    // 클릭 시 방향을 바라보도록 설정
-                    AimAtCursor();
                 }
             }
         }
 
         if (shouldMove && !isUsingFlamethrower)
         {
-            Vector3 direction = (destinationPoint - transform.position).normalized;
+            Quaternion targetRotation = Quaternion.LookRotation(destinationPoint - transform.position);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            // 일정 거리 이하일 경우 이동 중지
-            if (Vector3.Distance(transform.position, destinationPoint) > 0.1f)
+            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, movementSpeed * Time.deltaTime);
+
+            if (transform.position == destinationPoint)
             {
-                rigid.velocity = direction * movementSpeed; // 속도 설정
-                animator.SetBool("isMoving", true); // 이동 애니메이션 활성화
+                shouldMove = false;
+                animator.SetBool("isMoving", false); // 멈췄을 때 애니메이션 중지
             }
             else
             {
-                shouldMove = false; // 도착했으므로 이동 종료
-                animator.SetBool("isMoving", false);
-                rigid.velocity = Vector3.zero; // 정지
+                animator.SetBool("isMoving", true); // 이동 중 애니메이션 재생
             }
+
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
         }
 
 
@@ -207,7 +196,7 @@ public class PlayerController : MonoBehaviour
             direction.y = 0;
 
             Quaternion lookRotation = Quaternion.LookRotation(direction);
-            transform.rotation = lookRotation; // 캐릭터가 마우스를 바라보게 설정
+            transform.rotation = lookRotation;
         }
     }
 
@@ -366,11 +355,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator RollTowardsCursor()
+    IEnumerator RollTowardsCursor()
     {
-        lastRollTime = Time.time; // 굴리기 쿨타임 시작
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastRollTime < rollCooldown)
+        {
+            Debug.Log("구르기 스킬이 아직 쿨타임 중입니다.");
+            yield break; // Coroutine 종료
+        }
 
-        // 마우스 방향 계산
+        lastRollTime = Time.time; // 마지막 구르기 시간 갱신
+
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
@@ -379,17 +374,26 @@ public class PlayerController : MonoBehaviour
             Vector3 rollDirection = (hit.point - transform.position).normalized;
             rollDirection.y = 0;
 
-            float rollDuration = rollDistance / rollSpeed;
-            float elapsedTime = 0f;
+            // 캐릭터 굴러가는 애니메이션 트리거
+            animator.SetTrigger("Roll");
 
-            animator.SetTrigger("Roll"); // 구르기 애니메이션 트리거
+            Vector3 startPosition = transform.position; // 시작 위치
+            Vector3 rollTargetPosition = transform.position + rollDirection * rollDistance; // 목표 위치
+            float elapsedTime = 0f; // 경과 시간
+            float rollDuration = rollDistance / rollSpeed; // 구르기 시간
 
             while (elapsedTime < rollDuration)
             {
-                transform.position += rollDirection * rollSpeed * Time.deltaTime;
+                // 경과 시간 업데이트
                 elapsedTime += Time.deltaTime;
+                // 현재 위치를 보간하여 이동
+                transform.position = Vector3.Lerp(startPosition, rollTargetPosition, elapsedTime / rollDuration);
                 yield return null; // 다음 프레임까지 대기
             }
+
+            // 최종 위치 설정
+            transform.position = rollTargetPosition;
+            Debug.Log("캐릭터가 굴러서 이동: " + rollTargetPosition);
         }
     }
 
