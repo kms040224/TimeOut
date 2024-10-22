@@ -52,8 +52,17 @@ public class Inventory : MonoBehaviour
 
     public void RemoveItem(int _index)
     {
-        items.RemoveAt(_index);
-        onChangeItem.Invoke();
+        Debug.Log("Attempting to remove item at index: " + _index); // 인덱스 로그 추가
+        if (_index >= 0 && _index < items.Count)
+        {
+            Debug.Log("Removing item at index: " + _index);
+            items.RemoveAt(_index);
+            onChangeItem.Invoke();
+        }
+        else
+        {
+            Debug.LogError("Attempted to remove item at invalid index: " + _index);
+        }
     }
 
     private void OnTriggerEnter(Collider collision)

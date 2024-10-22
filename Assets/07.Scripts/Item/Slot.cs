@@ -22,10 +22,18 @@ public class Slot : MonoBehaviour, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        bool isUse = item.Use();
-        if(isUse)
+        if (item != null)
         {
-            Inventory.instance.RemoveItem(Slotnum);
+            Debug.Log("Slot number: " + Slotnum); // 현재 슬롯 번호 출력
+
+            // 현재 슬롯 번호를 사용하여 인벤토리에서 아이템 제거
+            bool isUse = item.Use();
+            if (isUse)
+            {
+                // 인덱스를 사용하여 아이템 제거
+                Inventory.instance.RemoveItem(Slotnum);
+                Debug.Log("Removing item from slot: " + Slotnum);
+            }
         }
     }
 }

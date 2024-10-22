@@ -5,21 +5,25 @@ using UnityEngine.AI;
 
 public class MonsterController : MonoBehaviour
 {
-    public float moveSpeed = 3.0f; // 몬스터의 이동 속도
-    public float attackDistance = 5.0f; // 공격 거리
-    public float stopDistance = 1.5f; // 플레이어와의 최종 정지 거리
-    public float attackRate = 1.0f; // 공격 속도
-    private float nextAttackTime = 0f; // 다음 공격 시간
+    public float moveSpeed = 3.0f;
+    public float attackDistance = 5.0f;
+    public float stopDistance = 1.5f;
+    public float attackRate = 1.0f;
+    private float nextAttackTime = 0f;
 
-    public float flockingRadius = 5.0f; // 플로킹을 위한 반경
-    public float separationDistance = 1.5f; // 몬스터들 간의 거리
+    public float flockingRadius = 5.0f;
+    public float separationDistance = 1.5f;
     private NavMeshAgent agent;
-    public Transform player; // 플레이어의 Transform
-    private FlockingManager flockingManager; // FlockingManager 참조
+    public Transform player;
+    private FlockingManager flockingManager;
     private PlayerController playerController;
     private GameManager gameManager;
 
-    public int health = 100; // 몬스터의 체력
+    public int health = 100;
+
+    // 드랍할 아이템 리스트
+    public List<GameObject> dropItems;
+    public float dropChance = 0.5f; // 아이템 드랍 확률 (50%)
 
     void Start()
     {
@@ -171,29 +175,38 @@ public class MonsterController : MonoBehaviour
             nextAttackTime = Time.time + attackRate;
             if (playerController != null)
             {
-                playerController.TakeDamage(10); // 플레이어에게 10의 데미지를 입힘
+                playerController.TakeDamage(10);
             }
         }
     }
 
-    // 몬스터가 피해를 입는 메서드
     public void TakeDamage(int damage)
     {
-        health -= damage; // 체력 감소
+        health -= damage;
         Debug.Log("Monster took damage! Current health: " + health);
 
-        // 체력이 0 이하가 되면 몬스터 사망 처리
         if (health <= 0)
         {
             Die();
         }
     }
 
-    // 몬스터 사망 처리 메서드
     private void Die()
     {
         Debug.Log("Monster died!");
-        Destroy(gameObject); // 몬스터 오브젝트 삭제
+        DropItem(); // 아이템 드랍 처리
+        Destroy(gameObject);
         gameManager.OnMonsterKilled();
+    }
+
+    // 아이템 드랍 메서드
+    void DropItem()
+    {
+        if (dropItems.Count > 0 && Random.value <= dropChance)
+        {
+            int randomIndex = Random.Range(0, dropItems.Count);
+            GameObject droppedItem = Instantiate(dropItems[randomIndex], transform.position, Quaternion.identity);
+            Debug.Log("Dropped item: " + droppedItem.name);
+        }
     }
 }
