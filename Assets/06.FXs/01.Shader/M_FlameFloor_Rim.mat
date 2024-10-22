@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9125996830528206051
+--- !u!114 &-2768827425455393179
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_FireFloor
-  m_Shader: {fileID: -6465566751694194690, guid: 21936bc2cd55cba47a37d011142c068d,
+  m_Name: M_FlameFloor_Rim
+  m_Shader: {fileID: -6465566751694194690, guid: a153ce42023e5154a9919d04253eb5ff,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -37,22 +37,6 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_1db41cf4990147bfa882ebf50ba23b7b_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 76a75b4dc60375c4f926e761da08d9e3, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_83f290fb713f488cbc9dc83cd90a05b8_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: da335d17267a8e24a9f280feb5a2a08b, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_9bc745eb84234dee81a005e2a88f7133_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 5495e9f4b6c17154f9abd8a7f891bb5e, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_e246b45bd19a4fa7a2a41c992ea98575_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 3824f8727c7263848ad1511899d84c4f, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -67,14 +51,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Circle_Rotate_01: 0.5
-    - _Circle_Rotate_02: -0.3
-    - _Corona_intensity: 50
-    - _Intensity: 1
+    - _Intensity: 3
     - _QueueControl: 0
     - _QueueOffset: 0
+    - _Rim_Power: 5
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
-    - _Color_01: {r: 0.94509804, g: 0.1105212, b: 0, a: 0}
-    - _Color_02: {r: 1, g: 0.30850935, b: 0.042452812, a: 0}
+    - _Color: {r: 1, g: 0.0990566, b: 0.0990566, a: 0}
   m_BuildTextureStacks: []
