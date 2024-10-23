@@ -21,6 +21,10 @@ public class Door : MonoBehaviour
 
     private IEnumerator TeleportPlayer(Transform player)
     {
+        // 플레이어 Collider 비활성화
+        Collider playerCollider = player.GetComponent<Collider>();
+        playerCollider.enabled = false;
+
         // 페이드 인
         yield return StartCoroutine(fadeController.FadeIn(fadeDuration));
 
@@ -33,5 +37,8 @@ public class Door : MonoBehaviour
 
         // 페이드 아웃
         yield return StartCoroutine(fadeController.FadeOut(fadeDuration));
+
+        // 플레이어 Collider 활성화
+        playerCollider.enabled = true;
     }
 }

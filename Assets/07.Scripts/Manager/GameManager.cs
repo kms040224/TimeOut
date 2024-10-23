@@ -8,8 +8,12 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnAreas; // 각 구간에 대한 몬스터 스폰 구역
     public GameObject[] doors; // 구간을 연결하는 문들 (각 구간의 출입문)
     public GameObject[] monsterPrefabs; // 몬스터 프리팹
+    public GameObject portalPrefab; // 포탈 프리팹
+    public Transform portalSpawnPoint; // 포탈이 스폰될 위치
+
     private int currentSpawnAreaIndex = 0; // 현재 구간 인덱스
     private int monsterCount; // 현재 구간의 몬스터 수
+    private bool isPortalSpawned = false; // 포탈이 스폰되었는지 확인
 
     private void Start()
     {
@@ -54,6 +58,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("현재 구역의 모든 몬스터가 처치되었습니다.");
             OpenNextArea();
+            SpawnPortal(); // 포탈 생성
         }
     }
 
@@ -84,6 +89,18 @@ public class GameManager : MonoBehaviour
             doors[currentSpawnAreaIndex].SetActive(true); // 다음 구간으로의 문 닫기
         }
     }
+
+    // 포탈 생성
+    private void SpawnPortal()
+    {
+        if (!isPortalSpawned && portalPrefab != null && portalSpawnPoint != null)
+        {
+            Instantiate(portalPrefab, portalSpawnPoint.position, Quaternion.identity);
+            isPortalSpawned = true; // 포탈이 한 번만 생성되도록 설정
+            Debug.Log("포탈이 생성되었습니다.");
+        }
+    }
+
     public void ToggleDoor(int index, bool isActive)
     {
         if (index >= 0 && index < doors.Length)
