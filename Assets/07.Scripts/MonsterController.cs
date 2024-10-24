@@ -71,17 +71,21 @@ public class MonsterController : MonoBehaviour
 
     void MoveToPlayer()
     {
-        if (agent != null && player != null)
+        if (agent != null && agent.isActiveAndEnabled && player != null)
         {
             Vector3 flockingForce = FlockingBehavior();
             Vector3 targetPosition = player.position + flockingForce;
 
+            // 몬스터가 플레이어 쪽을 바라보도록 회전
+            Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            if (directionToPlayer != Vector3.zero)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * agent.angularSpeed);
+            }
+
             agent.SetDestination(targetPosition);
             agent.speed = moveSpeed;
-        }
-        else
-        {
-            Debug.LogError("Agent or player is null for " + gameObject.name);
         }
     }
 

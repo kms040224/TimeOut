@@ -696,7 +696,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.464, z: 2.81}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5504509665114008576}
@@ -737,16 +737,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  attackDistance: 5
-  stopDistance: 1.5
+  attackDistance: 1
+  stopDistance: 1
   attackRate: 1
-  flockingRadius: 5
-  separationDistance: 4
+  flockingRadius: 2
+  separationDistance: 1
   player: {fileID: 0}
   health: 100
   dropItems:
   - {fileID: 6706802796391227106, guid: bb0f891208a30fa46b2926bea9df74c8, type: 3}
   - {fileID: 1265667851118796360, guid: 444861057751a854983c8d00810da66c, type: 3}
+  - {fileID: 1000013846074356, guid: 11e31a2ebb4e6e246bcf8c0ba034a031, type: 3}
   dropChance: 1
 --- !u!195 &1818437318642862296
 NavMeshAgent:
