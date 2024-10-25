@@ -30856,13 +30856,13 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   fireballPrefab: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
     type: 3}
-  flamethrowerPrefab: {fileID: 8485109365007204502, guid: e1eb270fc62494e4ab7272e5cda21788,
+  flamethrowerPrefab: {fileID: 9179484208670720367, guid: 9775b443934578d42b5f16d3aaccc831,
     type: 3}
   fireOrbPrefab: {fileID: 4949368458191691870, guid: 1443bc937ff99a44a91fb5b5c4d2347a,
     type: 3}
-  areaEffectPrefab: {fileID: 7658121052453657875, guid: d3060e6f21f93ef4cbe65759d8646151,
+  areaEffectPrefab: {fileID: 8535985873047557982, guid: 4d715193bb233ae47afbd323405ede05,
     type: 3}
-  meteorPrefab: {fileID: 7111896838402939154, guid: 8107478d7075b7944bf072d49ffe9c16,
+  meteorPrefab: {fileID: 2668697625759626458, guid: 09af3e1c0bc0ef5469fa99b2c2619e13,
     type: 3}
   GameOverPanel: {fileID: 1604672100}
   fireballSpawnPoint: {fileID: 400486153}
