@@ -15,6 +15,7 @@ public class MeteorController : MonoBehaviour
     {
         // 목표 방향을 설정
         targetDirection = (target - transform.position).normalized;
+        targetDirection.y = 0;
         StartCoroutine(DestroyAfterLifetime());
     }
 
