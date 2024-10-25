@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.AI.Navigation;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Door : MonoBehaviour
 {
@@ -10,12 +12,15 @@ public class Door : MonoBehaviour
     public float fadeDuration = 1.0f; // 페이드 인/아웃 시간
     public FadeController fadeController; // 페이드 컨트롤러 연결
     public Camera mainCamera; // 메인 카메라 연결
+    public Transform destination;
+    public NavMeshSurface navMeshSurface;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player")) // 플레이어가 닿으면 실행
         {
             StartCoroutine(TeleportPlayer(other.transform));
+            UpdateNavMesh();
         }
     }
 
@@ -29,8 +34,17 @@ public class Door : MonoBehaviour
         yield return StartCoroutine(fadeController.FadeIn(fadeDuration));
 
         // 플레이어 이동
-        player.position = targetPosition.position;
+        NavMeshAgent agent = player.GetComponent<NavMeshAgent>();
+        if (agent != null)
+        {
+            // 새로운 위치로 순간이동
+            agent.Warp(destination.position);
 
+            // 에이전트의 상태를 초기화
+            agent.ResetPath(); // 경로를 초기화하여 상태를 리셋
+
+            agent.isStopped = false; // 움직임 활성화
+        }
         // 카메라 이동
         mainCamera.transform.position = cameraPosition;
         mainCamera.transform.rotation = Quaternion.Euler(cameraRotation); // 회전 각도 설정
@@ -40,5 +54,13 @@ public class Door : MonoBehaviour
 
         // 플레이어 Collider 활성화
         playerCollider.enabled = true;
+    }
+
+    private void UpdateNavMesh()
+    {
+        if (navMeshSurface != null)
+        {
+            navMeshSurface.BuildNavMesh(); // NavMesh를 재계산
+        }
     }
 }
