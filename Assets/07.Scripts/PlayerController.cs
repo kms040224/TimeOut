@@ -146,11 +146,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             LayDownAreaEffect();
+            AimAtCursor();
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             LaunchMeteor();
+            AimAtCursor();
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -204,7 +206,7 @@ public class PlayerController : MonoBehaviour
     {
         isUsingFlamethrower = true;
 
-        animator.SetBool("isUsingFlamethrower", true);
+        animator.SetTrigger("FireThrower");
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -217,7 +219,6 @@ public class PlayerController : MonoBehaviour
             yield return new WaitForSeconds(flamethrowerDuration);
         }
 
-        animator.SetBool("isUsingFlamethrower", false);
         flamethrowerCooldownTimer = flamethrowerCooldown;
         isUsingFlamethrower = false;
     }
@@ -316,13 +317,16 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        // 애니메이션 트리거 추가
+        animator.SetTrigger("FireFlooring");
+
+        // 장판 생성
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
             // 장판 생성
-            Vector3 areaEffectPosition = new Vector3(hit.point.x, hit.point.y + 0.1f, hit.point.z);
             Instantiate(areaEffectPrefab, hit.point, Quaternion.identity);
             lastAreaEffectTime = Time.time; // 현재 시간을 기록하여 쿨타임 관리
         }
@@ -337,6 +341,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        animator.SetTrigger("Meteor");
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
