@@ -5027,6 +5027,8 @@ MonoBehaviour:
   damage: 20
   lifetime: 5
   speed: 10
+  hitEffectPrefab: {fileID: 8961421439207506276, guid: 9234708433098b347b0b7ca75ffdf5eb,
+    type: 3}
 --- !u!135 &6768613175075127640
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5144,6 +5146,7 @@ MonoBehaviour:
   damage: 20
   lifetime: 5
   speed: 10
+  hitEffectPrefab: {fileID: 0}
 --- !u!1 &7390970771463076496
 GameObject:
   m_ObjectHideFlags: 0

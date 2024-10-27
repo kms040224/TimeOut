@@ -7,6 +7,7 @@ public class FireballController : MonoBehaviour
     public int damage = 20; // 파이어볼 데미지
     public float lifetime = 5f; // 파이어볼이 유지되는 시간
     public float speed = 10f; // 파이어볼 속도
+    public GameObject hitEffectPrefab; // 타격 시 생성할 이펙트 프리팹
 
     private Vector3 direction;
 
@@ -40,6 +41,12 @@ public class FireballController : MonoBehaviour
             {
                 // 몬스터의 체력을 줄임
                 monster.TakeDamage(damage);
+
+                // 히트 이펙트 생성
+                if (hitEffectPrefab != null)
+                {
+                    Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
+                }
             }
 
             // 파이어볼을 파괴
