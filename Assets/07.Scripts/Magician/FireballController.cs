@@ -45,7 +45,11 @@ public class FireballController : MonoBehaviour
                 // 히트 이펙트 생성
                 if (hitEffectPrefab != null)
                 {
-                    Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
+                    // 히트 이펙트의 복제본 생성
+                    GameObject hitEffect = Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
+
+                    // 1초 후에 히트 이펙트의 복제본 파괴
+                    Destroy(hitEffect, 1f);
                 }
             }
 
