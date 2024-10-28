@@ -25,6 +25,8 @@ public class MonsterController : MonoBehaviour
     public List<GameObject> dropItems;
     public float dropChance = 0.5f; // 아이템 드랍 확률 (50%)
 
+    private bool isDead = false; // 죽었는지 확인하는 변수
+
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
@@ -186,6 +188,8 @@ public class MonsterController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (isDead) return; // 이미 죽은 경우 실행 안 함
+
         health -= damage;
         Debug.Log("Monster took damage! Current health: " + health);
 
@@ -197,6 +201,9 @@ public class MonsterController : MonoBehaviour
 
     private void Die()
     {
+        if (isDead) return; // 이미 죽은 경우 실행 안 함
+
+        isDead = true; // 죽은 상태로 설정
         Debug.Log("Monster died!");
         DropItem(); // 아이템 드랍 처리
         Destroy(gameObject);

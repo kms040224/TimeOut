@@ -6,10 +6,12 @@ public class AreaTrigger : MonoBehaviour
 {
     public int areaIndex; // 구간 번호
     private GameManager gameManager;
+    private Collider areaCollider; // 콜라이더 참조 추가
 
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>();
+        areaCollider = GetComponent<Collider>(); // 콜라이더 컴포넌트 가져오기
     }
 
     void OnTriggerEnter(Collider other)
@@ -23,6 +25,8 @@ public class AreaTrigger : MonoBehaviour
             {
                 gameManager.ToggleDoor(areaIndex - 1, true); // 이전 문을 활성화
             }
+
+            areaCollider.enabled = false; // 콜라이더 비활성화
         }
     }
 }
