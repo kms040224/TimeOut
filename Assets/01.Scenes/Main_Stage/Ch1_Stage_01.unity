@@ -187,7 +187,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -336,7 +337,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -410,7 +412,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -484,7 +487,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -633,7 +637,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1329,7 +1334,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1403,7 +1409,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1477,7 +1484,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1626,7 +1634,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1999,7 +2008,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2110,7 +2120,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2120,6 +2131,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
     type: 3}
   m_PrefabInstance: {fileID: 83177629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &83335071 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2168860106298537121, guid: 8abbfc1546bd32e408ce00442b7c686e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1696336037}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &88099089
 PrefabInstance:
@@ -2184,7 +2201,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2258,7 +2276,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2456,7 +2475,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2941,6 +2961,80 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &114719697
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 114719700}
+  - component: {fileID: 114719699}
+  - component: {fileID: 114719698}
+  m_Layer: 0
+  m_Name: Portal (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &114719698
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114719697}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114719699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114719697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 654512443}
+  cameraPosition: {x: -9, y: 9, z: -20}
+  cameraRotation: {x: 74, y: -90, z: 0}
+  fadeDuration: 1
+  fadeController: {fileID: 1017858046}
+  mainCamera: {fileID: 2087840466}
+  destination: {fileID: 1697944254}
+  navMeshSurface: {fileID: 1720990752}
+--- !u!4 &114719700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114719697}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.784, y: 0.55999994, z: -3.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123547158
 GameObject:
   m_ObjectHideFlags: 0
@@ -3152,7 +3246,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3375,7 +3470,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3524,7 +3620,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3872,7 +3969,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4250,7 +4348,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4356,7 +4455,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4430,7 +4530,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4535,7 +4636,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4644,7 +4746,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4868,7 +4971,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4942,7 +5046,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5048,7 +5153,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5122,7 +5228,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5196,7 +5303,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5628,7 +5736,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5976,7 +6085,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6050,7 +6160,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6430,7 +6541,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6504,7 +6616,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6578,7 +6691,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6652,7 +6766,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6801,7 +6916,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -6889,14 +7005,22 @@ MonoBehaviour:
   spawnAreas:
   - {fileID: 1210191646}
   - {fileID: 1330879182}
+  - {fileID: 1163476798}
+  - {fileID: 498563436}
+  - {fileID: 1645830745}
   doors:
   - {fileID: 1684094776}
   - {fileID: 511291768}
+  - {fileID: 83335071}
+  - {fileID: 2016494765}
   monsterPrefabs:
   - {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f, type: 3}
   portals:
   - {fileID: 1727191252}
   - {fileID: 1727191252}
+  - {fileID: 114719697}
+  - {fileID: 1293042791}
+  - {fileID: 537055989}
 --- !u!4 &373982333
 Transform:
   m_ObjectHideFlags: 0
@@ -7081,7 +7205,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7234,7 +7359,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7414,7 +7540,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7508,7 +7635,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7582,7 +7710,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7731,7 +7860,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7805,7 +7935,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7931,7 +8062,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8005,7 +8137,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8212,7 +8345,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8485,7 +8619,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8559,7 +8694,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8708,7 +8844,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8782,7 +8919,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8930,7 +9068,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9004,7 +9143,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9192,7 +9332,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9266,7 +9407,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9340,7 +9482,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9414,7 +9557,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9488,7 +9632,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9562,7 +9707,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9744,7 +9890,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9899,7 +10046,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -9973,7 +10121,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10121,7 +10270,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10420,7 +10570,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10656,6 +10807,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 536143184}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &537055989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 537055992}
+  - component: {fileID: 537055991}
+  - component: {fileID: 537055990}
+  m_Layer: 0
+  m_Name: Portal (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &537055990
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537055989}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &537055991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537055989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 654512443}
+  cameraPosition: {x: -26, y: 9, z: -40}
+  cameraRotation: {x: 74, y: -90, z: 0}
+  fadeDuration: 1
+  fadeController: {fileID: 1017858046}
+  mainCamera: {fileID: 2087840466}
+  destination: {fileID: 2051258274}
+  navMeshSurface: {fileID: 1720990752}
+--- !u!4 &537055992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537055989}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.422, y: 0.55999994, z: -40.488}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &544340411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10794,7 +11019,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -10942,7 +11168,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11166,7 +11393,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11240,7 +11468,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11631,7 +11860,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11705,7 +11935,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11779,7 +12010,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11853,7 +12085,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11927,7 +12160,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12001,7 +12235,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12075,7 +12310,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12288,7 +12524,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -12362,7 +12599,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13045,7 +13283,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13119,7 +13358,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13268,7 +13508,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13715,7 +13956,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13789,7 +14031,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -13863,7 +14106,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14012,7 +14256,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14086,7 +14331,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14160,7 +14406,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14389,7 +14636,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14463,7 +14711,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14736,7 +14985,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14885,7 +15135,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -14959,7 +15210,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15033,7 +15285,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15293,7 +15546,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15442,7 +15696,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15591,7 +15846,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15665,7 +15921,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15770,7 +16027,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15919,7 +16177,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -15993,7 +16252,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16173,7 +16433,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16247,7 +16508,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16321,7 +16583,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16594,7 +16857,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -16792,7 +17056,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17636,7 +17901,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17816,7 +18082,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -17890,7 +18157,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18048,7 +18316,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18613,7 +18882,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18687,7 +18957,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18912,7 +19183,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -18986,7 +19258,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19060,7 +19333,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19134,7 +19408,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19459,7 +19734,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19682,7 +19958,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19787,6 +20064,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1059580937}
   - component: {fileID: 1059580938}
+  - component: {fileID: 1059580939}
+  - component: {fileID: 1059580942}
+  - component: {fileID: 1059580941}
+  - component: {fileID: 1059580940}
   m_Layer: 0
   m_Name: ST_05
   m_TagString: Ground
@@ -19894,6 +20175,104 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 1d4be3a1f4a760f4fb98093e5a36a49f, type: 2}
   m_BuildHeightMesh: 0
+--- !u!65 &1059580939
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059580936}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.99, y: 1, z: 6.75}
+  m_Center: {x: 2.8, y: 5.07, z: 5.94}
+--- !u!114 &1059580940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059580936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69ded436f266314cbab7e07eeef71ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaIndex: 4
+--- !u!23 &1059580941
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059580936}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1059580942
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059580936}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1066409527
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19957,7 +20336,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20126,7 +20506,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20275,7 +20656,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20349,7 +20731,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20678,7 +21061,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20752,7 +21136,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -20826,7 +21211,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21024,7 +21410,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21252,7 +21639,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21539,7 +21927,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21613,7 +22002,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21826,7 +22216,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -21900,7 +22291,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22007,7 +22399,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22081,7 +22474,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22279,7 +22673,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22353,7 +22748,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22577,7 +22973,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22801,7 +23198,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -22999,7 +23397,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23073,7 +23472,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23226,7 +23626,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23237,6 +23638,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1282291232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1293042791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293042794}
+  - component: {fileID: 1293042793}
+  - component: {fileID: 1293042792}
+  m_Layer: 0
+  m_Name: Portal (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!65 &1293042792
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293042791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1293042793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293042791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetPosition: {fileID: 654512443}
+  cameraPosition: {x: -9, y: 9, z: -40}
+  cameraRotation: {x: 74, y: -90, z: 0}
+  fadeDuration: 1
+  fadeController: {fileID: 1017858046}
+  mainCamera: {fileID: 2087840466}
+  destination: {fileID: 1593359173}
+  navMeshSurface: {fileID: 1720990752}
+--- !u!4 &1293042794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293042791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.89, y: 0.55999994, z: -23.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1294509508
 GameObject:
   m_ObjectHideFlags: 0
@@ -23331,7 +23806,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23405,7 +23881,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23510,7 +23987,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23584,7 +24062,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23782,7 +24261,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (15)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23856,7 +24336,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -23930,7 +24411,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24070,7 +24552,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24144,7 +24627,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24218,7 +24702,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24543,7 +25028,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24617,7 +25103,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24691,7 +25178,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24840,7 +25328,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (10)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -24945,7 +25434,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25019,7 +25509,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25093,7 +25584,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25114,6 +25606,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1368456078}
   - component: {fileID: 1368456079}
+  - component: {fileID: 1368456082}
+  - component: {fileID: 1368456081}
+  - component: {fileID: 1368456080}
+  - component: {fileID: 1368456083}
   m_Layer: 0
   m_Name: ST_04
   m_TagString: Ground
@@ -25221,6 +25717,104 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 8a0d52ec32d487e4e9088f1814abae9a, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &1368456080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368456077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69ded436f266314cbab7e07eeef71ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaIndex: 3
+--- !u!23 &1368456081
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368456077}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1368456082
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368456077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
+--- !u!65 &1368456083
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1368456077}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.35, y: 1, z: 9.63}
+  m_Center: {x: 2.79, y: 5.06, z: 6.28}
 --- !u!1001 &1370699394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25284,7 +25878,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25657,7 +26252,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25731,7 +26327,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -25879,7 +26476,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26077,7 +26675,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26289,7 +26888,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26363,7 +26963,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26437,7 +27038,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (11)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26617,7 +27219,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26797,7 +27400,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -26983,7 +27587,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27221,7 +27826,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (16)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27644,7 +28250,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27808,7 +28415,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -27928,7 +28536,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28002,7 +28611,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (9)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28076,7 +28686,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28150,7 +28761,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28285,6 +28897,37 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1588364152}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1593359172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1593359173}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1593359173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593359172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.01, y: 0.25, z: -37.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1604672100
 GameObject:
   m_ObjectHideFlags: 0
@@ -28499,7 +29142,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28647,7 +29291,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28904,7 +29549,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -28978,7 +29624,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29052,7 +29699,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29201,7 +29849,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29275,7 +29924,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29355,7 +30005,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29648,7 +30299,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29743,6 +30395,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1696336037}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1697944253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1697944254}
+  m_Layer: 0
+  m_Name: GameObject (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1697944254
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1697944253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.01, y: 0.25, z: -17.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1707501695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29806,7 +30489,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29880,7 +30564,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (12)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -29954,7 +30639,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30099,6 +30785,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1720990751}
   - component: {fileID: 1720990752}
+  - component: {fileID: 1720990754}
+  - component: {fileID: 1720990753}
+  - component: {fileID: 1720990756}
+  - component: {fileID: 1720990755}
   m_Layer: 0
   m_Name: ST_03
   m_TagString: Ground
@@ -30206,6 +30896,104 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 00b118e1bdd319744a7244a1a3697eff, type: 2}
   m_BuildHeightMesh: 0
+--- !u!65 &1720990753
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720990750}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 1, z: 9}
+  m_Center: {x: 2.6, y: 4.8, z: 6.87}
+--- !u!114 &1720990754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720990750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69ded436f266314cbab7e07eeef71ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaIndex: 2
+--- !u!23 &1720990755
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720990750}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1720990756
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720990750}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1001 &1726206245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30269,7 +31057,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30338,7 +31127,7 @@ MonoBehaviour:
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
   destination: {fileID: 654512443}
-  navMeshSurface: {fileID: 1688408970}
+  navMeshSurface: {fileID: 1035394514}
 --- !u!4 &1727191255
 Transform:
   m_ObjectHideFlags: 0
@@ -30417,7 +31206,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30609,7 +31399,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (13)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30683,7 +31474,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2961892935720809594, guid: fe342b97be0dea14ea617cc60bfb6e10, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30757,7 +31549,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30831,7 +31624,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -30980,7 +31774,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31296,7 +32091,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31445,7 +32241,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31519,7 +32316,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31624,7 +32422,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31775,7 +32574,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -31849,7 +32649,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -32167,7 +32968,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -32590,7 +33392,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -32726,7 +33529,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_03 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1218366971822522676, guid: 5d9890dd1f9a9c644b4661e2da4680ba, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -32950,7 +33754,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33404,7 +34209,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33478,7 +34284,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33682,6 +34489,12 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &2016494765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2168860106298537121, guid: 8abbfc1546bd32e408ce00442b7c686e,
+    type: 3}
+  m_PrefabInstance: {fileID: 182604545}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2024998759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33745,7 +34558,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_05 (14)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33819,7 +34633,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -33929,7 +34744,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34006,6 +34822,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2042762125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2051258273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2051258274}
+  m_Layer: 0
+  m_Name: GameObject (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2051258274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2051258273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -24.33, y: 0.25, z: -40.56}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2064460063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34069,7 +34916,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34386,7 +35234,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543670526714510595, guid: c7100fa00916ded47b6e9508dafa30c9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34535,7 +35384,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34609,7 +35459,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_06 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4366833209317709722, guid: 398aa40bc57bf524ab418854bddb5b6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34833,7 +35684,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -2815968527132867412, guid: f330c4e14fcff334ba10e706b98c6b56, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -34982,7 +35834,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CH01_Floor_Tile_07 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -925645126482390177, guid: a81036ef21ca0624bafe87ed2e57ad6e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -35316,5 +36169,11 @@ SceneRoots:
   - {fileID: 8822361723008274640}
   - {fileID: 96925707}
   - {fileID: 654512443}
+  - {fileID: 1697944254}
+  - {fileID: 1593359173}
+  - {fileID: 2051258274}
   - {fileID: 1409038057}
   - {fileID: 1727191255}
+  - {fileID: 114719700}
+  - {fileID: 1293042794}
+  - {fileID: 537055992}
