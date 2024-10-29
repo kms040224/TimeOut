@@ -2870,7 +2870,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2087840466}
   destination: {fileID: 1697944254}
   navMeshSurface: {fileID: 1720990752}
-  playerController: {fileID: 0}
+  playerController: {fileID: 1877243102}
 --- !u!4 &114719700
 Transform:
   m_ObjectHideFlags: 0
@@ -10750,7 +10750,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2087840466}
   destination: {fileID: 2051258274}
   navMeshSurface: {fileID: 1720990752}
-  playerController: {fileID: 0}
+  playerController: {fileID: 1877243102}
 --- !u!4 &537055992
 Transform:
   m_ObjectHideFlags: 0
@@ -22654,7 +22654,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2087840466}
   destination: {fileID: 1593359173}
   navMeshSurface: {fileID: 1720990752}
-  playerController: {fileID: 0}
+  playerController: {fileID: 1877243102}
 --- !u!4 &1293042794
 Transform:
   m_ObjectHideFlags: 0
@@ -29655,7 +29655,7 @@ MonoBehaviour:
   mainCamera: {fileID: 2087840466}
   destination: {fileID: 654512443}
   navMeshSurface: {fileID: 1035394514}
-  playerController: {fileID: 0}
+  playerController: {fileID: 1877243102}
 --- !u!4 &1727191255
 Transform:
   m_ObjectHideFlags: 0
@@ -31160,7 +31160,7 @@ MonoBehaviour:
     type: 3}
   areaEffectPrefab: {fileID: 8535985873047557982, guid: 4d715193bb233ae47afbd323405ede05,
     type: 3}
-  meteorPrefab: {fileID: 2668697625759626458, guid: 09af3e1c0bc0ef5469fa99b2c2619e13,
+  meteorPrefab: {fileID: 2364792116979565844, guid: 7cf92ce320e53464d8cf667574557ad6,
     type: 3}
   GameOverPanel: {fileID: 1604672100}
   fireballSpawnPoint: {fileID: 400486153}
@@ -31173,7 +31173,7 @@ MonoBehaviour:
   teleportDistance: 1
   teleportCooldown: 8
   areaEffectCooldown: 10
-  meteorCooldown: 0
+  meteorCooldown: 40
   rollSpeed: 5
   rollDistance: 3
   rollCooldown: 5
