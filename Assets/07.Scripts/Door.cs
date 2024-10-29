@@ -66,13 +66,20 @@ public class Door : MonoBehaviour
     }
     private IEnumerator DisablePlayerMovement(PlayerController player)
     {
-        // 플레이어의 움직임 비활성화
+        // 플레이어의 움직임을 비활성화
         player.enabled = false;
+
+        // 애니메이터를 idle 상태로 전환
+        Animator playerAnimator = player.GetComponent<Animator>();
+        if (playerAnimator != null)
+        {
+            playerAnimator.Play("Idle"); // "Idle"은 애니메이터에서 idle 상태의 이름
+        }
 
         // 2초 대기
         yield return new WaitForSeconds(2f);
 
-        // 플레이어의 움직임 활성화
+        // 플레이어의 움직임을 다시 활성화
         player.enabled = true;
     }
 }
