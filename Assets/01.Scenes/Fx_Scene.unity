@@ -15786,7 +15786,7 @@ PrefabInstance:
     - target: {fileID: 1026441304111402468, guid: 7cf92ce320e53464d8cf667574557ad6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1026441304111402468, guid: 7cf92ce320e53464d8cf667574557ad6,
         type: 3}
@@ -15832,6 +15832,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FX_FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2975962447654289548, guid: 7cf92ce320e53464d8cf667574557ad6,
+        type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

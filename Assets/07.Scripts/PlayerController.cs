@@ -36,10 +36,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 destinationPoint;
     private bool shouldMove = false;
     private bool isUsingFlamethrower = false;
+    private bool isInvincible = false; // 무적 상태 여부
+    public float knockbackForce = 5f;  // 넉백 힘
     private float flamethrowerCooldownTimer = 0f;
     public float healthDrainRate = 1f; // 1초에 1만큼 체력 감소
     private float healthDrainCooldown = 1f; // 체력 감소 간격
     private float lastHealthDrainTime = 0f; // 마지막 체력 감소 시간
+    private Renderer playerRenderer;
 
     void Start()
     {
@@ -65,6 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("Health Slider가 할당되지 않았습니다.");
         }
+        playerRenderer = GetComponent<Renderer>();
     }
 
     void Update()
@@ -402,14 +406,62 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(Vector3 hitDirection, int damage)
     {
-        PlayerHealthManager.Instance.TakeDamage(damage);
+        animator.SetTrigger("CharacterHit");
+        if (!isInvincible)
+        {
+            StartCoroutine(Knockback(hitDirection));
+            StartCoroutine(InvincibilityCoroutine());
+        }
+            PlayerHealthManager.Instance.TakeDamage(damage);
         UpdateHealthBar();
+        StartCoroutine(InvincibilityAndBlinking());
+    }
+    private IEnumerator Knockback(Vector3 hitDirection)
+    {
+        Vector3 knockbackDir = hitDirection.normalized;
+        float knockbackTime = 0.1f;  // 넉백 지속 시간
+
+        while (knockbackTime > 0)
+        {
+            transform.position += knockbackDir * knockbackForce * Time.deltaTime;
+            knockbackTime -= Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    // 무적 상태를 관리하는 코루틴
+    private IEnumerator InvincibilityCoroutine()
+    {
+        isInvincible = true;  // 무적 상태 활성화
+        yield return new WaitForSeconds(0.5f);
+        isInvincible = false; // 무적 상태 해제
+    }
+    private IEnumerator InvincibilityAndBlinking()
+    {
+        isInvincible = true;
+
+        // 0.5초 동안 깜빡임 효과
+        float blinkDuration = 0.5f;
+        float blinkInterval = 0.1f; // 깜빡임 간격
+        float endTime = Time.time + blinkDuration;
+
+        while (Time.time < endTime)
+        {
+            // Renderer 활성화/비활성화로 깜빡임 구현
+            playerRenderer.enabled = !playerRenderer.enabled;
+            yield return new WaitForSeconds(blinkInterval);
+        }
+
+        // 깜빡임 종료 후 Renderer 활성화
+        playerRenderer.enabled = true;
+        isInvincible = false;
     }
 
     private void Die()
     {
+        animator.SetTrigger("Die");
         Debug.Log("Player died!");
         if (GameOverPanel != null)
         {

@@ -6,7 +6,6 @@ using UnityEngine.AI;
 
 public class Door : MonoBehaviour
 {
-    public Transform targetPosition; // 플레이어가 이동할 위치
     public Vector3 cameraPosition; // 카메라가 이동할 위치
     public Vector3 cameraRotation; // 카메라가 바라볼 각도 (EulerAngles)
     public float fadeDuration = 1.0f; // 페이드 인/아웃 시간
@@ -14,6 +13,7 @@ public class Door : MonoBehaviour
     public Camera mainCamera; // 메인 카메라 연결
     public Transform destination;
     public NavMeshSurface navMeshSurface;
+    public PlayerController playerController;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -21,6 +21,7 @@ public class Door : MonoBehaviour
         {
             StartCoroutine(TeleportPlayer(other.transform));
             UpdateNavMesh();
+            StartCoroutine(DisablePlayerMovement(other.GetComponent<PlayerController>()));
         }
     }
 
@@ -62,5 +63,16 @@ public class Door : MonoBehaviour
         {
             navMeshSurface.BuildNavMesh(); // NavMesh를 재계산
         }
+    }
+    private IEnumerator DisablePlayerMovement(PlayerController player)
+    {
+        // 플레이어의 움직임 비활성화
+        player.enabled = false;
+
+        // 2초 대기
+        yield return new WaitForSeconds(2f);
+
+        // 플레이어의 움직임 활성화
+        player.enabled = true;
     }
 }
