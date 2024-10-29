@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
     public AniController aniController;
 
     private Vector3 destinationPoint;
-    private bool shouldMove = false;
+    public bool shouldMove = false;
     private bool isUsingFlamethrower = false;
     private bool isInvincible = false; // 무적 상태 여부
     public float knockbackForce = 5f;  // 넉백 힘
@@ -109,25 +109,24 @@ public class PlayerController : MonoBehaviour
 
         if (shouldMove && !isUsingFlamethrower)
         {
-            Quaternion targetRotation = Quaternion.LookRotation(destinationPoint - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
-            transform.position = Vector3.MoveTowards(transform.position, destinationPoint, movementSpeed * Time.deltaTime);
-
-            if (transform.position == destinationPoint)
+            // 문에 들어가려고 할 때 이동 중지
+            if (Vector3.Distance(transform.position, destinationPoint) < 0.1f)
             {
-                shouldMove = false;
-                animator.SetBool("isMoving", false); // 멈췄을 때 애니메이션 중지
+                shouldMove = false; // 도착하면 이동 중지
+                animator.SetBool("isMoving", false); // 애니메이션 중지
             }
             else
             {
+                Quaternion targetRotation = Quaternion.LookRotation(destinationPoint - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+
+                transform.position = Vector3.MoveTowards(transform.position, destinationPoint, movementSpeed * Time.deltaTime);
                 animator.SetBool("isMoving", true); // 이동 중 애니메이션 재생
             }
-
         }
         else
         {
-            animator.SetBool("isMoving", false);
+            animator.SetBool("isMoving", false); // 이동하지 않을 때 애니메이션 중지
         }
 
 
