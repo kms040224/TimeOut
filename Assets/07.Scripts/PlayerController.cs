@@ -404,12 +404,14 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        animator.SetTrigger("CharacterHit");
         PlayerHealthManager.Instance.TakeDamage(damage);
         UpdateHealthBar();
     }
 
     private void Die()
     {
+        animator.SetTrigger("Die");
         Debug.Log("Player died!");
         if (GameOverPanel != null)
         {
