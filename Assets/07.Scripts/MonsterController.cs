@@ -181,7 +181,12 @@ public class MonsterController : MonoBehaviour
             nextAttackTime = Time.time + attackRate;
             if (playerController != null)
             {
-                playerController.TakeDamage(10);
+                // 몬스터에서 플레이어 방향 벡터 계산
+                Vector3 hitDirection = (player.transform.position - transform.position).normalized;
+                int damage = 10; // 예시로 설정한 데미지 값
+
+                // 방향과 데미지를 전달하여 TakeDamage 호출
+                playerController.TakeDamage(hitDirection, damage);
             }
         }
     }

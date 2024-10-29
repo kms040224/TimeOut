@@ -32792,7 +32792,10 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
-  m_WarningMessage: 
+  m_WarningMessage: "\nBinding warning: Some generic clip(s) animate transforms that
+    are already bound by a Humanoid avatar. These transforms can only be changed
+    by Humanoid clips.\n\tTransform 'root'\n\tTransform 'root'\n\tTransform 'root'\n\tFrom
+    animation clip 'Take 001'"
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
@@ -32846,7 +32849,7 @@ MonoBehaviour:
   teleportCooldown: 8
   areaEffectCooldown: 10
   meteorCooldown: 0
-  rollSpeed: 15
+  rollSpeed: 5
   rollDistance: 3
   rollCooldown: 5
   aniController: {fileID: 1877243101}
