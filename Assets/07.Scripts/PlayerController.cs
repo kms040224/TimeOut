@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f;
     public float flamethrowerDuration = 1.5f;
     public float flamethrowerCooldown = 12f;
-    public Slider healthSlider;
     public float teleportDistance = 1f; // 순간이동 거리 설정
     public float teleportCooldown = 8.0f;
     private float lastTeleportTime = -8.0f;
@@ -51,29 +50,11 @@ public class PlayerController : MonoBehaviour
 
         if (GameOverPanel != null)
             GameOverPanel.SetActive(false);
-
-        if (PlayerHealthManager.Instance != null)
-        {
-            UpdateHealthBar(); // 체력 바 업데이트
-        }
-        else
-        {
-            Debug.LogError("PlayerHealthManager 인스턴스가 null입니다. PlayerHealthManager가 씬에 추가되어 있는지 확인하세요.");
-        }
-
-        if (healthSlider == null)
-        {
-            Debug.LogError("Health Slider가 할당되지 않았습니다.");
-        }
         playerRenderer = GetComponent<Renderer>();
     }
 
     void Update()
     {
-        if (PlayerHealthManager.Instance != null)
-        {
-            UpdateHealthBar();
-        }
 
         if (PlayerHealthManager.Instance.health <= 0)
         {
@@ -160,18 +141,6 @@ public class PlayerController : MonoBehaviour
                 AimAtCursor();
                 StartCoroutine(RollTowardsCursor());
             }
-        }
-    }
-
-    private void UpdateHealthBar()
-    {
-        if (healthSlider != null)
-        {
-            healthSlider.value = (float)PlayerHealthManager.Instance.CurrentHealth / PlayerHealthManager.Instance.maxHealth;
-        }
-        else
-        {
-            Debug.LogError("Health Slider가 null입니다.");
         }
     }
 
@@ -399,7 +368,6 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(InvincibilityCoroutine());
         }
             PlayerHealthManager.Instance.TakeDamage(damage);
-        UpdateHealthBar();
         StartCoroutine(InvincibilityAndBlinking());
     }
     private IEnumerator Knockback(Vector3 hitDirection)

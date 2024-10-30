@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4001050937411974226}
   - component: {fileID: 5562136806432898795}
   - component: {fileID: 4052752191436810836}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GlowParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4818,7 +4818,7 @@ GameObject:
   - component: {fileID: 2242913083720001867}
   - component: {fileID: 5961621434917413672}
   - component: {fileID: 8488123554639056421}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bottle_red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4923,7 +4923,7 @@ GameObject:
   - component: {fileID: 526212754169271749}
   - component: {fileID: 4505448611749170080}
   - component: {fileID: 6154828596794774698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StarsParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9727,7 +9727,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4742252852259535424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9761,7 +9761,7 @@ GameObject:
   - component: {fileID: 6331339782283606461}
   - component: {fileID: 8379072233947412584}
   - component: {fileID: 5717349841075920612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Health
   m_TagString: FieldItem
   m_Icon: {fileID: 0}
@@ -9804,7 +9804,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5717349841075920612
 MonoBehaviour:

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4000012117052618}
   - component: {fileID: 198000013475447240}
   - component: {fileID: 199000010921799088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StarsParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 4000011568089122}
   - component: {fileID: 198000012310070970}
   - component: {fileID: 199000011540357244}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GlowParticles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9624,7 +9624,7 @@ GameObject:
   - component: {fileID: 33000011419905746}
   - component: {fileID: 23000010768551128}
   - component: {fileID: 95000014012712158}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bottle_green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9729,7 +9729,7 @@ GameObject:
   - component: {fileID: 4000013828724138}
   - component: {fileID: 7963960114408286512}
   - component: {fileID: -904987481900533800}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Green
   m_TagString: FieldItem
   m_Icon: {fileID: 0}
@@ -9772,7 +9772,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &-904987481900533800
 MonoBehaviour:
@@ -9802,7 +9802,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4000012602005092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bottle
   m_TagString: Untagged
   m_Icon: {fileID: 0}

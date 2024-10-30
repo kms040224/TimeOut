@@ -221,18 +221,26 @@ public class MonsterController : MonoBehaviour
         if (dropItems.Count > 0 && Random.value <= dropChance)
         {
             int randomIndex = Random.Range(0, dropItems.Count);
-            GameObject droppedItemPrefab = dropItems[randomIndex]; // dropItems에서 아이템 프리팹 가져오기
+            GameObject droppedItemPrefab = dropItems[randomIndex];
 
-            // 드롭된 아이템 오브젝트 생성
             GameObject droppedItemObject = Instantiate(droppedItemPrefab, transform.position, Quaternion.identity);
-            FieldItems fieldItem = droppedItemObject.GetComponent<FieldItems>();
 
-            Item itemToSet = null; // itemToSet 변수를 여기에 선언
+            // 몬스터와 아이템 충돌 무시
+            Collider itemCollider = droppedItemObject.GetComponent<Collider>();
+            Collider monsterCollider = GetComponent<Collider>();
+
+            if (itemCollider != null && monsterCollider != null)
+            {
+                Physics.IgnoreCollision(itemCollider, monsterCollider);
+            }
+
+            FieldItems fieldItem = droppedItemObject.GetComponent<FieldItems>();
+            Item itemToSet = null;
 
             if (fieldItem != null)
             {
                 itemToSet = ItemDatabase.instance.itemDB.Find(item => item.itemPrefab == droppedItemPrefab);
-                fieldItem.SetItem(itemToSet); // 드롭된 아이템 설정
+                fieldItem.SetItem(itemToSet);
             }
 
             if (itemToSet != null)
