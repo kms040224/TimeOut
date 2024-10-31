@@ -2727,8 +2727,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -9, y: 9, z: -20}
-  cameraRotation: {x: 74, y: -90, z: 0}
+  cameraPosition: {x: -7.88, y: 8.49, z: -20}
+  cameraRotation: {x: 66, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -6510,6 +6510,7 @@ MonoBehaviour:
   - {fileID: 114719697}
   - {fileID: 1293042791}
   - {fileID: 537055989}
+  - {fileID: 537055989}
 --- !u!4 &373982333
 Transform:
   m_ObjectHideFlags: 0
@@ -7584,6 +7585,72 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 427852717}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &434575979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434575980}
+  - component: {fileID: 434575982}
+  - component: {fileID: 434575981}
+  m_Layer: 0
+  m_Name: Portal (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &434575980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434575979}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -32.14, y: -5.020041, z: -0.6202431}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1648242212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434575981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434575979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b21f715ab589db4c9f2a7222ba8cfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &434575982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434575979}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.1, y: 0.1, z: 0.1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &435060856
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10521,8 +10588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -24, y: 9, z: -40}
-  cameraRotation: {x: 74, y: -90, z: 0}
+  cameraPosition: {x: -22.88, y: 8.49, z: -40}
+  cameraRotation: {x: 66, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -19454,7 +19521,6 @@ Transform:
   - {fileID: 1730847267}
   - {fileID: 1740894548}
   - {fileID: 1469197546}
-  - {fileID: 1321419975}
   - {fileID: 1117277760}
   - {fileID: 575821423}
   - {fileID: 721832399}
@@ -21040,7 +21106,7 @@ Transform:
   m_GameObject: {fileID: 1159247870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7478695, y: 1.043591, z: 4.0602264}
+  m_LocalPosition: {x: 0.4, y: 1.043591, z: -2.29}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22655,8 +22721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -9, y: 9, z: -40}
-  cameraRotation: {x: 74, y: -90, z: 0}
+  cameraPosition: {x: -7.88, y: 8.49, z: -40}
+  cameraRotation: {x: 66, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -23189,81 +23255,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 830902316153348046, guid: a81036ef21ca0624bafe87ed2e57ad6e,
     type: 3}
   m_PrefabInstance: {fileID: 1321270655}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1321419974
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1059580937}
-    m_Modifications:
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.99074364
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.0375385
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.53973
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6072275220939004824, guid: cc7bb31194466ce40ab8ead87e493bff,
-        type: 3}
-      propertyPath: m_Name
-      value: CH01_Floor_Tile_05 (12)
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 576557142286691034, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cc7bb31194466ce40ab8ead87e493bff, type: 3}
---- !u!4 &1321419975 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3422353010693019058, guid: cc7bb31194466ce40ab8ead87e493bff,
-    type: 3}
-  m_PrefabInstance: {fileID: 1321419974}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1321743186
 GameObject:
@@ -24901,7 +24892,7 @@ Transform:
   m_GameObject: {fileID: 1386945918}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7478695, y: 1.0273893, z: 4.939774}
+  m_LocalPosition: {x: 0.31, y: 1.0273893, z: 2.58}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28184,6 +28175,7 @@ Transform:
   - {fileID: 114719700}
   - {fileID: 1293042794}
   - {fileID: 537055992}
+  - {fileID: 434575980}
   m_Father: {fileID: 1408623636}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1649234193
@@ -29771,8 +29763,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -9, y: 9, z: 0}
-  cameraRotation: {x: 74, y: -90, z: 0}
+  cameraPosition: {x: -7.88, y: 8.49, z: 0}
+  cameraRotation: {x: 66, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
