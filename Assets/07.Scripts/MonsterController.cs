@@ -200,6 +200,7 @@ public class MonsterController : MonoBehaviour
 
         health -= damage;
         Debug.Log("Monster took damage! Current health: " + health);
+        DamageTextController.Instance.CreateDamageText(transform.position, damage);
 
         if (health <= 0)
         {
