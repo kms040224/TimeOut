@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
 
         if (GameOverPanel != null)
             GameOverPanel.SetActive(false);
-        playerRenderer = GetComponent<Renderer>();
+        playerRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
     }
 
     void Update()
