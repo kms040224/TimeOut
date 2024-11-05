@@ -11581,6 +11581,53 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 584581502}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &598283777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 598283779}
+  - component: {fileID: 598283778}
+  m_Layer: 0
+  m_Name: ObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &598283778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598283777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fae631e0cd0e384699a93aa0a2d836e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magicAttackPrefab: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
+    type: 3}
+  poolSize: 10
+--- !u!4 &598283779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 598283777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.4310284, y: 1.201816, z: -0.63897735}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &598774588
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33977,6 +34024,17 @@ PrefabInstance:
       propertyPath: fireOrbPrefab
       value: 
       objectReference: {fileID: 906889724}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: magicAttackPrefab
+      value: 
+      objectReference: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
+        type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: magicAttackSpawnPoint
+      value: 
+      objectReference: {fileID: 4519524882872249135}
     - target: {fileID: 7268830289730954398, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34037,6 +34095,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3901a47de11b0114a8bc2b4f89b9c5b2, type: 3}
+--- !u!4 &4519524882872249135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5740588035401547325, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+    type: 3}
+  m_PrefabInstance: {fileID: 4519524882872249134}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -34056,3 +34120,4 @@ SceneRoots:
   - {fileID: 1408623636}
   - {fileID: 4519524882872249134}
   - {fileID: 906889728}
+  - {fileID: 598283779}

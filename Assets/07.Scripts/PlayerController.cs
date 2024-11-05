@@ -7,36 +7,36 @@ public class PlayerController : MonoBehaviour
 {
     public Animator animator;
     public Camera mainCamera;
-    public GameObject fireballPrefab;
+    public GameObject magicAttackPrefab;  // MagicAttack 프리팹
     public GameObject flamethrowerPrefab;
-    public GameObject fireOrbPrefab;  // 화염구체 프리팹 추가
-    public GameObject areaEffectPrefab; // 장판 프리팹 추가
+    public GameObject fireOrbPrefab;
+    public GameObject areaEffectPrefab;
     public GameObject meteorPrefab;
     public GameObject GameOverPanel;
-    public Transform fireballSpawnPoint;
+    public Transform magicAttackSpawnPoint;  // MagicAttack 생성 위치
     public Transform flamethrowerSpawnPoint;
     public float movementSpeed = 10f;
     public float rotationSpeed = 10f;
     public float flamethrowerDuration = 1.5f;
     public float flamethrowerCooldown = 12f;
-    public float teleportDistance = 1f; // 순간이동 거리 설정
+    public float teleportDistance = 1f;
     public float teleportCooldown = 8.0f;
     private float lastTeleportTime = -8.0f;
-    public float areaEffectCooldown = 10.0f; // 장판 쿨타임 설정
-    private float lastAreaEffectTime = -10.0f; // 장판 쿨타임 초기화
-    public float meteorCooldown = 40f; // 메테오 쿨타임 설정
-    private float lastMeteorTime = -40f; // 메테오 쿨타임 초기화
-    public float rollSpeed = 15f; // 굴러가는 속도
-    public float rollDistance = 3f; // 굴러가는 거리
-    public float rollCooldown = 5f; // 굴러가는 쿨타임 설정
-    private float lastRollTime = -5f; // 굴러가기 쿨타임 초기화
+    public float areaEffectCooldown = 10.0f;
+    private float lastAreaEffectTime = -10.0f;
+    public float meteorCooldown = 40f;
+    private float lastMeteorTime = -40f;
+    public float rollSpeed = 15f;
+    public float rollDistance = 3f;
+    public float rollCooldown = 5f;
+    private float lastRollTime = -5f;
     public AniController aniController;
 
     private Vector3 destinationPoint;
     public bool shouldMove = false;
     private bool isUsingFlamethrower = false;
-    private bool isInvincible = false; // 무적 상태 여부
-    public float knockbackForce = 5f;  // 넉백 힘
+    private bool isInvincible = false;
+    public float knockbackForce = 5f;
     private float flamethrowerCooldownTimer = 0f;
     private Renderer playerRenderer;
 
@@ -110,11 +110,10 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isMoving", false); // 이동하지 않을 때 애니메이션 중지
         }
 
-
         if (Input.GetKeyDown(KeyCode.A) && !isUsingFlamethrower)
         {
             AimAtCursor();
-            ShootFireball();
+            ShootMagicAttack();  // MagicAttack 발사
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -180,22 +179,24 @@ public class PlayerController : MonoBehaviour
         isUsingFlamethrower = false;
     }
 
-    void ShootFireball()
+    void ShootMagicAttack()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
-            GameObject fireball = Instantiate(fireballPrefab, fireballSpawnPoint.position, Quaternion.identity);
-            FireballController fireballController = fireball.GetComponent<FireballController>();
+            GameObject magicAttack = ObjectPool.Instance.GetMagicAttack(); // MagicAttack을 풀에서 가져오기
+            magicAttack.transform.position = magicAttackSpawnPoint.position;
+            magicAttack.transform.rotation = Quaternion.identity;
 
-            if (fireballController != null)
+            MagicAttackController magicAttackController = magicAttack.GetComponent<MagicAttackController>();
+            if (magicAttackController != null)
             {
-                fireballController.Launch(hit.point);
+                magicAttackController.Launch(hit.point);
             }
 
-            Debug.Log("Fireball shot towards: " + hit.point);
+            Debug.Log("Magic Attack shot towards: " + hit.point);
         }
     }
 

@@ -10,6 +10,9 @@ public class MonsterController : MonoBehaviour
     public float stopDistance = 1.5f;
     public float attackRate = 1.0f;
     private float nextAttackTime = 0f;
+    public float knockbackForce = 5.0f;
+    public float knockbackDuration = 0.5f;
+    private bool isKnockedBack = false;
 
     public float flockingRadius = 5.0f;
     public float separationDistance = 1.5f;
@@ -193,7 +196,7 @@ public class MonsterController : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (isDead) return; // 이미 죽은 경우 실행 안 함
+        if (isDead) return;
 
         health -= damage;
         Debug.Log("Monster took damage! Current health: " + health);
@@ -202,8 +205,28 @@ public class MonsterController : MonoBehaviour
         {
             Die();
         }
+        else
+        {
+            // 넉백 처리
+            StartKnockback();
+        }
     }
 
+    private void StartKnockback()
+    {
+        Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+        rb.isKinematic = false; // 비활성화 상태로 시작
+        rb.AddForce(-transform.forward * knockbackForce, ForceMode.Impulse); // 반대 방향으로 힘 적용
+
+        // 일정 시간 후에 Rigidbody 제거
+        StartCoroutine(RemoveRigidbody(rb));
+    }
+
+    private IEnumerator RemoveRigidbody(Rigidbody rb)
+    {
+        yield return new WaitForSeconds(0.1f); // 넉백 시간이 끝날 때까지 대기
+        Destroy(rb);
+    }
     private void Die()
     {
         if (isDead) return; // 이미 죽은 경우 실행 안 함

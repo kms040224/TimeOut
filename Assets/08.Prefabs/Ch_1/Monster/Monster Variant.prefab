@@ -740,6 +740,8 @@ MonoBehaviour:
   attackDistance: 1
   stopDistance: 1
   attackRate: 1
+  knockbackForce: 20
+  knockbackDuration: 0.5
   flockingRadius: 2
   separationDistance: 1
   player: {fileID: 0}
@@ -790,7 +792,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 832e69c20e884e0790dae5ee86441a63, type: 3}
 --- !u!1 &5541695114698829447

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireballController : MonoBehaviour
+public class MagicAttackController : MonoBehaviour
 {
     public int damage = 20; // 파이어볼 데미지
     public float lifetime = 5f; // 파이어볼이 유지되는 시간
