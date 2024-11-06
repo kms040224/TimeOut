@@ -10,17 +10,25 @@ public class MagicAttackController : MonoBehaviour
     public GameObject hitEffectPrefab; // 타격 시 생성할 이펙트 프리팹
 
     private Vector3 direction;
+    private float lifetimeTimer;
 
-    void Start()
+    void OnEnable()
     {
-        // 일정 시간이 지나면 파이어볼을 파괴
-        Destroy(gameObject, lifetime);
+        // 오브젝트가 활성화될 때마다 lifetime 타이머 초기화
+        lifetimeTimer = lifetime;
     }
 
     void Update()
     {
         // 파이어볼이 직선으로 날아가도록
         transform.Translate(direction * speed * Time.deltaTime);
+
+        // 수명이 다하면 오브젝트 풀로 반환
+        lifetimeTimer -= Time.deltaTime;
+        if (lifetimeTimer <= 0f)
+        {
+            ReturnToPool();
+        }
     }
 
     public void Launch(Vector3 target)
@@ -45,16 +53,19 @@ public class MagicAttackController : MonoBehaviour
                 // 히트 이펙트 생성
                 if (hitEffectPrefab != null)
                 {
-                    // 히트 이펙트의 복제본 생성
                     GameObject hitEffect = Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
-
-                    // 1초 후에 히트 이펙트의 복제본 파괴
-                    Destroy(hitEffect, 1f);
+                    Destroy(hitEffect, 1f); // 히트 이펙트의 복제본은 일정 시간 후 파괴
                 }
             }
 
-            // 파이어볼을 파괴
-            Destroy(gameObject);
+            // 파이어볼을 풀로 반환
+            ReturnToPool();
         }
+    }
+
+    private void ReturnToPool()
+    {
+        // 오브젝트 풀로 반환
+        ObjectPool.Instance.ReturnMagicAttack(gameObject);
     }
 }
