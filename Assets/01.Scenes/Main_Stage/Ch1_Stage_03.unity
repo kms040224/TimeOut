@@ -470,6 +470,12 @@ PrefabInstance:
       objectReference: {fileID: 2087840466}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de,
+        type: 2}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 320886950}
@@ -5124,6 +5130,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicAttackPrefab: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
+    type: 3}
+  damageTextPrefab: {fileID: 6695460077086908051, guid: 20b68aea0693cb14f833e085df693ad1,
     type: 3}
   poolSize: 10
 --- !u!4 &306779313
@@ -29181,7 +29189,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 306832297}
-  dmgTxt: {fileID: 6695460077086908051, guid: 20b68aea0693cb14f833e085df693ad1, type: 3}
 --- !u!4 &1957660191
 Transform:
   m_ObjectHideFlags: 0

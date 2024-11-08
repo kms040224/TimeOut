@@ -51,6 +51,11 @@ public class PlayerController : MonoBehaviour
 
         if (GameOverPanel != null)
             GameOverPanel.SetActive(false);
+
+        if (playerRenderer == null)
+        {
+            playerRenderer = GetComponentInChildren<Renderer>();
+        }
     }
 
     void Update()
@@ -296,7 +301,15 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            Instantiate(meteorPrefab, hit.point, Quaternion.identity);
+            // 메테오를 소환하고, MeteorController의 Launch 메서드를 호출하여 마우스 방향으로 발사
+            GameObject meteor = Instantiate(meteorPrefab, transform.position, Quaternion.identity);
+            MeteorController meteorController = meteor.GetComponent<MeteorController>();
+
+            if (meteorController != null)
+            {
+                meteorController.Launch(hit.point); // 마우스 클릭 위치를 목표로 설정
+            }
+
             lastMeteorTime = Time.time;
         }
     }

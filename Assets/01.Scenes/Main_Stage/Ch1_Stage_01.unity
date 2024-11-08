@@ -5959,6 +5959,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 316903091}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &327532777
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327532779}
+  - component: {fileID: 327532778}
+  m_Layer: 0
+  m_Name: DamageText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &327532778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327532777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 473de9a6da5286645a79dc22a9068bf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 1017858043}
+--- !u!4 &327532779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327532777}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 27.286127, y: 1.2103336, z: -20.697481}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &328937499
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11612,6 +11657,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magicAttackPrefab: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
+    type: 3}
+  damageTextPrefab: {fileID: 6695460077086908051, guid: 20b68aea0693cb14f833e085df693ad1,
     type: 3}
   poolSize: 10
 --- !u!4 &598283779
@@ -34128,3 +34175,4 @@ SceneRoots:
   - {fileID: 4519524882872249134}
   - {fileID: 906889728}
   - {fileID: 598283779}
+  - {fileID: 327532779}
