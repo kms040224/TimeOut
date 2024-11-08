@@ -34017,6 +34017,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: playerStats
+      value: 
+      objectReference: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de,
+        type: 2}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: GameOverPanel
       value: 
       objectReference: {fileID: 1604672100}
