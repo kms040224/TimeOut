@@ -7,13 +7,13 @@ public class PlayerController : MonoBehaviour
 {
     public Animator animator;
     public Camera mainCamera;
-    public GameObject magicAttackPrefab;
+    public GameObject magicAttackPrefab;  // MagicAttack 프리팹
     public GameObject flamethrowerPrefab;
     public GameObject fireOrbPrefab;
     public GameObject areaEffectPrefab;
     public GameObject meteorPrefab;
     public GameObject GameOverPanel;
-    public Transform magicAttackSpawnPoint;
+    public Transform magicAttackSpawnPoint;  // MagicAttack 생성 위치
     public Transform flamethrowerSpawnPoint;
     public float movementSpeed = 10f;
     public float rotationSpeed = 10f;
@@ -31,7 +31,6 @@ public class PlayerController : MonoBehaviour
     public float rollCooldown = 5f;
     private float lastRollTime = -5f;
     public AniController aniController;
-    public PlayerStats playerStats;
 
     private Vector3 destinationPoint;
     public bool shouldMove = false;
@@ -56,13 +55,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
         if (PlayerHealthManager.Instance.health <= 0)
         {
             Die();
             return;
         }
 
-        // Flamethrower 사용 시
         if (Input.GetKeyDown(KeyCode.Q) && !isUsingFlamethrower && flamethrowerCooldownTimer <= 0)
         {
             AimAtCursor();
@@ -74,7 +73,6 @@ public class PlayerController : MonoBehaviour
             flamethrowerCooldownTimer -= Time.deltaTime;
         }
 
-        // 마우스 우클릭으로 이동
         if (Input.GetMouseButtonDown(1) && !isUsingFlamethrower)
         {
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -92,6 +90,7 @@ public class PlayerController : MonoBehaviour
 
         if (shouldMove && !isUsingFlamethrower)
         {
+            // 문에 들어가려고 할 때 이동 중지
             if (Vector3.Distance(transform.position, destinationPoint) < 0.1f)
             {
                 shouldMove = false; // 도착하면 이동 중지
@@ -100,9 +99,9 @@ public class PlayerController : MonoBehaviour
             else
             {
                 Quaternion targetRotation = Quaternion.LookRotation(destinationPoint - transform.position);
-                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, playerStats.rotationSpeed * Time.deltaTime); // 스크립터블 오브젝트의 rotationSpeed 사용
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-                transform.position = Vector3.MoveTowards(transform.position, destinationPoint, playerStats.movementSpeed * Time.deltaTime); // 스크립터블 오브젝트의 movementSpeed 사용
+                transform.position = Vector3.MoveTowards(transform.position, destinationPoint, movementSpeed * Time.deltaTime);
                 animator.SetBool("isMoving", true); // 이동 중 애니메이션 재생
             }
         }
@@ -114,7 +113,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A) && !isUsingFlamethrower)
         {
             AimAtCursor();
-            ShootMagicAttack();
+            ShootMagicAttack();  // MagicAttack 발사
         }
 
         if (Input.GetKeyDown(KeyCode.W))
@@ -136,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Time.time - lastRollTime >= playerStats.rollCooldown) // 쿨타임 체크
+            if (Time.time - lastRollTime >= rollCooldown) // 쿨타임 체크
             {
                 AimAtCursor();
                 StartCoroutine(RollTowardsCursor());
@@ -173,10 +172,10 @@ public class PlayerController : MonoBehaviour
             GameObject flamethrower = Instantiate(flamethrowerPrefab, flamethrowerSpawnPoint.position, Quaternion.identity);
             flamethrower.transform.LookAt(hit.point);
 
-            yield return new WaitForSeconds(playerStats.flamethrowerDuration); // 스크립터블 오브젝트의 flamethrowerDuration 사용
+            yield return new WaitForSeconds(flamethrowerDuration);
         }
 
-        flamethrowerCooldownTimer = playerStats.flamethrowerCooldown; // 스크립터블 오브젝트의 flamethrowerCooldown 사용
+        flamethrowerCooldownTimer = flamethrowerCooldown;
         isUsingFlamethrower = false;
     }
 
@@ -204,12 +203,14 @@ public class PlayerController : MonoBehaviour
     // 마우스 방향으로 캐릭터를 1만큼 순간이동하고 화염구체를 생성하는 메서드
     void TeleportAndSpawnFireOrbs()
     {
-        if (Time.time - lastTeleportTime < playerStats.teleportCooldown) // 스크립터블 오브젝트의 teleportCooldown 사용
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastTeleportTime < teleportCooldown)
         {
             Debug.Log("스킬이 아직 쿨타임 중입니다.");
             return;
         }
 
+        // 순간이동할 수 있는 경우, 현재 시간을 기록
         lastTeleportTime = Time.time;
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -219,8 +220,9 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 teleportDirection = (hit.point - transform.position).normalized;
             teleportDirection.y = 0;
-            transform.position += teleportDirection * playerStats.teleportDistance; // 스크립터블 오브젝트의 teleportDistance 사용
+            transform.position += teleportDirection * teleportDistance;
 
+            // 캐릭터 주위에 두 개의 화염구체 생성
             SpawnFireOrbs();
         }
     }
@@ -267,47 +269,65 @@ public class PlayerController : MonoBehaviour
     // 장판을 깔고 쿨타임을 관리하는 메서드
     void LayDownAreaEffect()
     {
-        if (Time.time - lastAreaEffectTime < playerStats.areaEffectCooldown) // 스크립터블 오브젝트의 areaEffectCooldown 사용
+        if (Time.time - lastAreaEffectTime < areaEffectCooldown)
         {
             Debug.Log("장판 쿨타임 중입니다.");
             return;
         }
 
+        // 애니메이션 트리거 추가
         animator.SetTrigger("FireFlooring");
 
+        // 장판 생성
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
+            // 장판 생성
             Instantiate(areaEffectPrefab, hit.point, Quaternion.identity);
-            lastAreaEffectTime = Time.time;
+            lastAreaEffectTime = Time.time; // 현재 시간을 기록하여 쿨타임 관리
         }
     }
 
     void LaunchMeteor()
     {
-        if (Time.time - lastMeteorTime < playerStats.meteorCooldown) // 스크립터블 오브젝트의 meteorCooldown 사용
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastMeteorTime < meteorCooldown)
         {
             Debug.Log("메테오 쿨타임 중입니다.");
             return;
         }
 
-        animator.SetTrigger("FireMeteor");
-
+        animator.SetTrigger("Meteor");
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
-            Instantiate(meteorPrefab, hit.point, Quaternion.identity);
-            lastMeteorTime = Time.time;
+            // 메테오 생성
+            GameObject meteor = Instantiate(meteorPrefab, transform.position, Quaternion.identity);
+            MeteorController meteorController = meteor.GetComponent<MeteorController>();
+
+            if (meteorController != null)
+            {
+                meteorController.Launch(hit.point); // 메테오 발사
+            }
+
+            lastMeteorTime = Time.time; // 현재 시간을 기록하여 쿨타임 관리
         }
     }
 
     IEnumerator RollTowardsCursor()
     {
-        lastRollTime = Time.time;
+        // 쿨타임이 지나지 않았으면 실행하지 않음
+        if (Time.time - lastRollTime < rollCooldown)
+        {
+            Debug.Log("구르기 스킬이 아직 쿨타임 중입니다.");
+            yield break; // Coroutine 종료
+        }
+
+        lastRollTime = Time.time; // 마지막 구르기 시간 갱신
 
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -317,21 +337,26 @@ public class PlayerController : MonoBehaviour
             Vector3 rollDirection = (hit.point - transform.position).normalized;
             rollDirection.y = 0;
 
-            float rollDistance = playerStats.rollDistance; // 스크립터블 오브젝트의 rollDistance 사용
-            Vector3 startPosition = transform.position;
-            Vector3 endPosition = startPosition + rollDirection * rollDistance;
+            // 캐릭터 굴러가는 애니메이션 트리거
+            animator.SetTrigger("Roll");
 
-            float rollTime = playerStats.rollTime; // 스크립터블 오브젝트의 rollTime 사용
-            float elapsedTime = 0f;
+            Vector3 startPosition = transform.position; // 시작 위치
+            Vector3 rollTargetPosition = transform.position + rollDirection * rollDistance; // 목표 위치
+            float elapsedTime = 0f; // 경과 시간
+            float rollDuration = rollDistance / rollSpeed; // 구르기 시간
 
-            while (elapsedTime < rollTime)
+            while (elapsedTime < rollDuration)
             {
-                transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime / rollTime);
+                // 경과 시간 업데이트
                 elapsedTime += Time.deltaTime;
-                yield return null;
+                // 현재 위치를 보간하여 이동
+                transform.position = Vector3.Lerp(startPosition, rollTargetPosition, elapsedTime / rollDuration);
+                yield return null; // 다음 프레임까지 대기
             }
 
-            transform.position = endPosition;
+            // 최종 위치 설정
+            transform.position = rollTargetPosition;
+            Debug.Log("캐릭터가 굴러서 이동: " + rollTargetPosition);
         }
     }
 

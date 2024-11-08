@@ -26,14 +26,13 @@ public class DamageTextController : MonoBehaviour
     }
 
     public Canvas canvas;
+    public GameObject dmgTxt;
 
     public void CreateDamageText(Vector3 hitPoint, int hitDamage)
     {
         Vector3 screenPosition = Camera.main.WorldToScreenPoint(hitPoint);
 
-        GameObject damageText = ObjectPool.Instance.GetDamageText(); // ObjectPool에서 DamageText 가져오기
-        damageText.transform.SetParent(canvas.transform, false);
-        damageText.transform.position = screenPosition;
+        GameObject damageText = Instantiate(dmgTxt, screenPosition, Quaternion.identity, canvas.transform);
 
         Text textComponent = damageText.GetComponent<Text>();
         if (textComponent != null)
