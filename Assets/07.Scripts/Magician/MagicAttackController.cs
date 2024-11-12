@@ -41,21 +41,28 @@ public class MagicAttackController : MonoBehaviour
     // 충돌 감지
     void OnTriggerEnter(Collider other)
     {
-        // 충돌한 오브젝트가 몬스터일 경우
+        // 몬스터 또는 보스일 경우
         if (other.CompareTag("Monster"))
         {
             MonsterController monster = other.GetComponent<MonsterController>();
+            BossController boss = other.GetComponent<BossController>();
+
             if (monster != null)
             {
-                // 몬스터의 체력을 줄임
+                // 몬스터의 체력 감소
                 monster.TakeDamage(damage);
+            }
+            else if (boss != null)
+            {
+                // 보스의 체력 감소
+                boss.TakeDamage(damage);
+            }
 
-                // 히트 이펙트 생성
-                if (hitEffectPrefab != null)
-                {
-                    GameObject hitEffect = Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
-                    Destroy(hitEffect, 1f); // 히트 이펙트의 복제본은 일정 시간 후 파괴
-                }
+            // 히트 이펙트 생성
+            if (hitEffectPrefab != null)
+            {
+                GameObject hitEffect = Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
+                Destroy(hitEffect, 1f);
             }
 
             // 파이어볼을 풀로 반환

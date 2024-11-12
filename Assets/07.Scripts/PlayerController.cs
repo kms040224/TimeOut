@@ -358,6 +358,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator Knockback(Vector3 hitDirection)
     {
         Vector3 knockbackDir = hitDirection.normalized;
+        knockbackDir.y = 0;
         float knockbackTime = 0.1f;  // 넉백 지속 시간
 
         while (knockbackTime > 0)
