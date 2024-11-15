@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -8,13 +9,44 @@ public class GameManager : MonoBehaviour
     public GameObject[] doors; // 던전을 연결하는 문
     public GameObject[] monsterPrefabs; // 몬스터 프리팹
     public GameObject[] portals; // 포탈 오브젝트
+    private static GameManager instance;
+    public static GameManager Instance
+    {
+
+        get 
+        {
+            
+            return instance; 
+        }
+    }
+
+
 
     private int currentSpawnAreaIndex = 0; // 현재 던전 인덱스
     private int currentWave = 0; // 현재 웨이브 (0: 첫 번째 웨이브, 1: 두 번째 웨이브)
     private int monsterCount = 0; // 현재 던전의 남은 몬스터 수
 
+
+
+    private void Awake()
+    {
+        if (instance != this)
+        {
+            if (instance == null)
+            {
+                instance = this;
+            }
+
+            if (instance != this)
+            {
+                Destroy(this);
+            }
+        }
+    }
+
     private void Start()
     {
+
         OpenCurrentArea(); // 첫 던전의 문을 엽니다.
     }
 

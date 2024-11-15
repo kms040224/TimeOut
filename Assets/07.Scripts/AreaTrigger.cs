@@ -10,6 +10,8 @@ public class AreaTrigger : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameManager.Instance;
+        gameManager = GetComponent<GameManager>();
         gameManager = FindObjectOfType<GameManager>();
         areaCollider = GetComponent<Collider>(); // 콜라이더 컴포넌트 가져오기
     }
@@ -18,7 +20,7 @@ public class AreaTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player")) // 플레이어가 트리거에 들어오면
         {
-            gameManager.OnPlayerEnterArea(areaIndex); // 해당 구간의 몬스터 스폰
+            GameManager.Instance.OnPlayerEnterArea(areaIndex); // 해당 구간의 몬스터 스폰
 
             // 이전 구간의 문을 다시 활성화
             if (areaIndex > 0) // 첫 번째 구역이 아닐 경우
