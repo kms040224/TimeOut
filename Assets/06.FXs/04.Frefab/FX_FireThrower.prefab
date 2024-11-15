@@ -1045,15 +1045,15 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.70279694
-          inSlope: 1.5766932
-          outSlope: 1.5766932
+          value: 0
+          inSlope: 9.403126
+          outSlope: 9.403126
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
-          outWeight: 0.3445716
+          outWeight: 0.093478024
         - serializedVersion: 3
-          time: 0.24175595
+          time: 0.2869525
           value: 1
           inSlope: -0
           outSlope: -0
@@ -1376,7 +1376,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 1, g: 1, b: 1, a: 1}
+        key1: {r: 1, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -2256,7 +2256,7 @@ ParticleSystem:
         m_RotationOrder: 4
     m_Range: {x: 0, y: 1}
   ForceModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2313,7 +2313,7 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5184,7 +5184,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -10081,7 +10081,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 8
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -16072,15 +16072,15 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0}
-        key1: {r: 0.33962262, g: 0.33962262, b: 0.33962262, a: 1}
+        key0: {r: 1, g: 0.91716796, b: 0.4292453, a: 0}
+        key1: {r: 0.6226415, g: 0, b: 0, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 1}
-        key3: {r: 0, g: 0, b: 0, a: 0.11764706}
+        key3: {r: 0, g: 0, b: 0, a: 0.3764706}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
+        ctime0: 4819
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -17177,7 +17177,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -17394,7 +17394,7 @@ ParticleSystem:
     inWorldSpace: 0
     multiplyDragByParticleSize: 1
     multiplyDragByParticleVelocity: 1
-    dampen: 0
+    dampen: 0.1
     drag:
       serializedVersion: 2
       minMaxState: 0
