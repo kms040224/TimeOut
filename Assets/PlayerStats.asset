@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 5
   rotationSpeed: 10
-  teleportDistance: 10
-  teleportCooldown: 8
   flamethrowerCooldown: 12
   flamethrowerDuration: 1.5
   rollCooldown: 5
@@ -23,3 +21,6 @@ MonoBehaviour:
   rollTime: 0.5
   areaEffectCooldown: 10
   meteorCooldown: 40
+  magicAttackDamage: 10
+  barrierCooldown: 2
+  barrierDuration: 5

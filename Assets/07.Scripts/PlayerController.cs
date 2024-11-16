@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,11 @@ public class PlayerController : MonoBehaviour
     public Camera mainCamera;
     public GameObject magicAttackPrefab;
     public GameObject flamethrowerPrefab;
-    public GameObject fireOrbPrefab;
+    private bool hasBarrier = false; 
+    private float barrierTimer = 0f;
+    private bool isBarrierOnCooldown = false; 
+    private GameObject activeBarrierEffect;
+    public GameObject barrierEffectPrefab;
     public GameObject areaEffectPrefab;
     public GameObject meteorPrefab;
     public GameObject GameOverPanel;
@@ -19,9 +24,6 @@ public class PlayerController : MonoBehaviour
     public float rotationSpeed = 10f;
     public float flamethrowerDuration = 1.5f;
     public float flamethrowerCooldown = 12f;
-    public float teleportDistance = 1f;
-    public float teleportCooldown = 8.0f;
-    private float lastTeleportTime = -8.0f;
     public float areaEffectCooldown = 10.0f;
     private float lastAreaEffectTime = -10.0f;
     public float meteorCooldown = 40f;
@@ -56,6 +58,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRenderer = GetComponentInChildren<Renderer>();
         }
+
     }
 
     void Update()
@@ -76,6 +79,15 @@ public class PlayerController : MonoBehaviour
         if (flamethrowerCooldownTimer > 0)
         {
             flamethrowerCooldownTimer -= Time.deltaTime;
+        }
+
+        if (hasBarrier)
+        {
+            barrierTimer -= Time.deltaTime;
+            if (barrierTimer <= 0)
+            {
+                DeactivateBarrier();
+            }
         }
 
         // 마우스 우클릭으로 이동
@@ -123,7 +135,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            TeleportAndSpawnFireOrbs();
+            TryActivateBarrier();
         }
 
         if (Input.GetKeyDown(KeyCode.E))
@@ -206,64 +218,73 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void TeleportAndSpawnFireOrbs()
+    void TryActivateBarrier()
     {
-        if (Time.time - lastTeleportTime < playerStats.teleportCooldown) // 스크립터블 오브젝트의 teleportCooldown 사용
+        if (hasBarrier)
         {
-            Debug.Log("스킬이 아직 쿨타임 중입니다.");
+            Debug.Log("배리어가 이미 활성화 중입니다.");
             return;
         }
 
-        lastTeleportTime = Time.time;
-
-        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        if (Physics.Raycast(ray, out hit))
+        if (isBarrierOnCooldown)
         {
-            Vector3 teleportDirection = (hit.point - transform.position).normalized;
-            teleportDirection.y = 0;
-            transform.position += teleportDirection * playerStats.teleportDistance; // 스크립터블 오브젝트의 teleportDistance 사용
-
-            SpawnFireOrbs();
+            Debug.Log("배리어 스킬이 쿨타임입니다.");
+            return;
         }
+
+        ActivateBarrier();
     }
 
-    void SpawnFireOrbs()
+    void ActivateBarrier()
     {
-        for (int i = 0; i < 2; i++)
-        {
-            GameObject fireOrb = Instantiate(fireOrbPrefab, transform.position + (Vector3.right * (i == 0 ? 1 : -1)), Quaternion.identity);
-            FireOrbController fireOrbController = fireOrb.GetComponent<FireOrbController>();
+        hasBarrier = true;
+        barrierTimer = playerStats.barrierDuration;
 
-            if (fireOrbController != null)
-            {
-                GameObject nearestMonster = FindNearestMonster();
-                if (nearestMonster != null)
-                {
-                    fireOrbController.SetTarget(nearestMonster.transform);
-                }
-            }
-        }
+        activeBarrierEffect = Instantiate(barrierEffectPrefab, transform.position, Quaternion.identity);
+        activeBarrierEffect.transform.parent = transform;
+
+        Debug.Log("배리어가 활성화되었습니다.");
+
+        // 배리어 지속 시간 관리
+        StartCoroutine(BarrierDurationCoroutine());
+
+        // 쿨타임 시작
+        StartCoroutine(StartBarrierCooldown());
     }
 
-    GameObject FindNearestMonster()
+    IEnumerator BarrierDurationCoroutine()
     {
-        GameObject[] monsters = GameObject.FindGameObjectsWithTag("Monster");
-        GameObject nearestMonster = null;
-        float minDistance = Mathf.Infinity;
-
-        foreach (GameObject monster in monsters)
+        yield return new WaitForSeconds(playerStats.barrierDuration);
+        if (hasBarrier) // 여전히 배리어가 활성화된 상태인지 확인
         {
-            float distance = Vector3.Distance(transform.position, monster.transform.position);
-            if (distance < minDistance)
+            DeactivateBarrier();
+        }
+    }
+    void DeactivateBarrier()
+    {
+        hasBarrier = false;
+
+        if (activeBarrierEffect != null)
+        {
+            ParticleSystem ps = activeBarrierEffect.GetComponent<ParticleSystem>();
+            if (ps != null)
             {
-                minDistance = distance;
-                nearestMonster = monster;
+                ps.Stop();
+                ps.Clear();
             }
+            Destroy(activeBarrierEffect);
+            activeBarrierEffect = null;
         }
 
-        return nearestMonster;
+        Debug.Log("배리어가 해제되었습니다.");
+    }
+
+    IEnumerator StartBarrierCooldown()
+    {
+        isBarrierOnCooldown = true;
+        yield return new WaitForSeconds(playerStats.barrierCooldown); // PlayerStats에서 쿨타임 참조
+        isBarrierOnCooldown = false;
+        Debug.Log("배리어 스킬이 다시 사용 가능합니다.");
     }
 
     void LayDownAreaEffect()
@@ -346,20 +367,26 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(Vector3 hitDirection, float damage)
     {
+        if (hasBarrier)
+        {
+            DeactivateBarrier(); // 배리어 해제
+            return;
+        }
+
         animator.SetTrigger("CharacterHit");
         if (!isInvincible)
         {
             StartCoroutine(Knockback(hitDirection));
             StartCoroutine(InvincibilityCoroutine());
         }
-            PlayerHealthManager.Instance.TakeDamage(damage);
+        PlayerHealthManager.Instance.TakeDamage(damage);
         StartCoroutine(InvincibilityAndBlinking());
     }
     private IEnumerator Knockback(Vector3 hitDirection)
     {
         Vector3 knockbackDir = hitDirection.normalized;
         knockbackDir.y = 0;
-        float knockbackTime = 0.1f;  // 넉백 지속 시간
+        float knockbackTime = 0.1f;
 
         while (knockbackTime > 0)
         {
@@ -372,9 +399,9 @@ public class PlayerController : MonoBehaviour
     // 무적 상태를 관리하는 코루틴
     private IEnumerator InvincibilityCoroutine()
     {
-        isInvincible = true;  // 무적 상태 활성화
+        isInvincible = true;  
         yield return new WaitForSeconds(0.5f);
-        isInvincible = false; // 무적 상태 해제
+        isInvincible = false;
     }
     private IEnumerator InvincibilityAndBlinking()
     {

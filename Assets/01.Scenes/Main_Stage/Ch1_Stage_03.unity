@@ -492,6 +492,12 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: barrierEffectPrefab
+      value: 
+      objectReference: {fileID: 7799848009916720622, guid: 04e11099092f486489c6c88637b88491,
+        type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: magicAttackSpawnPoint
       value: 
       objectReference: {fileID: 2127868884}

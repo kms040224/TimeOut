@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MagicAttackController : MonoBehaviour
 {
-    public int damage = 20; // 파이어볼 데미지
+    public PlayerStats playerStats; // 플레이어 스탯 참조
     public float lifetime = 5f; // 파이어볼이 유지되는 시간
     public float speed = 10f; // 파이어볼 속도
     public GameObject hitEffectPrefab; // 타격 시 생성할 이펙트 프리팹
@@ -50,12 +50,12 @@ public class MagicAttackController : MonoBehaviour
             if (monster != null)
             {
                 // 몬스터의 체력 감소
-                monster.TakeDamage(damage);
+                monster.TakeDamage((int)playerStats.magicAttackDamage);
             }
             else if (boss != null)
             {
                 // 보스의 체력 감소
-                boss.TakeDamage(damage);
+                boss.TakeDamage((int)playerStats.magicAttackDamage);
             }
 
             // 히트 이펙트 생성
