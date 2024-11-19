@@ -21,6 +21,6 @@ MonoBehaviour:
   rollTime: 0.5
   areaEffectCooldown: 10
   meteorCooldown: 40
-  magicAttackDamage: 10
+  magicAttackDamage: 100
   barrierCooldown: 2
   barrierDuration: 5

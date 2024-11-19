@@ -81,14 +81,39 @@ public class MonsterController : MonoBehaviour
             Vector3 flockingForce = FlockingBehavior();
             Vector3 targetPosition = player.position + flockingForce;
 
-            // 몬스터가 플레이어 쪽을 바라보도록 회전
+            // 플레이어와 몬스터 사이에 장애물이 있는지 Raycast로 확인
             Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            RaycastHit hit;
+
+            if (Physics.Raycast(transform.position, directionToPlayer, out hit, agent.stoppingDistance))
+            {
+                // 장애물이 있을 경우, 장애물을 회피하는 벡터 계산
+                if (hit.collider != null && hit.collider.CompareTag("NavMeshObstacle"))
+                {
+                    // 장애물 벡터와 수평 방향을 교차시켜 회피 벡터를 구함
+                    Vector3 avoidanceDirection = Vector3.Cross(hit.normal, Vector3.up).normalized;
+
+                    // 장애물을 피할 새로운 위치 계산
+                    Vector3 newTargetPosition = transform.position + avoidanceDirection * 2f; // 2f는 피하는 정도를 설정하는 값
+                    targetPosition = newTargetPosition;
+                }
+            }
+
+            // 경로 재계산 강제 호출 (경로가 유효하지 않으면 재계산)
+            if (agent.hasPath && agent.pathStatus == NavMeshPathStatus.PathInvalid)
+            {
+                agent.ResetPath();
+                agent.SetDestination(targetPosition);
+            }
+
+            // 몬스터가 플레이어 쪽을 바라보도록 회전
             if (directionToPlayer != Vector3.zero)
             {
                 Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
                 transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * agent.angularSpeed);
             }
 
+            // 새로운 targetPosition으로 NavMeshAgent 설정
             agent.SetDestination(targetPosition);
             agent.speed = moveSpeed;
         }
