@@ -168,12 +168,15 @@ public class BossController : MonoBehaviour
         }
 
         // 레이저를 2번 발사한 후, 처음 패턴으로 돌아감
-        yield return new WaitForSeconds(laserCooldown); // 레이저 쿨타임 기다린 후
-        StartCoroutine(PatternSequence()); // 처음 패턴으로 돌아가기
+    //    yield return new WaitForSeconds(laserCooldown); // 레이저 쿨타임 기다린 후
+    //    StartCoroutine(PatternSequence()); // 처음 패턴으로 돌아가기
     }
 
     private void FireLaser(Vector3 targetPosition)
     {
+        // 랜덤으로 왼쪽(-1) 또는 오른쪽(1)을 선택
+        int randomDirection = Random.Range(0, 2) == 0 ? -1 : 1;
+
         // 왼쪽 눈에서 레이저 발사
         GameObject leftLaser = Instantiate(laserPrefab, leftEye.position, Quaternion.identity);
         LineRenderer leftLine = leftLaser.GetComponent<LineRenderer>();
@@ -185,11 +188,11 @@ public class BossController : MonoBehaviour
         rightLine.SetPosition(0, rightEye.position);
 
         // 동일한 목표 위치로 레이저 발사
-        StartCoroutine(ShootLaser(leftLine, leftEye.position, targetPosition));
-        StartCoroutine(ShootLaser(rightLine, rightEye.position, targetPosition));
+        StartCoroutine(ShootLaser(leftLine, leftEye.position, targetPosition, randomDirection));
+        StartCoroutine(ShootLaser(rightLine, rightEye.position, targetPosition, randomDirection));
     }
 
-    private IEnumerator ShootLaser(LineRenderer lineRenderer, Vector3 startPosition, Vector3 targetPosition)
+    private IEnumerator ShootLaser(LineRenderer lineRenderer, Vector3 startPosition, Vector3 targetPosition, int horizontalDirection)
     {
         float elapsedTime = 0f;
         float laserDuration = 1f; // 레이저 발사 지속 시간
@@ -205,21 +208,17 @@ public class BossController : MonoBehaviour
             yield return null;
         }
 
-        // 레이저가 목표 위치에 도달한 후, 수평 방향으로 계속 이동
-        StartCoroutine(ShootLaserHorizontally(lineRenderer, lineRenderer.GetPosition(1)));
+        // 레이저가 목표 위치에 도달한 후, 수평 방향으로 이동
+        StartCoroutine(ShootLaserHorizontally(lineRenderer, lineRenderer.GetPosition(1), horizontalDirection));
     }
 
-    private IEnumerator ShootLaserHorizontally(LineRenderer lineRenderer, Vector3 startPosition)
+    private IEnumerator ShootLaserHorizontally(LineRenderer lineRenderer, Vector3 startPosition, int horizontalDirection)
     {
         float duration = 2f; // 레이저를 오른쪽/왼쪽으로 이동시키는 시간
         float elapsedTime = 0f;
 
         // 카메라 기준으로 좌우 방향 벡터를 계산
-        Vector3 cameraForward = Camera.main.transform.forward;  // 카메라의 앞 방향
-        Vector3 cameraRight = Camera.main.transform.right;      // 카메라의 오른쪽 방향 (좌우 방향)
-
-        // 카메라의 앞 방향을 제외한 좌우 방향으로만 이동하도록 설정
-        Vector3 direction = Vector3.Cross(cameraForward, Vector3.up).normalized;  // 수평 방향만 취함
+        Vector3 direction = Camera.main.transform.right * horizontalDirection; // 오른쪽(1) 또는 왼쪽(-1)으로 이동
 
         // 두 레이저가 동일한 방향으로 이동하도록 처리
         while (elapsedTime < duration)
