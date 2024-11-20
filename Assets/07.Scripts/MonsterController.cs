@@ -21,6 +21,7 @@ public class MonsterController : MonoBehaviour
     private FlockingManager flockingManager;
     private PlayerController playerController;
     private GameManager gameManager;
+    private Animator animator;
 
     public int health = 100;
 
@@ -47,6 +48,7 @@ public class MonsterController : MonoBehaviour
             Debug.LogError("Player not found in the scene. Make sure the player has the 'Player' tag.");
         }
         playerController = player.GetComponent<PlayerController>();
+        animator = GetComponent<Animator>();
     }
 
     void OnDestroy()
@@ -216,6 +218,7 @@ public class MonsterController : MonoBehaviour
                 // 방향과 데미지를 전달하여 TakeDamage 호출
                 playerController.TakeDamage(hitDirection, damage);
             }
+            animator.SetTrigger("Attack");
         }
     }
 
@@ -224,6 +227,7 @@ public class MonsterController : MonoBehaviour
         if (isDead) return;
 
         health -= damage;
+        animator.SetTrigger("TakeDamage");
         Debug.Log("Monster took damage! Current health: " + health);
         DamageTextController.Instance.CreateDamageText(transform.position, damage);
 
