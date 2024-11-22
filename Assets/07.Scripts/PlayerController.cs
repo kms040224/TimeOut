@@ -339,6 +339,7 @@ public class PlayerController : MonoBehaviour
     {
         lastRollTime = Time.time;
 
+        animator.SetTrigger("Roll");
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 

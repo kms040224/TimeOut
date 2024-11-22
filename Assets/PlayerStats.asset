@@ -17,7 +17,7 @@ MonoBehaviour:
   flamethrowerCooldown: 12
   flamethrowerDuration: 1.5
   rollCooldown: 5
-  rollDistance: 10
+  rollDistance: 5
   rollTime: 0.5
   areaEffectCooldown: 10
   meteorCooldown: 40

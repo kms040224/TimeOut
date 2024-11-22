@@ -24906,6 +24906,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: rollSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: playerStats
       value: 
       objectReference: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de,
@@ -24925,6 +24930,12 @@ PrefabInstance:
       propertyPath: magicAttackPrefab
       value: 
       objectReference: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
+        type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: barrierEffectPrefab
+      value: 
+      objectReference: {fileID: 7799848009916720622, guid: 04e11099092f486489c6c88637b88491,
         type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
