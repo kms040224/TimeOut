@@ -17,4 +17,26 @@ public class PlayerStats : ScriptableObject
     public float magicAttackDamage = 10f;
     public float barrierCooldown = 20f;
     public float barrierDuration = 5f;
+
+    public void UpgradeStat(string statName, float upgradeValue)
+    {
+        switch (statName)
+        {
+            case "movementSpeed":
+                movementSpeed += upgradeValue;
+                Debug.Log($"Movement Speed upgraded to {movementSpeed}");
+                break;
+            case "magicAttackDamage":
+                magicAttackDamage += upgradeValue;
+                Debug.Log($"Magic Attack Damage upgraded to {magicAttackDamage}");
+                break;
+            case "flamethrowerCooldown":
+                flamethrowerCooldown += upgradeValue;
+                Debug.Log($"Flamethrower Cooldown upgraded to {flamethrowerCooldown}");
+                break;
+            default:
+                Debug.LogWarning($"Unknown stat: {statName}");
+                break;
+        }
+    }
 }

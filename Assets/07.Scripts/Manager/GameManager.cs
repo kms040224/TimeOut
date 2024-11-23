@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     private int currentSpawnAreaIndex = 0; // 현재 던전 인덱스
     private int currentWave = 0; // 현재 웨이브 (0: 첫 번째 웨이브, 1: 두 번째 웨이브)
     private int monsterCount = 0; // 현재 던전의 남은 몬스터 수
-
+    public PlayerStats playerStats;
 
 
     private void Awake()
@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public PlayerStats GetPlayerStats()
+    {
+        return playerStats;
+    }
     private void Start()
     {
 
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("현재 던전의 모든 웨이브가 완료되었습니다.");
         OpenNextArea();
         ActivatePortal(currentSpawnAreaIndex); // 포탈 활성화
+        FindObjectOfType<StatUpgradeUI>().ShowPanel(); // 패널 열기
     }
 
     // 현재 던전의 문을 열고 다음 던전의 문을 닫기
