@@ -30,18 +30,17 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance != this)
+        if (instance == null)
         {
-            if (instance == null)
-            {
-                instance = this;
-            }
-
-            if (instance != this)
-            {
-                Destroy(this);
-            }
+            instance = this;
         }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject); // GameManager가 다른 씬으로 넘어가도 유지되도록 설정
     }
 
     public PlayerStats GetPlayerStats()
@@ -108,9 +107,29 @@ public class GameManager : MonoBehaviour
     private void OnAllWavesCleared()
     {
         Debug.Log("현재 던전의 모든 웨이브가 완료되었습니다.");
+
         OpenNextArea();
         ActivatePortal(currentSpawnAreaIndex); // 포탈 활성화
-        FindObjectOfType<StatUpgradeUI>().ShowPanel(); // 패널 열기
+
+        // StatUpgradeUI 인스턴스 확인 및 활성화
+        if (StatUpgradeUI.Instance == null)
+        {
+            GameObject uiObject = GameObject.Find("StatUpgradeUI"); // 오브젝트 이름으로 찾기
+            if (uiObject != null)
+            {
+                uiObject.SetActive(true); // 활성화
+                StatUpgradeUI.Instance = uiObject.GetComponent<StatUpgradeUI>(); // 참조 설정
+            }
+        }
+
+        if (StatUpgradeUI.Instance != null)
+        {
+            StatUpgradeUI.Instance.ShowPanel();
+        }
+        else
+        {
+            Debug.LogError("StatUpgradeUI.Instance가 null입니다. StatUpgradeUI가 씬에 추가되었는지 확인하세요.");
+        }
     }
 
     // 현재 던전의 문을 열고 다음 던전의 문을 닫기

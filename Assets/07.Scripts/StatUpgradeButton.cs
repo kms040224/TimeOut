@@ -24,13 +24,15 @@ public class StatUpgradeButton : MonoBehaviour
         }
     }
 
-    // 버튼 클릭 시 실행
+    // 버튼 클릭 시 실행되는 메서드
     private void OnClick()
     {
+        // StatUpgradeUI 인스턴스가 존재하는지 확인
         if (StatUpgradeUI.Instance != null)
         {
+            // 스탯 업그레이드 실행
             StatUpgradeUI.Instance.UpgradeStat(statName, upgradeValue);
-            StatUpgradeUI.Instance.HidePanel(); // 패널 닫기
+            StatUpgradeUI.Instance.HidePanel(); // 업그레이드 후 패널 숨기기
         }
         else
         {
@@ -38,7 +40,7 @@ public class StatUpgradeButton : MonoBehaviour
         }
     }
 
-    // 버튼 초기화 메서드
+    // 버튼에 설정된 스탯과 업그레이드 값을 설정하는 메서드
     public void Setup(string stat, float value)
     {
         statName = stat;

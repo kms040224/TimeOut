@@ -18,6 +18,7 @@ public class PlayerStats : ScriptableObject
     public float barrierCooldown = 20f;
     public float barrierDuration = 5f;
 
+    // 스탯 업그레이드 메서드
     public void UpgradeStat(string statName, float upgradeValue)
     {
         switch (statName)
@@ -26,14 +27,17 @@ public class PlayerStats : ScriptableObject
                 movementSpeed += upgradeValue;
                 Debug.Log($"Movement Speed upgraded to {movementSpeed}");
                 break;
+
             case "magicAttackDamage":
                 magicAttackDamage += upgradeValue;
                 Debug.Log($"Magic Attack Damage upgraded to {magicAttackDamage}");
                 break;
+
             case "flamethrowerCooldown":
                 flamethrowerCooldown += upgradeValue;
                 Debug.Log($"Flamethrower Cooldown upgraded to {flamethrowerCooldown}");
                 break;
+
             default:
                 Debug.LogWarning($"Unknown stat: {statName}");
                 break;
