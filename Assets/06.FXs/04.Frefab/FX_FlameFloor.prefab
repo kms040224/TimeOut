@@ -49003,6 +49003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd29f3bd4ae4e59469f221f2a6f6bf83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de, type: 2}
   duration: 3
   damagePerSecond: 10
   speedReduction: 0.3

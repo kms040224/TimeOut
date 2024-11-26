@@ -76,6 +76,12 @@ public class StatUpgradeUI : MonoBehaviour
             button.gameObject.SetActive(false); // 모든 버튼을 비활성화
         }
 
+        // 디버그 로그로 버튼 비활성화 상태 확인
+        foreach (var button in statButtons)
+        {
+            Debug.Log($"Button {button.name} active: {button.gameObject.activeSelf}");
+        }
+
         // 3개의 고정된 위치에 랜덤으로 버튼 배치
         for (int i = 0; i < 3; i++)
         {
@@ -83,6 +89,9 @@ public class StatUpgradeUI : MonoBehaviour
 
             // 선택된 버튼을 활성화
             selectedButton.gameObject.SetActive(true);
+
+            // 디버그 로그로 활성화된 버튼 확인
+            Debug.Log($"Activated Button: {selectedButton.name}");
 
             // RectTransform을 사용해 UI 위치 설정 (앵커를 부모에 맞게 설정)
             RectTransform rectTransform = selectedButton.GetComponent<RectTransform>();

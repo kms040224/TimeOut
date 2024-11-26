@@ -19650,7 +19650,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 64
   m_CollisionDetection: 0
 --- !u!114 &1174616644915691703
 MonoBehaviour:
@@ -19664,4 +19664,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a8d1189f551d64b83bfc7726ab5c95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de, type: 2}
   damage: 10

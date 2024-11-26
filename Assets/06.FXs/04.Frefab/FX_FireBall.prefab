@@ -19636,6 +19636,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cabcaa0bf81006043a695a17780c8f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de, type: 2}
   speed: 5
   damage: 50
   lifetime: 5

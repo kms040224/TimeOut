@@ -3001,12 +3001,12 @@ MonoBehaviour:
   monsterPrefabs:
   - {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f, type: 3}
   portals:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 451670667}
+  - {fileID: 451670667}
+  - {fileID: 451670667}
+  - {fileID: 451670667}
+  - {fileID: 451670667}
+  - {fileID: 451670667}
   playerStats: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de, type: 2}
 --- !u!4 &255270811
 Transform:
@@ -7836,6 +7836,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1257279533}
+    - targetCorrespondingSourceObject: {fileID: 1008177697404363737, guid: 9ed5efc1075138449a0e932a8c35ef89,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1257279535}
+    - targetCorrespondingSourceObject: {fileID: 1008177697404363737, guid: 9ed5efc1075138449a0e932a8c35ef89,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1257279534}
   m_SourcePrefab: {fileID: 100100000, guid: 9ed5efc1075138449a0e932a8c35ef89, type: 3}
 --- !u!4 &573290738 stripped
 Transform:
@@ -15980,6 +15988,40 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: f31f531f5bb240a44b70cf3d4b5005e6, type: 2}
   m_BuildHeightMesh: 0
+--- !u!114 &1257279534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257279532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69ded436f266314cbab7e07eeef71ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  areaIndex: 0
+--- !u!65 &1257279535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257279532}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 9.62, y: 1, z: 8.33}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!1001 &1257956805
 PrefabInstance:
   m_ObjectHideFlags: 0
