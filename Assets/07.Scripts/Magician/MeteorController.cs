@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MeteorController : MonoBehaviour
 {
+    public PlayerStats playerStats;
     public float speed = 15f; // 메테오 이동 속도
     public float damage = 50f; // 메테오 데미지
     public float lifetime = 5f; // 메테오 생명주기
@@ -19,20 +20,19 @@ public class MeteorController : MonoBehaviour
         StartCoroutine(DestroyAfterLifetime());
     }
 
-    private void Update()
+    void Update()
     {
-        // 메테오를 목표 방향으로 계속 이동
         transform.position += targetDirection * speed * Time.deltaTime;
 
-        // 메테오가 떨어지는 거리와 충돌 검사
         RaycastHit hit;
         if (Physics.Raycast(transform.position, targetDirection, out hit, speed * Time.deltaTime))
         {
             MonsterController monster = hit.collider.GetComponent<MonsterController>();
             if (monster != null && !damagedMonsters.Contains(monster))
             {
-                monster.TakeDamage((int)damage); // 몬스터에게 데미지 적용
-                damagedMonsters.Add(monster); // 이미 데미지를 입힌 몬스터로 추가
+                int calculatedDamage = (int)(playerStats.magicAttackDamage * playerStats.meteorDamageMultiplier);
+                monster.TakeDamage(calculatedDamage); // 배율 적용
+                damagedMonsters.Add(monster);
             }
         }
     }

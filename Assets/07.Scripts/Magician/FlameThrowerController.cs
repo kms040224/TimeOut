@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlamethrowerController : MonoBehaviour
 {
+    public PlayerStats playerStats;
     public int damage = 10;  // 화염방사기로 주는 데미지
 
     void Start()
@@ -19,7 +20,8 @@ public class FlamethrowerController : MonoBehaviour
             MonsterController monster = other.GetComponent<MonsterController>();
             if (monster != null)
             {
-                monster.TakeDamage(damage);
+                int calculatedDamage = (int)(playerStats.magicAttackDamage * playerStats.flamethrowerDamageMultiplier);
+                monster.TakeDamage(calculatedDamage); // 배율 적용
             }
         }
     }

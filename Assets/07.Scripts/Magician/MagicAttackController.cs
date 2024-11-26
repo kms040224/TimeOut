@@ -41,7 +41,6 @@ public class MagicAttackController : MonoBehaviour
     // 충돌 감지
     void OnTriggerEnter(Collider other)
     {
-        // 몬스터 또는 보스일 경우
         if (other.CompareTag("Monster"))
         {
             MonsterController monster = other.GetComponent<MonsterController>();
@@ -49,13 +48,11 @@ public class MagicAttackController : MonoBehaviour
 
             if (monster != null)
             {
-                // 몬스터의 체력 감소
-                monster.TakeDamage((int)playerStats.magicAttackDamage);
+                monster.TakeDamage((int)(playerStats.magicAttackDamage * 1.5f)); // 기본 100% 데미지
             }
             else if (boss != null)
             {
-                // 보스의 체력 감소
-                boss.TakeDamage((int)playerStats.magicAttackDamage);
+                boss.TakeDamage((int)(playerStats.magicAttackDamage * 1.0f)); // 기본 100% 데미지
             }
 
             // 히트 이펙트 생성
@@ -69,6 +66,7 @@ public class MagicAttackController : MonoBehaviour
             ReturnToPool();
         }
     }
+
 
     private void ReturnToPool()
     {

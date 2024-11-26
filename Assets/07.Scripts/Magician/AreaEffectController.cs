@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AreaEffectController : MonoBehaviour
 {
+    public PlayerStats playerStats;
     public float duration = 3.0f; // 장판 지속 시간
     public float damagePerSecond = 10.0f; // 초당 데미지
     public float speedReduction = 0.3f; // 이동 속도 감소 비율
@@ -72,7 +73,8 @@ public class AreaEffectController : MonoBehaviour
         {
             if (monster != null)
             {
-                monster.TakeDamage((int)damagePerSecond); // 몬스터에 데미지 적용
+                int calculatedDamage = (int)(playerStats.magicAttackDamage * playerStats.areaEffectDamageMultiplier);
+                monster.TakeDamage(calculatedDamage); // 배율 적용
             }
         }
     }
