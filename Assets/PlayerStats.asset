@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955ccc1d83427bb41a2515678bada4d1, type: 3}
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
-  movementSpeed: 9
+  movementSpeed: 13
   rotationSpeed: 10
-  flamethrowerCooldown: 5
+  flamethrowerCooldown: 7
   flamethrowerDuration: 1.5
   rollCooldown: 5
   rollDistance: 5
   rollTime: 0.5
   areaEffectCooldown: 10
   meteorCooldown: 40
-  magicAttackDamage: 36
+  magicAttackDamage: 33
   flamethrowerDamageMultiplier: 0.5
   areaEffectDamageMultiplier: 0.3
   meteorDamageMultiplier: 1.5

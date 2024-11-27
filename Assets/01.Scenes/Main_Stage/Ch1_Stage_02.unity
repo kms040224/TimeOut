@@ -6070,8 +6070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: 0, y: 0, z: 0}
-  cameraRotation: {x: 0, y: 0, z: 0}
+  cameraPosition: {x: -8.4, y: 8, z: -48}
+  cameraRotation: {x: 50, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 418503961}
   mainCamera: {fileID: 2087840466}
@@ -26958,7 +26958,7 @@ Transform:
   m_GameObject: {fileID: 2087840464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.29883623, y: -0.64085644, z: 0.29883623, w: 0.64085644}
-  m_LocalPosition: {x: 10.17, y: 8, z: -48}
+  m_LocalPosition: {x: 11, y: 8, z: -48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
