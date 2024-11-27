@@ -6669,6 +6669,7 @@ MonoBehaviour:
   - {fileID: 1293042791}
   - {fileID: 537055989}
   - {fileID: 421225091}
+  playerStats: {fileID: 0}
 --- !u!4 &373982333
 Transform:
   m_ObjectHideFlags: 0
