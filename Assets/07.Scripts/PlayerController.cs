@@ -43,6 +43,16 @@ public class PlayerController : MonoBehaviour
     private float flamethrowerCooldownTimer = 0f;
     private Renderer playerRenderer;
 
+    public Image qSkillCooldownImage;
+    public Image wSkillCooldownImage;
+    public Image eSkillCooldownImage;
+    public Image rSkillCooldownImage;
+
+    public Text qSkillCooldownText;
+    public Text wSkillCooldownText;
+    public Text eSkillCooldownText;
+    public Text rSkillCooldownText;
+
     void Start()
     {
         if (animator == null)
@@ -156,6 +166,29 @@ public class PlayerController : MonoBehaviour
             {
                 AimAtCursor();
                 StartCoroutine(RollTowardsCursor());
+            }
+        }
+
+        UpdateCooldownUI(flamethrowerCooldownTimer, playerStats.flamethrowerCooldown, qSkillCooldownImage, qSkillCooldownText);
+        UpdateCooldownUI(playerStats.barrierCooldown - (Time.time - lastAreaEffectTime), playerStats.barrierCooldown, wSkillCooldownImage, wSkillCooldownText);
+        UpdateCooldownUI(playerStats.areaEffectCooldown - (Time.time - lastAreaEffectTime), playerStats.areaEffectCooldown, eSkillCooldownImage, eSkillCooldownText);
+        UpdateCooldownUI(playerStats.meteorCooldown - (Time.time - lastMeteorTime), playerStats.meteorCooldown, rSkillCooldownImage, rSkillCooldownText);
+
+        void UpdateCooldownUI(float currentCooldown, float maxCooldown, Image cooldownImage, Text cooldownText)
+        {
+            if (currentCooldown > 0)
+            {
+                cooldownImage.fillAmount = currentCooldown / maxCooldown;
+                cooldownText.text = Mathf.Ceil(currentCooldown).ToString(); // 초 단위로 표시
+                cooldownImage.enabled = true; // 활성화
+                cooldownText.enabled = true;
+            }
+            else
+            {
+                cooldownImage.fillAmount = 0;
+                cooldownText.text = "";
+                cooldownImage.enabled = false; // 비활성화
+                cooldownText.enabled = false;
             }
         }
     }
