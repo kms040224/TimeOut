@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     private bool isInvincible = false;
     public float knockbackForce = 5f;
     private float flamethrowerCooldownTimer = 0f;
+    private float lastBarrierActivationTime;
     private Renderer playerRenderer;
 
     public Image qSkillCooldownImage;
@@ -68,7 +69,7 @@ public class PlayerController : MonoBehaviour
         {
             playerRenderer = GetComponentInChildren<Renderer>();
         }
-
+        lastBarrierActivationTime = Time.time;
     }
 
     void Update()
@@ -170,7 +171,7 @@ public class PlayerController : MonoBehaviour
         }
 
         UpdateCooldownUI(flamethrowerCooldownTimer, playerStats.flamethrowerCooldown, qSkillCooldownImage, qSkillCooldownText);
-        UpdateCooldownUI(playerStats.barrierCooldown - (Time.time - lastAreaEffectTime), playerStats.barrierCooldown, wSkillCooldownImage, wSkillCooldownText);
+        UpdateCooldownUI(hasBarrier ? barrierTimer : playerStats.barrierCooldown - (Time.time - lastBarrierActivationTime), playerStats.barrierCooldown, wSkillCooldownImage, wSkillCooldownText);
         UpdateCooldownUI(playerStats.areaEffectCooldown - (Time.time - lastAreaEffectTime), playerStats.areaEffectCooldown, eSkillCooldownImage, eSkillCooldownText);
         UpdateCooldownUI(playerStats.meteorCooldown - (Time.time - lastMeteorTime), playerStats.meteorCooldown, rSkillCooldownImage, rSkillCooldownText);
 
@@ -179,15 +180,15 @@ public class PlayerController : MonoBehaviour
             if (currentCooldown > 0)
             {
                 cooldownImage.fillAmount = currentCooldown / maxCooldown;
-                cooldownText.text = Mathf.Ceil(currentCooldown).ToString(); // 초 단위로 표시
-                cooldownImage.enabled = true; // 활성화
+                cooldownText.text = Mathf.Ceil(currentCooldown).ToString();
+                cooldownImage.enabled = true;
                 cooldownText.enabled = true;
             }
             else
             {
                 cooldownImage.fillAmount = 0;
                 cooldownText.text = "";
-                cooldownImage.enabled = false; // 비활성화
+                cooldownImage.enabled = false;
                 cooldownText.enabled = false;
             }
         }
