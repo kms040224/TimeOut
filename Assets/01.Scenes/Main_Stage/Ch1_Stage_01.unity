@@ -4807,6 +4807,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372851091}
+  - component: {fileID: 372851092}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -4829,6 +4830,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 27260902}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &372851092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372851090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  assignedMonster: {fileID: 2274970206416863583, guid: ad060fd1f86c24446af12bc804b50e2a,
+    type: 3}
 --- !u!1 &373982330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,8 +4885,6 @@ MonoBehaviour:
   - {fileID: 918178878}
   - {fileID: 438005313}
   - {fileID: 979481452}
-  monsterPrefabs:
-  - {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f, type: 3}
   portals:
   - {fileID: 1727191252}
   - {fileID: 1727191252}
@@ -26510,6 +26523,11 @@ PrefabInstance:
       propertyPath: fireOrbPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: magicAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 52b3debb197079a49a147489d8d9f61c, type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: magicAttackPrefab

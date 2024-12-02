@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 {
     public GameObject[] spawnAreas; // 각 던전의 스폰 영역
     public GameObject[] doors; // 던전을 연결하는 문
-    public GameObject[] monsterPrefabs; // 몬스터 프리팹
     public GameObject[] portals; // 포탈 오브젝트
     private static GameManager instance;
     public static GameManager Instance
@@ -70,8 +69,17 @@ public class GameManager : MonoBehaviour
 
         foreach (Transform spawnPoint in wave)
         {
-            int randomIndex = Random.Range(0, monsterPrefabs.Length);
-            Instantiate(monsterPrefabs[randomIndex], spawnPoint.position, Quaternion.identity);
+            // SpawnPoint 스크립트를 가져옴
+            SpawnPoint spawnPointScript = spawnPoint.GetComponent<SpawnPoint>();
+
+            if (spawnPointScript != null && spawnPointScript.assignedMonster != null)
+            {
+                Instantiate(spawnPointScript.assignedMonster, spawnPoint.position, Quaternion.identity);
+            }
+            else
+            {
+                Debug.LogWarning($"스폰 포인트 {spawnPoint.name}에 할당된 몬스터가 없습니다.");
+            }
         }
 
         monsterCount = wave.childCount;

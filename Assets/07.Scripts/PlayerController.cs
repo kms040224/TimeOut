@@ -34,6 +34,8 @@ public class PlayerController : MonoBehaviour
     private float lastRollTime = -5f;
     public AniController aniController;
     public PlayerStats playerStats;
+    public AudioClip magicAttackSound; 
+    private AudioSource audioSource;  
 
     private Vector3 destinationPoint;
     public bool shouldMove = false;
@@ -70,6 +72,7 @@ public class PlayerController : MonoBehaviour
             playerRenderer = GetComponentInChildren<Renderer>();
         }
         lastBarrierActivationTime = Time.time;
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -249,6 +252,12 @@ public class PlayerController : MonoBehaviour
             }
 
             Debug.Log("Magic Attack shot towards: " + hit.point);
+
+            // 사운드 재생
+            if (magicAttackSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(magicAttackSound);
+            }
         }
     }
 
