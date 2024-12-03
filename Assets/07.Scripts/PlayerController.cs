@@ -34,7 +34,15 @@ public class PlayerController : MonoBehaviour
     private float lastRollTime = -5f;
     public AniController aniController;
     public PlayerStats playerStats;
-    public AudioClip magicAttackSound; 
+    public AudioClip magicAttackSound;
+    public AudioClip walkingSound;
+    public AudioClip AttackedSound;
+    public AudioClip ActivateBarrierSound;
+    public AudioClip DeactivateBarrierSound;
+    public AudioClip FlamethrowerSound;
+    public AudioClip LayDownAreaSound;
+    public AudioClip MeteorSound;
+    public AudioClip DeathSound;
     private AudioSource audioSource;  
 
     private Vector3 destinationPoint;
@@ -126,6 +134,7 @@ public class PlayerController : MonoBehaviour
             {
                 shouldMove = false; // 도착하면 이동 중지
                 animator.SetBool("isMoving", false); // 애니메이션 중지
+                StopWalkingSound(); // 걷는 소리 멈추기
             }
             else
             {
@@ -134,12 +143,15 @@ public class PlayerController : MonoBehaviour
 
                 transform.position = Vector3.MoveTowards(transform.position, destinationPoint, playerStats.movementSpeed * Time.deltaTime); // 스크립터블 오브젝트의 movementSpeed 사용
                 animator.SetBool("isMoving", true); // 이동 중 애니메이션 재생
+                PlayWalkingSound(); // 걷는 소리 재생
             }
         }
         else
         {
             animator.SetBool("isMoving", false); // 이동하지 않을 때 애니메이션 중지
+            StopWalkingSound(); // 걷는 소리 멈추기
         }
+
 
         if (Input.GetKeyDown(KeyCode.A) && !isUsingFlamethrower)
         {
@@ -174,7 +186,7 @@ public class PlayerController : MonoBehaviour
         }
 
         UpdateCooldownUI(flamethrowerCooldownTimer, playerStats.flamethrowerCooldown, qSkillCooldownImage, qSkillCooldownText);
-        UpdateCooldownUI(hasBarrier ? barrierTimer : playerStats.barrierCooldown - (Time.time - lastBarrierActivationTime), playerStats.barrierCooldown, wSkillCooldownImage, wSkillCooldownText);
+        UpdateCooldownUI(isBarrierOnCooldown ? playerStats.barrierCooldown - (Time.time - lastBarrierActivationTime) : 0, playerStats.barrierCooldown, wSkillCooldownImage,wSkillCooldownText);
         UpdateCooldownUI(playerStats.areaEffectCooldown - (Time.time - lastAreaEffectTime), playerStats.areaEffectCooldown, eSkillCooldownImage, eSkillCooldownText);
         UpdateCooldownUI(playerStats.meteorCooldown - (Time.time - lastMeteorTime), playerStats.meteorCooldown, rSkillCooldownImage, rSkillCooldownText);
 
@@ -196,6 +208,25 @@ public class PlayerController : MonoBehaviour
             }
         }
     }
+
+    private void PlayWalkingSound()
+    {
+        if (!audioSource.isPlaying && walkingSound != null)
+        {
+            audioSource.loop = true; // 반복 재생
+            audioSource.clip = walkingSound;
+            audioSource.Play();
+        }
+    }
+
+    private void StopWalkingSound()
+    {
+        if (audioSource.isPlaying && walkingSound != null)
+        {
+            audioSource.Stop();
+        }
+    }
+
 
     private void AimAtCursor()
     {
@@ -231,6 +262,7 @@ public class PlayerController : MonoBehaviour
 
         flamethrowerCooldownTimer = playerStats.flamethrowerCooldown; // 스크립터블 오브젝트의 flamethrowerCooldown 사용
         isUsingFlamethrower = false;
+        SoundManager.Instance.PlaySound(FlamethrowerSound);
     }
 
     // MagicAttack 발사
@@ -253,11 +285,8 @@ public class PlayerController : MonoBehaviour
 
             Debug.Log("Magic Attack shot towards: " + hit.point);
 
-            // 사운드 재생
-            if (magicAttackSound != null && audioSource != null)
-            {
-                audioSource.PlayOneShot(magicAttackSound);
-            }
+            // SoundManager를 사용하여 사운드 재생
+            SoundManager.Instance.PlaySound(magicAttackSound);
         }
     }
 
@@ -275,6 +304,7 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        lastBarrierActivationTime = Time.time; // 쿨타임 시작 시간 기록
         ActivateBarrier();
     }
 
@@ -293,18 +323,14 @@ public class PlayerController : MonoBehaviour
 
         // 쿨타임 시작
         StartCoroutine(StartBarrierCooldown());
+        SoundManager.Instance.PlaySound(ActivateBarrierSound);
     }
 
-    IEnumerator BarrierDurationCoroutine()
-    {
-        yield return new WaitForSeconds(playerStats.barrierDuration);
-        if (hasBarrier) // 여전히 배리어가 활성화된 상태인지 확인
-        {
-            DeactivateBarrier();
-        }
-    }
     void DeactivateBarrier()
     {
+        if (!hasBarrier)
+            return; // 배리어가 이미 해체된 상태라면 아무 작업도 하지 않음
+
         hasBarrier = false;
 
         if (activeBarrierEffect != null)
@@ -319,7 +345,24 @@ public class PlayerController : MonoBehaviour
             activeBarrierEffect = null;
         }
 
+        SoundManager.Instance.PlaySound(DeactivateBarrierSound); // 해체 소리 재생
         Debug.Log("배리어가 해제되었습니다.");
+    }
+
+    IEnumerator DestroyEffectAfterDelay(GameObject effect, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Destroy(effect);
+    }
+
+    IEnumerator BarrierDurationCoroutine()
+    {
+        yield return new WaitForSeconds(playerStats.barrierDuration);
+
+        if (hasBarrier) // 배리어가 활성 상태인지 확인
+        {
+            DeactivateBarrier();
+        }
     }
 
     IEnumerator StartBarrierCooldown()
@@ -348,6 +391,7 @@ public class PlayerController : MonoBehaviour
             Instantiate(areaEffectPrefab, hit.point, Quaternion.identity);
             lastAreaEffectTime = Time.time;
         }
+        SoundManager.Instance.PlaySound(LayDownAreaSound);
     }
 
     void LaunchMeteor()
@@ -376,6 +420,7 @@ public class PlayerController : MonoBehaviour
 
             lastMeteorTime = Time.time;
         }
+        SoundManager.Instance.PlaySound(MeteorSound);
     }
 
     IEnumerator RollTowardsCursor()
@@ -425,6 +470,7 @@ public class PlayerController : MonoBehaviour
         }
         PlayerHealthManager.Instance.TakeDamage(damage);
         StartCoroutine(InvincibilityAndBlinking());
+        SoundManager.Instance.PlaySound(AttackedSound);
     }
     private IEnumerator Knockback(Vector3 hitDirection)
     {
@@ -476,5 +522,6 @@ public class PlayerController : MonoBehaviour
         {
             GameOverPanel.SetActive(true);
         }
+        SoundManager.Instance.PlaySound(DeathSound);
     }
 }
