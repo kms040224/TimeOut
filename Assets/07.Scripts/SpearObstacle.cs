@@ -49,7 +49,7 @@ public class SpearObstacle : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         PlayerController player = other.GetComponent<PlayerController>();
-        if (player != null)
+        if (player != null) // null 체크
         {
             Vector3 hitDirection = (player.transform.position - transform.position).normalized; // 창에서 플레이어 방향 계산
             float damage = 5f; // 줄 데미지 설정
