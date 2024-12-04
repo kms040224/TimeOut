@@ -1286,7 +1286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &114719698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1320,8 +1320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -5, y: 10, z: -20}
-  cameraRotation: {x: 66, y: -90, z: 0}
+  cameraPosition: {x: -3.5, y: 8, z: -21}
+  cameraRotation: {x: 50, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -5584,7 +5584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &421225092
 Transform:
   m_ObjectHideFlags: 0
@@ -5612,7 +5612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b21f715ab589db4c9f2a7222ba8cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Ch1_Stage_03
+  sceneToLoad: Ch1_Stage_02
 --- !u!136 &421225094
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7242,7 +7242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &537055990
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7276,8 +7276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -20, y: 10, z: -40}
-  cameraRotation: {x: 66, y: -90, z: 0}
+  cameraPosition: {x: -18.5, y: 8, z: -40}
+  cameraRotation: {x: 50, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -14122,7 +14122,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1115439066
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16176,7 +16176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1293042792
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16210,8 +16210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -5, y: 10, z: -40}
-  cameraRotation: {x: 66, y: -90, z: 0}
+  cameraPosition: {x: -3.5, y: 8, z: -40}
+  cameraRotation: {x: 50, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -16632,7 +16632,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1316399948
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21620,7 +21620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1727191253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21654,8 +21654,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb43b4a46337d3e478b0e56a311169c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosition: {x: -5, y: 10.41, z: -1}
-  cameraRotation: {x: 66, y: -90, z: 0}
+  cameraPosition: {x: -3.5, y: 8, z: -1}
+  cameraRotation: {x: 50, y: -90, z: 0}
   fadeDuration: 1
   fadeController: {fileID: 1017858046}
   mainCamera: {fileID: 2087840466}
@@ -25647,7 +25647,7 @@ PrefabInstance:
         type: 3}
       propertyPath: walkingSound
       value: 
-      objectReference: {fileID: 8300000, guid: b36baa7f16373d3418d1361315c23c3c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: AttackedSound
