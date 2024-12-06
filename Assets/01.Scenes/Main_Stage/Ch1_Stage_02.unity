@@ -7638,11 +7638,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAreas:
-  - {fileID: 714927161}
-  - {fileID: 714927161}
-  - {fileID: 714927161}
-  - {fileID: 714927161}
-  - {fileID: 714927161}
+  - {fileID: 537072869}
+  - {fileID: 829963539}
+  - {fileID: 1431952374}
+  - {fileID: 379179603}
+  - {fileID: 71480588}
   doors:
   - {fileID: 707689373}
   - {fileID: 1174129205}

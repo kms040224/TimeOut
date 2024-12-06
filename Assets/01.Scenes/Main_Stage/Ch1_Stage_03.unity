@@ -40097,12 +40097,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAreas:
-  - {fileID: 1004676117}
-  - {fileID: 2118954328}
-  - {fileID: 1920598233}
-  - {fileID: 114523120}
-  - {fileID: 1980558700}
-  - {fileID: 1661793399}
+  - {fileID: 621727077}
+  - {fileID: 1337089812}
+  - {fileID: 163736027}
+  - {fileID: 2023319453}
+  - {fileID: 1285483288}
   doors:
   - {fileID: 1004676117}
   - {fileID: 1004676117}

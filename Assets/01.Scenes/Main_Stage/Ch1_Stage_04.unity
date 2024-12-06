@@ -66862,11 +66862,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAreas:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1892868373}
+  - {fileID: 291971760}
+  - {fileID: 1459811490}
+  - {fileID: 1631818644}
+  - {fileID: 50099484}
+  - {fileID: 1475628702}
   doors:
   - {fileID: 0}
   - {fileID: 0}
