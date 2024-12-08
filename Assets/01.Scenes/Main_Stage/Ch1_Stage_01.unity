@@ -58019,6 +58019,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 6913eb9c249dc31488f43af21eb3051e, type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 4519524882872249135}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: MeteorSound
       value: 
       objectReference: {fileID: 8300000, guid: 4087b894fae379e4c816f429773e80a1, type: 3}
@@ -58125,6 +58130,12 @@ PrefabInstance:
       propertyPath: magicAttackSpawnPoint
       value: 
       objectReference: {fileID: 4519524882872249135}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: shockwaveEffectPrefab
+      value: 
+      objectReference: {fileID: 3903769285579764751, guid: 89eaa69e2475e244a9481049023d6ac8,
+        type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: DeactivateBarrierSound

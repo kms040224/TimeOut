@@ -43,7 +43,11 @@ public class PlayerController : MonoBehaviour
     public AudioClip LayDownAreaSound;
     public AudioClip MeteorSound;
     public AudioClip DeathSound;
-    private AudioSource audioSource;  
+    private AudioSource audioSource;
+
+    public GameObject shockwaveEffectPrefab;
+    public Transform spawnPoint;
+    public float shockwaveDuration = 0.5f;
 
     private Vector3 destinationPoint;
     public bool shouldMove = false;
@@ -102,6 +106,11 @@ public class PlayerController : MonoBehaviour
             {
                 AimAtCursor();
                 StartCoroutine(UseFlamethrower());
+            }
+            else if (PlayerAttribute.Instance.SelectedAttribute == AttributeType.Lightning)
+            {
+                AimAtCursor();
+                StartCoroutine(UseShockwave());
             }
         }
 
@@ -436,6 +445,32 @@ public class PlayerController : MonoBehaviour
             lastMeteorTime = Time.time;
         }
         SoundManager.Instance.PlaySound(MeteorSound);
+    }
+
+    private IEnumerator UseShockwave()
+    {
+        // 마우스 위치를 월드 좌표로 변환
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0; // Z값을 0으로 설정 (2D 게임인 경우)
+
+        // 스폰 포인트와 마우스 위치 간의 방향 계산
+        Vector3 direction = (mousePosition - spawnPoint.position).normalized;
+
+        // 쇼크웨이브 이펙트 생성
+        GameObject shockwaveEffect = Instantiate(shockwaveEffectPrefab, spawnPoint.position, Quaternion.identity);
+
+        // Y좌표는 스폰포인트에서 변하지 않도록 설정
+        shockwaveEffect.transform.position = new Vector3(shockwaveEffect.transform.position.x, spawnPoint.position.y, shockwaveEffect.transform.position.z);
+
+        // 마우스 커서 방향으로 회전 (회전값을 Quaternion을 사용하여 설정)
+        Quaternion rotation = Quaternion.LookRotation(Vector3.forward, direction); // 2D에서 z축 기준으로 회전
+        shockwaveEffect.transform.rotation = rotation;
+
+        // 쇼크웨이브 이펙트가 일정 시간 후 사라지도록 설정
+        Destroy(shockwaveEffect, shockwaveDuration);
+
+        // 코루틴 종료를 위해 반드시 null을 반환해야 함
+        yield return null;
     }
 
     IEnumerator RollTowardsCursor()
