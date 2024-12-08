@@ -28,6 +28,12 @@ public class AreaTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (areaCollider == null)
+        {
+            Debug.LogError($"AreaCollider가 null입니다. AreaTrigger {areaIndex}를 확인하세요.");
+            return;
+        }
+
         Debug.Log($"Collider {other.name} entered AreaTrigger {areaIndex}");
 
         // 플레이어가 트리거에 들어왔을 때 처리

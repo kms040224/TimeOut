@@ -64,6 +64,11 @@ public class PlayerController : MonoBehaviour
     public Text eSkillCooldownText;
     public Text rSkillCooldownText;
 
+    public enum AttributeType
+    {
+        Fire,
+        Lightning
+    }
     void Start()
     {
         if (animator == null)
@@ -91,11 +96,13 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        // Flamethrower 사용 시
         if (Input.GetKeyDown(KeyCode.Q) && !isUsingFlamethrower && flamethrowerCooldownTimer <= 0)
         {
-            AimAtCursor();
-            StartCoroutine(UseFlamethrower());
+            if (PlayerAttribute.Instance.SelectedAttribute == AttributeType.Fire)
+            {
+                AimAtCursor();
+                StartCoroutine(UseFlamethrower());
+            }
         }
 
         if (flamethrowerCooldownTimer > 0)
@@ -152,28 +159,36 @@ public class PlayerController : MonoBehaviour
             StopWalkingSound(); // 걷는 소리 멈추기
         }
 
-
         if (Input.GetKeyDown(KeyCode.A) && !isUsingFlamethrower)
         {
             AimAtCursor();
-            ShootMagicAttack();
+            ShootMagicAttack(); // 이 스킬도 속성 기반으로 제어 가능
         }
 
         if (Input.GetKeyDown(KeyCode.W))
         {
-            TryActivateBarrier();
+            if (PlayerAttribute.Instance.SelectedAttribute == AttributeType.Fire)
+            {
+                TryActivateBarrier();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            LayDownAreaEffect();
-            AimAtCursor();
+            if (PlayerAttribute.Instance.SelectedAttribute == AttributeType.Fire)
+            {
+                LayDownAreaEffect();
+                AimAtCursor();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
-            LaunchMeteor();
-            AimAtCursor();
+            if (PlayerAttribute.Instance.SelectedAttribute == AttributeType.Fire)
+            {
+                LaunchMeteor();
+                AimAtCursor();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space))

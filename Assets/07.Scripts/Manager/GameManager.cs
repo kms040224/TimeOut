@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -9,53 +8,67 @@ public class GameManager : MonoBehaviour
     public GameObject[] doors; // 던전을 연결하는 문
     public GameObject[] portals; // 포탈 오브젝트
     private static GameManager instance;
+
     public static GameManager Instance
     {
-
-        get 
+        get
         {
-            
-            return instance; 
+            return instance;
         }
     }
-
-
 
     private int currentSpawnAreaIndex = 0; // 현재 던전 인덱스
     private int currentWave = 0; // 현재 웨이브 (0: 첫 번째 웨이브, 1: 두 번째 웨이브)
     private int monsterCount = 0; // 현재 던전의 남은 몬스터 수
     public PlayerStats playerStats;
 
+    private string selectedAttribute; // 선택된 속성 (Fire, Ice, etc.)
 
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); // GameManager가 다른 씬으로 넘어가도 유지되도록 설정
         }
         else if (instance != this)
         {
             Destroy(gameObject);
             return;
         }
-
-        DontDestroyOnLoad(gameObject); // GameManager가 다른 씬으로 넘어가도 유지되도록 설정
     }
 
     public PlayerStats GetPlayerStats()
     {
         return playerStats;
     }
+
     private void Start()
     {
-
         OpenCurrentArea(); // 첫 던전의 문을 엽니다.
+    }
+
+    // 속성 설정 함수
+    public void SetSelectedAttribute(string attribute)
+    {
+        selectedAttribute = attribute;
+        Debug.Log($"선택된 속성: {selectedAttribute}");
+    }
+
+    // 선택된 속성을 반환
+    public string GetSelectedAttribute()
+    {
+        return selectedAttribute;
     }
 
     // 특정 웨이브에서 몬스터 스폰
     private void SpawnMonstersInWave(int areaIndex, int waveIndex)
     {
-        if (areaIndex >= spawnAreas.Length) return;
+        if (areaIndex >= spawnAreas.Length || spawnAreas[areaIndex] == null)
+        {
+            Debug.LogWarning($"spawnAreas[{areaIndex}]가 null이거나 유효하지 않습니다.");
+            return;
+        }
 
         Transform spawnArea = spawnAreas[areaIndex].transform;
         Transform wave = spawnArea.Find($"Wave{waveIndex + 1}");
@@ -69,7 +82,6 @@ public class GameManager : MonoBehaviour
 
         foreach (Transform spawnPoint in wave)
         {
-            // SpawnPoint 스크립트를 가져옴
             SpawnPoint spawnPointScript = spawnPoint.GetComponent<SpawnPoint>();
 
             if (spawnPointScript != null && spawnPointScript.assignedMonster != null)
@@ -89,6 +101,12 @@ public class GameManager : MonoBehaviour
     // 플레이어가 특정 던전에 들어왔을 때 호출되는 함수
     public void OnPlayerEnterArea(int areaIndex)
     {
+        if (areaIndex < 0 || areaIndex >= spawnAreas.Length) // 범위 체크
+        {
+            Debug.LogError($"유효하지 않은 areaIndex: {areaIndex}");
+            return;
+        }
+
         if (areaIndex == currentSpawnAreaIndex)
         {
             Debug.Log($"플레이어가 던전 {areaIndex}에 들어왔습니다.");
@@ -128,6 +146,10 @@ public class GameManager : MonoBehaviour
                 uiObject.SetActive(true); // 활성화
                 StatUpgradeUI.Instance = uiObject.GetComponent<StatUpgradeUI>(); // 참조 설정
             }
+            else
+            {
+                Debug.LogWarning("StatUpgradeUI 오브젝트가 씬에 없습니다.");
+            }
         }
 
         if (StatUpgradeUI.Instance != null)
@@ -143,7 +165,7 @@ public class GameManager : MonoBehaviour
     // 현재 던전의 문을 열고 다음 던전의 문을 닫기
     private void OpenNextArea()
     {
-        if (currentSpawnAreaIndex < doors.Length)
+        if (currentSpawnAreaIndex < doors.Length && doors[currentSpawnAreaIndex] != null)
         {
             doors[currentSpawnAreaIndex].SetActive(false); // 현재 던전의 문 열기
         }
@@ -163,7 +185,7 @@ public class GameManager : MonoBehaviour
     // 현재 던전의 문을 닫기
     private void OpenCurrentArea()
     {
-        if (currentSpawnAreaIndex < doors.Length)
+        if (currentSpawnAreaIndex < doors.Length && doors[currentSpawnAreaIndex] != null)
         {
             doors[currentSpawnAreaIndex].SetActive(true); // 다음 던전으로의 문 닫기
         }
@@ -172,7 +194,7 @@ public class GameManager : MonoBehaviour
     // 포탈 활성화
     private void ActivatePortal(int areaIndex)
     {
-        if (areaIndex >= 0 && areaIndex < portals.Length)
+        if (areaIndex >= 0 && areaIndex < portals.Length && portals[areaIndex] != null)
         {
             portals[areaIndex].SetActive(true); // 해당 던전의 포탈 활성화
             Debug.Log($"던전 {areaIndex}에 포탈이 활성화되었습니다.");
@@ -186,10 +208,14 @@ public class GameManager : MonoBehaviour
     // 문 상태를 변경하는 함수
     public void ToggleDoor(int index, bool isActive)
     {
-        if (index >= 0 && index < doors.Length)
+        if (index >= 0 && index < doors.Length && doors[index] != null)
         {
             doors[index].SetActive(isActive);
             Debug.Log($"던전 {index}의 문이 {(isActive ? "활성화" : "비활성화")}되었습니다.");
+        }
+        else
+        {
+            Debug.LogWarning($"유효하지 않은 index: {index}. 해당 던전의 문을 찾을 수 없습니다.");
         }
     }
 }

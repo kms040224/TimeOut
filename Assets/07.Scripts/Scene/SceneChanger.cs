@@ -5,6 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    public static SceneChanger Instance { get; private set; }
+
+    private void Awake()
+    {
+        // ½Ì±ÛÅæ ÆÐÅÏ ±¸Çö
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject); // ¾À ÀüÈ¯ ½Ã ÆÄ±«µÇÁö ¾ÊÀ½
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public void ChangeScene(string sceneName)
     {
         StartCoroutine(LoadSceneAsync(sceneName));
