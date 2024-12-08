@@ -6712,7 +6712,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224412467}
-  - component: {fileID: 224412468}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -6738,21 +6737,6 @@ Transform:
   - {fileID: 1868065080}
   m_Father: {fileID: 1772678903}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &224412468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 224412466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76368cec2d32e54db4e6bbcb2128602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPoints: []
-  monstersToSpawn: 3
 --- !u!1001 &227015446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15478,7 +15462,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 471231197}
-  - component: {fileID: 471231198}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -15505,21 +15488,6 @@ Transform:
   - {fileID: 1742374226}
   m_Father: {fileID: 923175815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &471231198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 471231196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76368cec2d32e54db4e6bbcb2128602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPoints: []
-  monstersToSpawn: 3
 --- !u!1 &472181031
 GameObject:
   m_ObjectHideFlags: 0
@@ -36675,7 +36643,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1219495434}
-  - component: {fileID: 1219495435}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -36700,21 +36667,6 @@ Transform:
   - {fileID: 1263567420}
   m_Father: {fileID: 1976457207}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1219495435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1219495433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76368cec2d32e54db4e6bbcb2128602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPoints: []
-  monstersToSpawn: 3
 --- !u!1001 &1221397896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39714,7 +39666,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1298767945}
-  - component: {fileID: 1298767946}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -39741,21 +39692,6 @@ Transform:
   - {fileID: 1592337142}
   m_Father: {fileID: 1530906856}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1298767946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1298767944}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76368cec2d32e54db4e6bbcb2128602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPoints: []
-  monstersToSpawn: 3
 --- !u!1001 &1299897529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52768,7 +52704,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1757335762}
-  - component: {fileID: 1757335763}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -52791,21 +52726,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 584111591}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1757335763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1757335761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76368cec2d32e54db4e6bbcb2128602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPoints: []
-  monstersToSpawn: 3
 --- !u!1001 &1757799819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63125,7 +63045,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2075729728}
-  - component: {fileID: 2075729729}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -63152,21 +63071,6 @@ Transform:
   - {fileID: 268237756}
   m_Father: {fileID: 2126352283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2075729729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2075729727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f76368cec2d32e54db4e6bbcb2128602, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 0}
-  spawnPoints: []
-  monstersToSpawn: 3
 --- !u!1001 &2076295743
 PrefabInstance:
   m_ObjectHideFlags: 0
