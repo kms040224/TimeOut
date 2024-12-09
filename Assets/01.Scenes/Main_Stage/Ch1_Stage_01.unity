@@ -10706,10 +10706,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAreas:
+  - {fileID: 1210191646}
   - {fileID: 1330879182}
   - {fileID: 1163476798}
   - {fileID: 498563436}
-  - {fileID: 1517967553}
   - {fileID: 1645830745}
   doors:
   - {fileID: 1061805530}
@@ -10717,7 +10717,6 @@ MonoBehaviour:
   - {fileID: 438005313}
   - {fileID: 979481452}
   portals:
-  - {fileID: 1727191252}
   - {fileID: 1727191252}
   - {fileID: 114719697}
   - {fileID: 1293042791}

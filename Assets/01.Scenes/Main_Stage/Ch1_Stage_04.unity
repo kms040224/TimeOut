@@ -5117,6 +5117,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2029865307}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &154922002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 154922003}
+  m_Layer: 0
+  m_Name: 1Room
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &154922003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154922002}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 225448873}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &155866034
 GameObject:
   m_ObjectHideFlags: 0
@@ -8045,6 +8076,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 154922003}
   - {fileID: 1892868374}
   - {fileID: 291971761}
   - {fileID: 1459811491}
@@ -67880,24 +67912,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnAreas:
+  - {fileID: 154922002}
   - {fileID: 1892868373}
   - {fileID: 291971760}
   - {fileID: 1459811490}
-  - {fileID: 1631818644}
   - {fileID: 50099484}
   - {fileID: 1475628702}
   doors:
-  - {fileID: 337133735}
-  - {fileID: 337133735}
-  - {fileID: 337133735}
-  - {fileID: 337133735}
+  - {fileID: 650705234}
+  - {fileID: 1922846468}
+  - {fileID: 28100102}
+  - {fileID: 1596823660}
+  - {fileID: 1977966714}
+  - {fileID: 1878151375}
   portals:
-  - {fileID: 337133735}
-  - {fileID: 337133735}
-  - {fileID: 337133735}
-  - {fileID: 337133735}
-  - {fileID: 337133735}
-  - {fileID: 337133735}
+  - {fileID: 1617887125}
+  - {fileID: 367134729}
+  - {fileID: 305003273}
+  - {fileID: 627663894}
+  - {fileID: 1659343666}
+  - {fileID: 840498236}
   playerStats: {fileID: 11400000, guid: 45b747923ebc9f44cb0484767d15e3de, type: 2}
 --- !u!4 &2052184154
 Transform:
