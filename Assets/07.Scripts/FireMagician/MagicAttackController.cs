@@ -46,12 +46,20 @@ public class MagicAttackController : MonoBehaviour
             MonsterController monster = other.GetComponent<MonsterController>();
             BossController boss = other.GetComponent<BossController>();
 
+            if (playerStats == null)
+            {
+                Debug.LogError("PlayerStats is not assigned in MagicAttackController!");
+                return;
+            }
+
             if (monster != null)
             {
+                // 몬스터에 데미지 적용
                 monster.TakeDamage((int)(playerStats.magicAttackDamage * 1.5f)); // 기본 100% 데미지
             }
             else if (boss != null)
             {
+                // 보스에 데미지 적용
                 boss.TakeDamage((int)(playerStats.magicAttackDamage * 1.0f)); // 기본 100% 데미지
             }
 
@@ -61,16 +69,26 @@ public class MagicAttackController : MonoBehaviour
                 GameObject hitEffect = Instantiate(hitEffectPrefab, other.transform.position, Quaternion.identity);
                 Destroy(hitEffect, 1f);
             }
+            else
+            {
+                Debug.LogWarning("Hit effect prefab is not assigned.");
+            }
 
             // 파이어볼을 풀로 반환
             ReturnToPool();
         }
     }
 
-
     private void ReturnToPool()
     {
         // 오브젝트 풀로 반환
-        ObjectPool.Instance.ReturnMagicAttack(gameObject);
+        if (ObjectPool.Instance != null)
+        {
+            ObjectPool.Instance.ReturnMagicAttack(gameObject);
+        }
+        else
+        {
+            Debug.LogError("ObjectPool instance is not available!");
+        }
     }
 }

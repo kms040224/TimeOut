@@ -292,12 +292,36 @@ public class PlayerController : MonoBehaviour
     // MagicAttack 발사
     void ShootMagicAttack()
     {
+        if (mainCamera == null)
+        {
+            Debug.LogError("Main Camera is not assigned!");
+            return;
+        }
+
+        if (magicAttackSpawnPoint == null)
+        {
+            Debug.LogError("MagicAttack Spawn Point is not assigned!");
+            return;
+        }
+
+        if (ObjectPool.Instance == null)
+        {
+            Debug.LogError("ObjectPool instance is null! Check if ObjectPool script is added to the scene.");
+            return;
+        }
+
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
 
         if (Physics.Raycast(ray, out hit))
         {
             GameObject magicAttack = ObjectPool.Instance.GetMagicAttack(); // MagicAttack을 풀에서 가져오기
+            if (magicAttack == null)
+            {
+                Debug.LogError("Failed to retrieve MagicAttack from ObjectPool!");
+                return;
+            }
+
             magicAttack.transform.position = magicAttackSpawnPoint.position;
             magicAttack.transform.rotation = Quaternion.identity;
 
@@ -306,11 +330,23 @@ public class PlayerController : MonoBehaviour
             {
                 magicAttackController.Launch(hit.point);
             }
+            else
+            {
+                Debug.LogError("MagicAttackController component is missing on the MagicAttack object!");
+                return;
+            }
 
             Debug.Log("Magic Attack shot towards: " + hit.point);
 
             // SoundManager를 사용하여 사운드 재생
-            SoundManager.Instance.PlaySound(magicAttackSound);
+            if (SoundManager.Instance != null && magicAttackSound != null)
+            {
+                SoundManager.Instance.PlaySound(magicAttackSound);
+            }
+            else
+            {
+                Debug.LogError("SoundManager instance or MagicAttack sound is not assigned!");
+            }
         }
     }
 
