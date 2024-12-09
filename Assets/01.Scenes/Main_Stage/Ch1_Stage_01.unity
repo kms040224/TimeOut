@@ -58457,7 +58457,7 @@ PrefabInstance:
         type: 3}
       propertyPath: walkingSound
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: b36baa7f16373d3418d1361315c23c3c, type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: AttackedSound

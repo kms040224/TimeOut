@@ -270,32 +270,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 540447943952334433}
   mainCamera: {fileID: 0}
-  fireballPrefab: {fileID: 3965582333600582820, guid: 62ab8c115436d124389e5cf454f7500e,
-    type: 3}
+  magicAttackPrefab: {fileID: 0}
   flamethrowerPrefab: {fileID: 9179484208670720367, guid: 9775b443934578d42b5f16d3aaccc831,
     type: 3}
-  fireOrbPrefab: {fileID: 0}
+  barrierEffectPrefab: {fileID: 0}
   areaEffectPrefab: {fileID: 8535985873047557982, guid: 4d715193bb233ae47afbd323405ede05,
     type: 3}
   meteorPrefab: {fileID: 2364792116979565844, guid: 7cf92ce320e53464d8cf667574557ad6,
     type: 3}
   GameOverPanel: {fileID: 0}
-  fireballSpawnPoint: {fileID: 5740588035401547325}
+  magicAttackSpawnPoint: {fileID: 0}
   flamethrowerSpawnPoint: {fileID: 5740588035401547325}
   movementSpeed: 4
   rotationSpeed: 10
   flamethrowerDuration: 1.5
   flamethrowerCooldown: 12
-  teleportDistance: 1
-  teleportCooldown: 8
   areaEffectCooldown: 10
   meteorCooldown: 40
   rollSpeed: 5
   rollDistance: 3
   rollCooldown: 5
   aniController: {fileID: 6913199367923490523}
+  playerStats: {fileID: 0}
+  magicAttackSound: {fileID: 0}
+  walkingSound: {fileID: 0}
+  AttackedSound: {fileID: 0}
+  ActivateBarrierSound: {fileID: 0}
+  DeactivateBarrierSound: {fileID: 0}
+  FlamethrowerSound: {fileID: 0}
+  LayDownAreaSound: {fileID: 0}
+  MeteorSound: {fileID: 0}
+  DeathSound: {fileID: 0}
+  shockwaveEffectPrefab: {fileID: 0}
+  spawnPoint: {fileID: 0}
+  shockwaveDuration: 0.5
   shouldMove: 0
   knockbackForce: 5
+  qSkillCooldownImage: {fileID: 0}
+  wSkillCooldownImage: {fileID: 0}
+  eSkillCooldownImage: {fileID: 0}
+  rSkillCooldownImage: {fileID: 0}
+  qSkillCooldownText: {fileID: 0}
+  wSkillCooldownText: {fileID: 0}
+  eSkillCooldownText: {fileID: 0}
+  rSkillCooldownText: {fileID: 0}
 --- !u!114 &6913199367923490523
 MonoBehaviour:
   m_ObjectHideFlags: 0

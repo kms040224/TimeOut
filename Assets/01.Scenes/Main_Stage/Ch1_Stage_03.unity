@@ -541,9 +541,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: DeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6913eb9c249dc31488f43af21eb3051e, type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 2087840466}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 2127868884}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: MeteorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4087b894fae379e4c816f429773e80a1, type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: playerStats
@@ -552,14 +567,39 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: walkingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b36baa7f16373d3418d1361315c23c3c, type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: AttackedSound
+      value: 
+      objectReference: {fileID: 8300000, guid: cbbfefb33555c0e4e8b868178eefd8be, type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: GameOverPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1861884540}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: fireOrbPrefab
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: LayDownAreaSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b031f6843362384eb13229b335b66cb, type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: magicAttackSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 52b3debb197079a49a147489d8d9f61c, type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: FlamethrowerSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 52dcbe2ce15e21c4b81f36f43a710ec2, type: 3}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: magicAttackPrefab
@@ -614,9 +654,25 @@ PrefabInstance:
       objectReference: {fileID: 2146253762}
     - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
+      propertyPath: ActivateBarrierSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 667cafb46f787254cb6f6d0dc6efee21, type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
       propertyPath: magicAttackSpawnPoint
       value: 
       objectReference: {fileID: 2127868884}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: shockwaveEffectPrefab
+      value: 
+      objectReference: {fileID: 3903769285579764751, guid: 89eaa69e2475e244a9481049023d6ac8,
+        type: 3}
+    - target: {fileID: 4535321278051205110, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
+        type: 3}
+      propertyPath: DeactivateBarrierSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 293bb980110a915409d2d11da361ec53, type: 3}
     - target: {fileID: 7268830289730954398, guid: 3901a47de11b0114a8bc2b4f89b9c5b2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8413,8 +8469,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.4, y: 1, z: 11.05}
-  m_Center: {x: 4.17, y: 0, z: 4.19}
+  m_Size: {x: 9.62, y: 1, z: 12.69}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!114 &325238175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22652,8 +22708,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.4, y: 1, z: 11.05}
-  m_Center: {x: 4.17, y: 0, z: 4.19}
+  m_Size: {x: 9.62, y: 1, z: 12.69}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!114 &783898759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29345,8 +29401,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.4, y: 1, z: 11.05}
-  m_Center: {x: 4.17, y: 0, z: 4.19}
+  m_Size: {x: 9.62, y: 1, z: 12.69}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!114 &1009256937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35509,8 +35565,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.4, y: 1, z: 11.05}
-  m_Center: {x: 4.17, y: 0, z: 4.19}
+  m_Size: {x: 9.62, y: 1, z: 12.69}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!114 &1198153504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46323,8 +46379,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.4, y: 1, z: 11.05}
-  m_Center: {x: 4.17, y: 0, z: 4.19}
+  m_Size: {x: 9.62, y: 1, z: 12.69}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!114 &1588270225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60115,8 +60171,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 10.4, y: 1, z: 11.05}
-  m_Center: {x: 4.17, y: 0, z: 4.19}
+  m_Size: {x: 9.62, y: 1, z: 12.69}
+  m_Center: {x: 3.8, y: 0.03, z: 4.55}
 --- !u!114 &2034321465
 MonoBehaviour:
   m_ObjectHideFlags: 0
