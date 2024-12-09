@@ -10,8 +10,8 @@ public class AreaTrigger : MonoBehaviour
 
     void Start()
     {
-        // GameManager 싱글톤 인스턴스 가져오기
-        gameManager = GameManager.Instance;
+        // 씬에서 GameManager를 찾아서 할당
+        gameManager = FindObjectOfType<GameManager>();
         if (gameManager == null)
         {
             Debug.LogError("GameManager 인스턴스를 찾을 수 없습니다!");

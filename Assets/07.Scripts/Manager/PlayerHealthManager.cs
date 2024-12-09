@@ -15,15 +15,15 @@ public class PlayerHealthManager : MonoBehaviour
 
     void Awake()
     {
-        // 싱글톤 인스턴스 설정
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject); // 씬 전환 시에도 파괴되지 않도록 설정
+            DontDestroyOnLoad(gameObject); // Manager 유지
+            DontDestroyOnLoad(healthText.transform.root.gameObject); // Canvas 유지
         }
         else
         {
-            Destroy(gameObject); // 이미 존재하면 파괴
+            Destroy(gameObject);
         }
     }
 

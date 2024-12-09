@@ -7,47 +7,22 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnAreas; // 각 던전의 스폰 영역
     public GameObject[] doors; // 던전을 연결하는 문
     public GameObject[] portals; // 포탈 오브젝트
-    private static GameManager instance;
-
-    public static GameManager Instance
-    {
-        get
-        {
-            return instance;
-        }
-    }
 
     private int currentSpawnAreaIndex = 0; // 현재 던전 인덱스
     private int currentWave = 0; // 현재 웨이브 (0: 첫 번째 웨이브, 1: 두 번째 웨이브)
     private int monsterCount = 0; // 현재 던전의 남은 몬스터 수
     public PlayerStats playerStats;
-
     private string selectedAttribute; // 선택된 속성 (Fire, Ice, etc.)
-
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // GameManager가 다른 씬으로 넘어가도 유지되도록 설정
-        }
-        else if (instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-    }
-
-    public PlayerStats GetPlayerStats()
-    {
-        return playerStats;
-    }
 
     private void Start()
     {
         OpenCurrentArea(); // 첫 던전의 문을 엽니다.
     }
 
+    public PlayerStats GetPlayerStats()
+    {
+        return playerStats;
+    }
     // 속성 설정 함수
     public void SetSelectedAttribute(string attribute)
     {

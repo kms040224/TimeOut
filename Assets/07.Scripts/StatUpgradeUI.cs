@@ -100,16 +100,19 @@ public class StatUpgradeUI : MonoBehaviour
             rectTransform.anchoredPosition = buttonPositions[i].anchoredPosition;
         }
     }
+
     // 스탯을 업그레이드하는 함수
     public void UpgradeStat(string statName, float upgradeValue)
     {
-        if (GameManager.Instance == null)
+        // GameManager 인스턴스를 씬에서 찾기
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null)
         {
-            Debug.LogError("GameManager.Instance is null! Cannot upgrade stats.");
+            Debug.LogError("GameManager instance not found! Cannot upgrade stats.");
             return;
         }
 
-        PlayerStats playerStats = GameManager.Instance.GetPlayerStats();
+        playerStats = gameManager.GetPlayerStats();
         if (playerStats == null)
         {
             Debug.LogError("PlayerStats is null! Cannot upgrade stats.");
