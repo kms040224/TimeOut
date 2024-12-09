@@ -28240,7 +28240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b21f715ab589db4c9f2a7222ba8cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Ch1_Stage_02
+  sceneToLoad: Ch1_Stage_05
 --- !u!136 &840498239
 CapsuleCollider:
   m_ObjectHideFlags: 0
