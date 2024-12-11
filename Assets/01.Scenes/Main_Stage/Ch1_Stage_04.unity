@@ -354,7 +354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 487602282078333466, guid: ef7702b9499f7124696f96c2634c8b87,
     type: 3}
 --- !u!1001 &1809116
 PrefabInstance:
@@ -2809,7 +2809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &77641579
 PrefabInstance:
@@ -5129,7 +5129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1 &151594135
 GameObject:
@@ -5175,7 +5175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1 &154922002
 GameObject:
@@ -7676,7 +7676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &218966851
 PrefabInstance:
@@ -8779,7 +8779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &238239892
 PrefabInstance:
@@ -18164,7 +18164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &507306307
 PrefabInstance:
@@ -18738,7 +18738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1 &530368919
 GameObject:
@@ -18784,7 +18784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &530936106
 PrefabInstance:
@@ -19200,7 +19200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &543109316
 PrefabInstance:
@@ -23822,7 +23822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &701489888
 PrefabInstance:
@@ -24578,7 +24578,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &719451468
 PrefabInstance:
@@ -24856,7 +24856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &727897115
 PrefabInstance:
@@ -26860,7 +26860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &797614806
 PrefabInstance:
@@ -26980,7 +26980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &801988039
 PrefabInstance:
@@ -28730,7 +28730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 3145683048858680915, guid: 95988d746cf930249841c28cb1b0cd29,
     type: 3}
 --- !u!1001 &848691369
 PrefabInstance:
@@ -32706,7 +32706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &962452430
 PrefabInstance:
@@ -35103,7 +35103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &1034007564
 PrefabInstance:
@@ -37045,7 +37045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &1088818506
 PrefabInstance:
@@ -39492,7 +39492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &1158583919
 PrefabInstance:
@@ -40993,7 +40993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 487602282078333466, guid: ef7702b9499f7124696f96c2634c8b87,
     type: 3}
 --- !u!1001 &1191833956
 PrefabInstance:
@@ -43233,7 +43233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &1252452980
 PrefabInstance:
@@ -44728,7 +44728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 3145683048858680915, guid: 95988d746cf930249841c28cb1b0cd29,
     type: 3}
 --- !u!1001 &1308473814
 PrefabInstance:
@@ -45828,7 +45828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 487602282078333466, guid: ef7702b9499f7124696f96c2634c8b87,
     type: 3}
 --- !u!1 &1349187238
 GameObject:
@@ -45982,7 +45982,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &1355223041
 PrefabInstance:
@@ -48169,7 +48169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &1420657267
 PrefabInstance:
@@ -50999,7 +50999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &1497883955
 PrefabInstance:
@@ -51225,7 +51225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &1505636187
 PrefabInstance:
@@ -51475,7 +51475,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 487602282078333466, guid: ef7702b9499f7124696f96c2634c8b87,
     type: 3}
 --- !u!1 &1510200840
 GameObject:
@@ -53121,7 +53121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1 &1560001079 stripped
 GameObject:
@@ -53238,7 +53238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1 &1565671845
 GameObject:
@@ -55213,7 +55213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 487602282078333466, guid: ef7702b9499f7124696f96c2634c8b87,
     type: 3}
 --- !u!1 &1634524083
 GameObject:
@@ -55744,7 +55744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &1649687990
 PrefabInstance:
@@ -58275,7 +58275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 487602282078333466, guid: ef7702b9499f7124696f96c2634c8b87,
     type: 3}
 --- !u!1001 &1719314020
 PrefabInstance:
@@ -59327,7 +59327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5791374106004149410, guid: c0c5692a81212ec48b08ba2909b9974d,
     type: 3}
 --- !u!1001 &1763989464
 PrefabInstance:
@@ -60169,7 +60169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &1807482087
 PrefabInstance:
@@ -61750,7 +61750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1 &1840182552
 GameObject:
@@ -62211,7 +62211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &1851925798
 PrefabInstance:
@@ -63091,7 +63091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &1900256013
 PrefabInstance:
@@ -68067,7 +68067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1 &2037226370
 GameObject:
@@ -68222,7 +68222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &2039099248
 PrefabInstance:
@@ -69106,7 +69106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &2067591096
 PrefabInstance:
@@ -70343,7 +70343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &2095318814
 PrefabInstance:
@@ -71476,7 +71476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 934519822643966620, guid: 62c3fc4168b51844c8114873ddeebdff,
     type: 3}
 --- !u!1001 &2125449302
 PrefabInstance:
@@ -71744,7 +71744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a3174eb4db524eb58f7b9f4d02b83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  assignedMonster: {fileID: 5243921788105980535, guid: db5e2efd3ad750147bf00c14d6037e6f,
+  assignedMonster: {fileID: 5907518518841556897, guid: c1e56bf01ff85f342a6aa267ee22e7d1,
     type: 3}
 --- !u!1001 &2136558375
 PrefabInstance:
