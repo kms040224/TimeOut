@@ -9,7 +9,7 @@ public class MonsterController : MonoBehaviour
     public float attackDistance = 5.0f;
     public float stopDistance = 1.5f;
     public float attackRate = 1.0f;
-    private float nextAttackTime = 0f;
+    protected float nextAttackTime = 0f;
     public float knockbackForce = 5.0f;
     public float knockbackDuration = 0.5f;
     private bool isKnockedBack = false;
@@ -21,7 +21,7 @@ public class MonsterController : MonoBehaviour
     private FlockingManager flockingManager;
     private PlayerController playerController;
     private GameManager gameManager;
-    private Animator animator;
+    protected Animator animator;
 
     public int health = 100;
 
@@ -68,9 +68,19 @@ public class MonsterController : MonoBehaviour
         }
 
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
-        MoveToPlayer();
 
-        if (distanceToPlayer <= stopDistance)
+        // 플레이어와의 거리가 stopDistance보다 멀면 이동
+        if (distanceToPlayer > stopDistance)
+        {
+            MoveToPlayer();
+        }
+        else
+        {
+            agent.ResetPath(); // 이동 멈춤
+        }
+
+        // 공격 거리가 유효하면 공격
+        if (distanceToPlayer <= attackDistance)
         {
             Attack();
         }
@@ -202,7 +212,7 @@ public class MonsterController : MonoBehaviour
         return Vector3.zero;
     }
 
-    void Attack()
+    protected virtual void Attack()
     {
         if (Time.time >= nextAttackTime)
         {

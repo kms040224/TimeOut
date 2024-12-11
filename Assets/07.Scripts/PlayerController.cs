@@ -608,6 +608,6 @@ public class PlayerController : MonoBehaviour
         {
             GameOverPanel.SetActive(true);
         }
-        SoundManager.Instance.PlaySound(DeathSound);
+       // SoundManager.Instance.PlaySound(DeathSound);
     }
 }
