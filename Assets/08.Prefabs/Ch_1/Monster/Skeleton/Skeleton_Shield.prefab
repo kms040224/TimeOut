@@ -376,15 +376,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126857650832794444}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.45365253, y: -0.5208897, z: 0.54527974, w: -0.47491404}
-  m_LocalPosition: {x: -79.02964, y: -12.134284, z: -155.36743}
+  m_LocalRotation: {x: -0.52947, y: 0.32942405, z: 0.77450126, w: 0.106250905}
+  m_LocalPosition: {x: -77.72675, y: -36.30213, z: -130.7179}
   m_LocalScale: {x: 100, y: 100.000015, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7962811080088752872}
   - {fileID: 4544286048118981952}
-  m_Father: {fileID: 8099387346461024367}
-  m_LocalEulerAnglesHint: {x: 87.378, y: 90, z: -97.867}
+  m_Father: {fileID: 892750162364941517}
+  m_LocalEulerAnglesHint: {x: -141.48, y: 106.506, z: -346.379}
 --- !u!1 &2222677907672937660
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +419,6 @@ Transform:
   - {fileID: 5178637376379426482}
   - {fileID: 1631984788292354675}
   - {fileID: 8914778677921897969}
-  - {fileID: 5445381851646599181}
   m_Father: {fileID: 7944287776764162873}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2379173995202615909
@@ -590,6 +589,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6072562040965592178}
+  - component: {fileID: 8557418168150556572}
+  - component: {fileID: 5264523800081644867}
+  - component: {fileID: 6820656888319665453}
+  - component: {fileID: 8778385816469894644}
   m_Layer: 0
   m_Name: Skeleton_Shield
   m_TagString: Untagged
@@ -614,6 +617,94 @@ Transform:
   - {fileID: 306893845661045474}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 89.974, z: 0}
+--- !u!95 &8557418168150556572
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145683048858680915}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3cf94038fbe99384b8e88adb4d42af78, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5264523800081644867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145683048858680915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d40e4f2a651f8d24c878120eca6f5cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 3
+  attackDistance: 1.5
+  stopDistance: 1.5
+  attackRate: 1
+  knockbackForce: 5
+  knockbackDuration: 0.5
+  flockingRadius: 5
+  separationDistance: 1.5
+  player: {fileID: 0}
+  health: 100
+  dropItems: []
+  dropChance: 0.5
+--- !u!65 &6820656888319665453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145683048858680915}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &8778385816469894644
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3145683048858680915}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &3250982514735488263
 GameObject:
   m_ObjectHideFlags: 0
@@ -2090,6 +2181,7 @@ Transform:
   - {fileID: 5391850121715541171}
   - {fileID: 6694100307570287084}
   - {fileID: 331360035716195347}
+  - {fileID: 5445381851646599181}
   m_Father: {fileID: 9085224361016360669}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8730739221087896003

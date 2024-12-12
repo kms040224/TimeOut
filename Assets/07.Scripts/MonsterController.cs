@@ -16,7 +16,7 @@ public class MonsterController : MonoBehaviour
 
     public float flockingRadius = 5.0f;
     public float separationDistance = 1.5f;
-    private NavMeshAgent agent;
+    protected NavMeshAgent agent;
     public Transform player;
     private FlockingManager flockingManager;
     private PlayerController playerController;
@@ -59,7 +59,7 @@ public class MonsterController : MonoBehaviour
         }
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (player == null)
         {
@@ -77,6 +77,14 @@ public class MonsterController : MonoBehaviour
         else
         {
             agent.ResetPath(); // 이동 멈춤
+
+            // 플레이어 쪽을 바라봄
+            Vector3 directionToPlayer = (player.position - transform.position).normalized;
+            if (directionToPlayer != Vector3.zero)
+            {
+                Quaternion lookRotation = Quaternion.LookRotation(directionToPlayer);
+                transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * agent.angularSpeed);
+            }
         }
 
         // 공격 거리가 유효하면 공격
