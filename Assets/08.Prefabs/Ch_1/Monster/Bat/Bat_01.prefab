@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  attackDistance: 5
+  attackDistance: 1.5
   stopDistance: 1.5
   attackRate: 1
   knockbackForce: 5
