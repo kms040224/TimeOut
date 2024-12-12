@@ -35,7 +35,13 @@ public class BossController : MonoBehaviour
     private void Start()
     {
         initialPosition = transform.position;
-        StartCoroutine(PatternLoop());
+        StartCoroutine(DelayBeforePatternStart());
+        
+    }
+    private IEnumerator DelayBeforePatternStart()
+    {
+        yield return new WaitForSeconds(2f); // 1초 대기
+        StartCoroutine(PatternLoop()); // 패턴 루프 시작
     }
 
     private IEnumerator PatternLoop()
