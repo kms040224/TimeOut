@@ -2303,6 +2303,7 @@ MonoBehaviour:
   stage3Music: {fileID: 8300000, guid: b563d4e4e5bfdfa4fb2007afb95145b5, type: 3}
   stage4Music: {fileID: 8300000, guid: b563d4e4e5bfdfa4fb2007afb95145b5, type: 3}
   stage5Music: {fileID: 8300000, guid: b563d4e4e5bfdfa4fb2007afb95145b5, type: 3}
+  BossSceneMusic: {fileID: 8300000, guid: e050db562d65e8547b4398b84fffeac6, type: 3}
   volumeSlider: {fileID: 160323704}
 --- !u!4 &2051062277
 Transform:

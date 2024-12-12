@@ -12,6 +12,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip stage3Music;
     public AudioClip stage4Music;
     public AudioClip stage5Music;
+    public AudioClip BossSceneMusic;
 
     private AudioSource audioSource;
 
@@ -115,6 +116,9 @@ public class MusicManager : MonoBehaviour
                 break;
             case "Ch1_Stage_05":
                 clipToPlay = stage5Music;
+                break;
+            case "BossScene":
+                clipToPlay = BossSceneMusic;
                 break;
         }
 
