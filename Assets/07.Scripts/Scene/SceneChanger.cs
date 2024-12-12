@@ -9,7 +9,6 @@ public class SceneChanger : MonoBehaviour
 
     private void Awake()
     {
-        // 싱글톤 패턴 구현
         if (Instance == null)
         {
             Instance = this;
@@ -23,18 +22,25 @@ public class SceneChanger : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
+        Debug.Log("Changing to scene: " + sceneName); // 씬 변경 확인용 로그
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
     private IEnumerator LoadSceneAsync(string sceneName)
     {
-        // 새로운 씬을 비동기적으로 로드
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(sceneName);
-
-        // 로드가 완료될 때까지 대기
         while (!loadOperation.isDone)
         {
-            yield return null; // 다음 프레임까지 대기
+            yield return null;
+        }
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            // 씬 이름이 정확한지 확인
+            ChangeScene("BossScene");  // 씬 이름을 정확히 입력하세요
         }
     }
 }

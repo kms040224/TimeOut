@@ -542,6 +542,10 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(Vector3 hitDirection, float damage)
     {
+        // 무적 상태일 때 데미지를 받지 않음
+        if (isInvincible)
+            return;
+
         if (hasBarrier)
         {
             DeactivateBarrier(); // 배리어 해제
@@ -549,13 +553,13 @@ public class PlayerController : MonoBehaviour
         }
 
         animator.SetTrigger("CharacterHit");
-        if (!isInvincible)
-        {
-            StartCoroutine(Knockback(hitDirection));
-            StartCoroutine(InvincibilityCoroutine());
-        }
+
+        // Knockback 및 무적 처리
+        StartCoroutine(Knockback(hitDirection));
+        StartCoroutine(InvincibilityAndBlinking(damage));  // 깜빡임 및 무적 상태 처리
+
+        // 데미지 적용
         PlayerHealthManager.Instance.TakeDamage(damage);
-        StartCoroutine(InvincibilityAndBlinking());
         SoundManager.Instance.PlaySound(AttackedSound);
     }
     private IEnumerator Knockback(Vector3 hitDirection)
@@ -579,9 +583,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         isInvincible = false;
     }
-    private IEnumerator InvincibilityAndBlinking()
+    private IEnumerator InvincibilityAndBlinking(float damage)
     {
-        isInvincible = true;
+        isInvincible = true;  // 무적 상태로 설정
 
         // 0.5초 동안 깜빡임 효과
         float blinkDuration = 0.5f;
@@ -597,6 +601,9 @@ public class PlayerController : MonoBehaviour
 
         // 깜빡임 종료 후 Renderer 활성화
         playerRenderer.enabled = true;
+
+        // 무적 상태 종료
+        yield return new WaitForSeconds(0.5f);  // 0.5초 후 무적 상태 해제
         isInvincible = false;
     }
 

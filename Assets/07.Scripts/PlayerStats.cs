@@ -46,6 +46,18 @@ public class PlayerStats : ScriptableObject
                 flamethrowerCooldown -= upgradeValue;
                 Debug.Log($"Flamethrower Cooldown upgraded to {flamethrowerCooldown}");
                 break;
+            case "areaEffectCooldown":
+                areaEffectCooldown -= upgradeValue;
+                Debug.Log($"Flamethrower Cooldown upgraded to {areaEffectCooldown}");
+                break;
+            case "barrierCooldown":
+                barrierCooldown -= upgradeValue;
+                Debug.Log($"Flamethrower Cooldown upgraded to {barrierCooldown}");
+                break;
+            case "meteorCooldown":
+                meteorCooldown -= upgradeValue;
+                Debug.Log($"Flamethrower Cooldown upgraded to {meteorCooldown}");
+                break;
 
             default:
                 Debug.LogWarning($"Unknown stat: {statName}");

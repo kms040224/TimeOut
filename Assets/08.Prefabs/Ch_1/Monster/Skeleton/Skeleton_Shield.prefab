@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 8778385816469894644}
   m_Layer: 0
   m_Name: Skeleton_Shield
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
