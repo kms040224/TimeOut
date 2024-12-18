@@ -5,10 +5,12 @@ using UnityEngine;
 public class SettingMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
+    public GameObject howtoplayPanel;
 
     private void Start()
     {
         settingsPanel.SetActive(false);
+        howtoplayPanel.SetActive(false);
     }
 
     public void OpenSettings()
@@ -19,5 +21,15 @@ public class SettingMenu : MonoBehaviour
     public void CloseSettings()
     {
         settingsPanel.SetActive(false);
+    }
+
+    public void OpenHowtoPlayPanel()
+    {
+        howtoplayPanel.SetActive(true);
+    }
+
+    public  void CloseHowtoPlayPanel()
+    {
+        howtoplayPanel.SetActive(false);
     }
 }
