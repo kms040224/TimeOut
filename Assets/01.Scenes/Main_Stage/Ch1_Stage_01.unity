@@ -5351,7 +5351,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: FlamethrowerCooldown  -1
+  m_Text: Upgrade Q
 --- !u!222 &188283641
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10924,6 +10924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 646905297}
+  howtoplayPanel: {fileID: 0}
 --- !u!1001 &374595003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44125,8 +44126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27668f2b8f1c6f84a846319c887e8ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  maxHealth: 100
+  health: 150
+  maxHealth: 150
   healthText: {fileID: 42100520}
 --- !u!4 &1556109007
 Transform:
@@ -44259,7 +44260,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: areaEffectCooldown  -1
+  m_Text: Upgrade E
 --- !u!222 &1563586332
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45242,7 +45243,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: barrierCooldown  -1
+  m_Text: Upgrade W
 --- !u!222 &1595905020
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47418,7 +47419,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: meteorCooldown  -1
+  m_Text: Upgrade R
 --- !u!222 &1663309768
 CanvasRenderer:
   m_ObjectHideFlags: 0

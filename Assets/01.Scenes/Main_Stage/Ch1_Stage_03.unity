@@ -38865,6 +38865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1239838603}
+  howtoplayPanel: {fileID: 0}
 --- !u!114 &1390844562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42529,7 +42530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b21f715ab589db4c9f2a7222ba8cfbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: Ch1_Stage_04
+  sceneToLoad: Ch1_Stage_05
 --- !u!136 &1507861455
 CapsuleCollider:
   m_ObjectHideFlags: 0

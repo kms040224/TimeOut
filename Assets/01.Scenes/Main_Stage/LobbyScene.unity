@@ -552,6 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1372386922}
+  howtoplayPanel: {fileID: 0}
 --- !u!1 &324184559
 GameObject:
   m_ObjectHideFlags: 0
@@ -1209,7 +1210,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &642692847
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1217,17 +1218,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642692846}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5584755, y: 3.5584755, z: 3.5584755}
+  m_LocalScale: {x: 3.023779, y: 3.023779, z: 3.023779}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 70220806}
-  m_Father: {fileID: 1090031321}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 421.9, y: 0}
+  m_AnchoredPosition: {x: 718.4181, y: 178.58449}
   m_SizeDelta: {x: 200, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &642692848
@@ -1685,7 +1686,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1061683809}
-  - {fileID: 642692847}
   m_Father: {fileID: 555677128}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2739,6 +2739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1372386922}
+  howtoplayPanel: {fileID: 0}
 --- !u!114 &1854819264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2956,3 +2957,4 @@ SceneRoots:
   - {fileID: 555677128}
   - {fileID: 1323758858}
   - {fileID: 1854819265}
+  - {fileID: 642692847}
